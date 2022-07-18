@@ -5,6 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
+ecgc-key
+ecgc-key.pub
 
 node_modules
 
