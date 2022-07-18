@@ -40,7 +40,7 @@ const ExportPaymentInsuaranceForm = () => {
     //     console.log(response);
     //   });
     axios
-      .post("http://localhost:8000/api/export-payment", {
+      .post("https://sheltered-refuge-20729.herokuapp.com/api/export-payment", {
         registeredcompanyname: registeredcompanyname,
         policynumber: policynumber,
         contactperson: contactperson,
