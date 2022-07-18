@@ -1,26 +1,26 @@
-import React from 'react';
-import NavbarTwo from '../components/_App/NavbarTwo';
-import PageBanner from '../components/Common/PageBanner';
-import PortfolioColumnsThreeCard from '../components/Portfolio/PortfolioColumnsThreeCard';
-import Footer from '../components/_App/Footer';
+import React from "react";
+import Navbar from "../components/_App/Navbar";
+import PageBanner from "../components/Common/PageBanner";
+import PortfolioColumnsThreeCard from "../components/Portfolio/PortfolioColumnsThreeCard";
+import Footer from "../components/_App/Footer";
 
 const PortfolioColumnsThree = () => {
-    return (
-        <>
-            <NavbarTwo />
+  return (
+    <>
+      <Navbar />
 
-            <PageBanner 
-                pageTitle="Portfolio Columns Three" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Portfolio Columns Three" 
-            /> 
+      <PageBanner
+        pageTitle="Portfolio Columns Three"
+        homePageUrl="/"
+        homePageText="Home"
+        activePageText="Portfolio Columns Three"
+      />
 
-            <PortfolioColumnsThreeCard />
-            
-            <Footer />
-        </>
-    )
-}
+      <PortfolioColumnsThreeCard />
+
+      <Footer />
+    </>
+  );
+};
 
 export default PortfolioColumnsThree;

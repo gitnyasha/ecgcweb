@@ -1,40 +1,40 @@
-import React from 'react';
-import NavbarTwo from '../components/_App/NavbarTwo';
-import PageBanner from '../components/Common/PageBanner';
-import OurServices from '../components/HomeThree/OurServices';
-import AchievementContent from '../components/About/AchievementContent';
-import GetAFreeQuoteFormStyleTwo from '../components/Common/GetAFreeQuoteFormStyleTwo';
-import OffersArea from '../components/Common/OffersArea';
-import OurVision from '../components/About/OurVision';
-import Footer from '../components/_App/Footer';
+import React from "react";
+import Navbar from "../components/_App/Navbar";
+import PageBanner from "../components/Common/PageBanner";
+import OurServices from "../components/HomeThree/OurServices";
+import AchievementContent from "../components/About/AchievementContent";
+import GetAFreeQuoteFormStyleTwo from "../components/Common/GetAFreeQuoteFormStyleTwo";
+import OffersArea from "../components/Common/OffersArea";
+import OurVision from "../components/About/OurVision";
+import Footer from "../components/_App/Footer";
 
 const CarInsurance = () => {
-    return (
-        <>
-            <NavbarTwo />
+  return (
+    <>
+      <Navbar />
 
-            <PageBanner 
-                pageTitle="Car Insurance" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Car Insurance" 
-            /> 
+      <PageBanner
+        pageTitle="Car Insurance"
+        homePageUrl="/"
+        homePageText="Home"
+        activePageText="Car Insurance"
+      />
 
-            <OurServices />
+      <OurServices />
 
-            <AchievementContent />
+      <AchievementContent />
 
-            <GetAFreeQuoteFormStyleTwo />
+      <GetAFreeQuoteFormStyleTwo />
 
-            <div className="pt-100">
-                <OffersArea />
-            </div>
+      <div className="pt-100">
+        <OffersArea />
+      </div>
 
-            <OurVision />
-            
-            <Footer />
-        </>
-    )
-}
+      <OurVision />
+
+      <Footer />
+    </>
+  );
+};
 
 export default CarInsurance;
