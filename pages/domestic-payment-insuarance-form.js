@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
@@ -45,86 +46,50 @@ const DomesticPaymentInsuaranceForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      email: email,
-      clientname: clientname,
-      policynumber: policynumber,
-      maximumliability: maximumliability,
-      physicaladdress: physicaladdress,
-      extenof: extenof,
-      amountnow: amountnow,
-      insolvency: insolvency,
-      failureRadios: failureRadios,
-      date1: date1,
-      termsofpayment: termsofpayment,
-      amount: amount,
-      effectivedate: effectivedate,
-      dateOfsales1: dateOfsales1,
-      itemsold1: itemsold1,
-      grossinvoice1: grossinvoice1,
-      termsofpayment1: termsofpayment1,
-      duedate1: duedate1,
-      datedeclared1: datedeclared1,
-      overdues: overdues,
-      declaration: particulars,
-      payreceive: payreceive,
-      nonfulfillment: nonfulfillment,
-      proceedsresale: proceedsresale,
-      setoff: setoff,
-      lesstotal: lesstotal,
-      expenses: expenses,
-      netamountloss: netamountloss,
-      check1: check1,
-      check2: check2,
-      check3: check3,
-      check4: check4,
-      check5: check5,
-      check6: check6,
-      check7: check7,
-    });
-    // apiClient.get("/sanctum/csrf-cookie").then((response) => {
-    //   apiClient
-    //     .post("/api/auth/sign-in", {
-    //       email: email,
-    //       clientname: clientname,
-    //       policynumber: policynumber,
-    //       maximumliability: maximumliability,
-    //       physicaladdress: physicaladdress,
-    //       extenof: extenof,
-    //       amountnow: amountnow,
-    //       insolvency: insolvency,
-    //       failureRadios: failureRadios,
-    //       date1: date1,
-    //       termsofpayment: termsofpayment,
-    //       amount: amount,
-    //       effectivedate: effectivedate,
-    //       dateOfsales1: dateOfsales1,
-    //       itemsold1: itemsold1,
-    //       grossinvoice1: grossinvoice1,
-    //       termsofpayment1: termsofpayment1,
-    //       duedate1: duedate1,
-    //       datedeclared1: datedeclared1,
-    //       overdues: overdues,
-    //       declaration: particulars,
-    //       payreceive: payreceive,
-    //       nonfulfillment: nonfulfillment,
-    //       proceedsresale: proceedsresale,
-    //       setoff: setoff,
-    //       lesstotal: lesstotal,
-    //       expenses: expenses,
-    //       netamountloss: netamountloss,
-    //       check1: check1,
-    //       check2: check2,
-    //       check3: check3,
-    //       check4: check4,
-    //       check5: check5,
-    //       check6: check6,
-    //       check7: check7,
-    //     })
-    //     .then((response) => {
-    //       console.log(response);
-    //     });
-    // });
+    axios
+      .post(
+        "https://sheltered-refuge-20729.herokuapp.com/api/domestic-payment",
+        {
+          email: email,
+          clientname: clientname,
+          policynumber: policynumber,
+          maximumliability: maximumliability,
+          physicaladdress: physicaladdress,
+          extenof: extenof,
+          amountnow: amountnow,
+          insolvency: insolvency,
+          failureradios: failureRadios,
+          date1: date1,
+          termsofpayment: termsofpayment,
+          amount: amount,
+          effectivedate: effectivedate,
+          dateofsales1: dateOfsales1,
+          itemsold1: itemsold1,
+          grossinvoice1: grossinvoice1,
+          termsofpayment1: termsofpayment1,
+          duedate1: duedate1,
+          datedeclared1: datedeclared1,
+          overdues: overdues,
+          declaration: particulars,
+          payreceive: payreceive,
+          nonfulfillment: nonfulfillment,
+          proceedsresale: proceedsresale,
+          setoff: setoff,
+          lesstotal: lesstotal,
+          expenses: expenses,
+          netamountloss: netamountloss,
+          check1: check1,
+          check2: check2,
+          check3: check3,
+          check4: check4,
+          check5: check5,
+          check6: check6,
+          check7: check7,
+        }
+      )
+      .then((response) => {
+        console.log(response);
+      });
   };
 
   return (
