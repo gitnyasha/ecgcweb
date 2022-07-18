@@ -6,12 +6,12 @@ import GetAFreeQuoteFormStyleTwo from "../components/Common/GetAFreeQuoteFormSty
 import OffersArea from "../components/Common/OffersArea";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
+import Navbar from "../components/_App/Navbar";
 
 const HealthInsurance = () => {
   return (
     <>
       <Navbar />
-
       <PageBanner
         pageTitle="Health Insurance"
         homePageUrl="/"

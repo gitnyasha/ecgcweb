@@ -59,7 +59,7 @@ const ComingSoon = () => {
             <div className="container">
               <div className="coming-soon-content">
                 <h1>Coming Soon</h1>
-                <p>Under development and will be up shortly.</p>
+                <p>Site Under development and will be up shortly.</p>
 
                 {/*  <div id="timer">
                                     <div id="days">
