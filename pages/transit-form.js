@@ -68,7 +68,7 @@ const TransitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://sheltered-refuge-20729.herokuapp.com/api/transit", {
+      .post("http://localhost:8000/api/transit", {
         contractoraddress: contractoraddress,
         subcontratorpremium: subcontratorpremium,
         vehicleregnumber: vehicleregnumber,
@@ -214,7 +214,7 @@ const TransitForm = () => {
                 </div>
               </div>
               <div className="card-header my-3">
-                DATE, TIME AND occurencereported OF OCCURENCE
+                DATE, TIME AND PLACE OF OCCURENCE
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-4 col-sm-12 col-sm-12">
@@ -238,7 +238,7 @@ const TransitForm = () => {
                   />
                 </div>
                 <div className="form-group my-2 col-md-4 col-sm-12 col-sm-12">
-                  <label for="inputCD2">occurencereported</label>
+                  <label for="inputCD2">Place</label>
                   <input
                     type="text"
                     value={occurenceplace}

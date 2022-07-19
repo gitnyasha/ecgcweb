@@ -1,11 +1,10 @@
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import apiClient from "./api/api";
 import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 
 const ExportPaymentInsuaranceForm = () => {
-  const [email, setEmail] = React.useState("");
   const [registeredcompanyname, setRegisteredCompanyName] = React.useState("");
   const [policynumber, setPolicyNumber] = React.useState("");
   const [contactperson, setContactPerson] = React.useState("");
@@ -31,16 +30,12 @@ const ExportPaymentInsuaranceForm = () => {
   const [applyposition, setApplyPosition] = React.useState("");
   const [datesigned, setDateSigned] = React.useState("");
 
+  const [show, setShow] = React.useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // axios
-    //   .post("http://localhost:8000/api/export-payment", {})
-    //   .then((response) => {
-    //     console.log(response);
-    //   });
     axios
-      .post("https://sheltered-refuge-20729.herokuapp.com/api/export-payment", {
+      .post("http://localhost:8000/api/export-payment", {
         registeredcompanyname: registeredcompanyname,
         policynumber: policynumber,
         contactperson: contactperson,
@@ -66,7 +61,10 @@ const ExportPaymentInsuaranceForm = () => {
         datesigned: datesigned,
       })
       .then((response) => {
-        console.log(response);
+        if (response.data.status === "201") {
+          setShow(true);
+          console.log(response);
+        }
       });
   };
   return (
@@ -466,6 +464,15 @@ const ExportPaymentInsuaranceForm = () => {
             </form>
           </div>
         </div>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </div>
       <Footer />
     </>

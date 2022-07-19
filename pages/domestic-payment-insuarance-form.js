@@ -1,8 +1,7 @@
-import axios from "axios";
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import apiClient from "./api/api";
+import axios from "axios";
 
 const DomesticPaymentInsuaranceForm = () => {
   const [email, setEmail] = React.useState("");
@@ -44,49 +43,46 @@ const DomesticPaymentInsuaranceForm = () => {
   const [check6, setCheck6] = React.useState("");
   const [check7, setCheck7] = React.useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://sheltered-refuge-20729.herokuapp.com/api/domestic-payment",
-        {
-          email: email,
-          clientname: clientname,
-          policynumber: policynumber,
-          maximumliability: maximumliability,
-          physicaladdress: physicaladdress,
-          extenof: extenof,
-          amountnow: amountnow,
-          insolvency: insolvency,
-          failureradios: failureRadios,
-          date1: date1,
-          termsofpayment: termsofpayment,
-          amount: amount,
-          effectivedate: effectivedate,
-          dateofsales1: dateOfsales1,
-          itemsold1: itemsold1,
-          grossinvoice1: grossinvoice1,
-          termsofpayment1: termsofpayment1,
-          duedate1: duedate1,
-          datedeclared1: datedeclared1,
-          overdues: overdues,
-          declaration: particulars,
-          payreceive: payreceive,
-          nonfulfillment: nonfulfillment,
-          proceedsresale: proceedsresale,
-          setoff: setoff,
-          lesstotal: lesstotal,
-          expenses: expenses,
-          netamountloss: netamountloss,
-          check1: check1,
-          check2: check2,
-          check3: check3,
-          check4: check4,
-          check5: check5,
-          check6: check6,
-          check7: check7,
-        }
-      )
+      .post("http://localhost:8000/api/domestic-payment", {
+        email: email,
+        clientname: clientname,
+        policynumber: policynumber,
+        maximumliability: maximumliability,
+        physicaladdress: physicaladdress,
+        extenof: extenof,
+        amountnow: amountnow,
+        insolvency: insolvency,
+        failureradios: failureRadios,
+        date1: date1,
+        termsofpayment: termsofpayment,
+        amount: amount,
+        effectivedate: effectivedate,
+        dateofsales1: dateOfsales1,
+        itemsold1: itemsold1,
+        grossinvoice1: grossinvoice1,
+        termsofpayment1: termsofpayment1,
+        duedate1: duedate1,
+        datedeclared1: datedeclared1,
+        overdues: overdues,
+        declaration: particulars,
+        payreceive: payreceive,
+        nonfulfillment: nonfulfillment,
+        proceedsresale: proceedsresale,
+        setoff: setoff,
+        lessTotal: lesstotal,
+        expenses: expenses,
+        netamountloss: netamountloss,
+        check1: check1,
+        check2: check2,
+        check3: check3,
+        check4: check4,
+        check5: check5,
+        check6: check6,
+        check7: check7,
+      })
       .then((response) => {
         console.log(response);
       });
@@ -101,7 +97,7 @@ const DomesticPaymentInsuaranceForm = () => {
         </h1>
         <div className="row my-2">
           <div className="col">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmitForm}>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12">
                   <label for="inputRC4">Name of Client</label>
@@ -652,11 +648,7 @@ const DomesticPaymentInsuaranceForm = () => {
                   />
                 </div>
               </div>
-              <button
-                type="submit"
-                name="btnSubmit"
-                className="btn btn-primary"
-              >
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </form>
