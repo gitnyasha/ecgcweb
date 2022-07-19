@@ -7,8 +7,8 @@ template.
 
 This files table contents are outlined below>>>>>
 
-******************************************* 
-** - DEFAULT AREA STYLE 
+*******************************************
+** - DEFAULT AREA STYLE
 ** - Default Btn Area Style
 ** - Read More Area Style
 ** - Header Area Style
@@ -50,7 +50,8 @@ This files table contents are outlined below>>>>>
 /*
 Default Style
 ============================*/
-
+@import url('bulma/css/bulma.css');
+@import url('material-design-icons/iconfont/material-icons.css');
 $paragraph-font-family :  'Open Sans', sans-serif;
 $body-font-family : 'Roboto', sans-serif;
 
@@ -89,7 +90,7 @@ a {
 	}
 }
 button {
-    outline: 0 !important; 
+    outline: 0 !important;
 	box-shadow: none;
 	border: none;
     &:focus {
@@ -117,7 +118,7 @@ p {
 	&:last-child {
         margin-bottom: 0;
     }
-} 
+}
 img {
     max-width: 100%;
     height: auto;
@@ -158,7 +159,7 @@ ul {
         box-shadow: unset;
     }
 }
-textarea {   
+textarea {
     &.form-control {
         height: auto;
     }
@@ -253,7 +254,7 @@ Read More Area Style*/
 	display: block;
 	font-size: 13px;
 	&:hover {
-		color: $main-color; 
+		color: $main-color;
 		i{
 			color: $main-color;
 			animation: rotation 0.5s linear infinite;
@@ -269,7 +270,7 @@ HOME PAGE ONE STYLE
 
 /*
 Header Area Style
-======================================================*/ 
+======================================================*/
 .header-area {
 	.top-header-area {
 		padding: 15px 0;
@@ -284,7 +285,7 @@ Header Area Style
 		.header-content-right {
 			float: right;
 			li {
-				display: inline-block; 
+				display: inline-block;
 				padding-right: 20px;
 				color: $heading-color;
 				&:last-child {
@@ -296,7 +297,7 @@ Header Area Style
 					i {
 						color: $white-color;
 						margin-right: 5px;
-						font-size: 15px; 
+						font-size: 15px;
 						background-color: #193e80;
 						width: 25px;
 						height: 25px;
@@ -317,7 +318,7 @@ Header Area Style
 
 /*
 Nav Area Style
-======================================================*/ 
+======================================================*/
 .navbar-area {
 	.main-nav {
 		position: unset;
@@ -469,7 +470,7 @@ Nav Area Style
 				}
 			}
 		}
-	}	
+	}
 
 	.others-option {
 		position: relative;
@@ -633,7 +634,7 @@ Nav Area Style
     }
     &.collapsed {
         .top-bar {
-            transform: rotate(0);      
+            transform: rotate(0);
             left: 0;
         }
         .middle-bar {
@@ -814,7 +815,7 @@ Search Overlay CSS
 				border: none;
 				font-size: 20px;
 				line-height: 50px;
-				 
+
 				&:hover {
 					background-color: $black-color;
 					color: $white-color;
@@ -939,7 +940,7 @@ Sidebar Modal Area Style
 							}
 						}
 						i {
-							position: absolute; 
+							position: absolute;
 							left: 0;
 							top: 5px;
 							color: $white-color;
@@ -1037,7 +1038,7 @@ Sidebar Modal Area Style
 			&:hover {
 				color: red;
 			}
-			
+
 			i {
 				font-size: 30px;
 			}
@@ -1057,10 +1058,10 @@ Sidebar Modal Area Style
 
 /*
 Banner Area Style
-======================================================*/ 
+======================================================*/
 .main-banner-area {
 	position: relative;
-	background-color: #c6e3fd; 
+	background-color: #c6e3fd;
 	padding-top: 225px;
     padding-bottom: 125px;
 	z-index: 1;
@@ -1108,7 +1109,7 @@ Banner Area Style
 
 /*
 Choose Us Area Style
-======================================================*/ 
+======================================================*/
 .single-choose {
 	text-align: center;
 	background-color: $white-color;
@@ -1186,7 +1187,7 @@ Choose Us Area Style
 
 /*
 About Area Style
-======================================================*/ 
+======================================================*/
 .about-area {
 	background-color: #f8f9fa;
 	height: 100%;
@@ -1271,7 +1272,7 @@ About Area Style
 
 /*
 Our Vision Area Style
-======================================================*/ 
+======================================================*/
 .our-vision-area {
 	position: relative;
 	.vision-content {
@@ -1304,7 +1305,7 @@ Our Vision Area Style
 					width: 50%;
 					float: left;
 					padding-right: 15px;
-					
+
 					i {
 						font-size: 25px;
 						font-weight: normal;
@@ -1320,7 +1321,7 @@ Our Vision Area Style
 
 /*
 Services Area Style
-======================================================*/ 
+======================================================*/
 .services-area {
 	position: relative;
 	overflow: hidden;
@@ -1373,7 +1374,7 @@ Services Area Style
 		color: $white-color;
 		font-size: 15px;
 	}
-	&:hover { 
+	&:hover {
 		box-shadow: $box-shadow;
 		background-color: $main-color;
 		i {
@@ -1387,7 +1388,7 @@ Services Area Style
 
 /*
 Quat Area Style
-======================================================*/  
+======================================================*/
 .get-quat-area {
 	.quat-form {
 		padding: 50px;
@@ -1417,7 +1418,7 @@ Quat Area Style
 				}
 			}
 			.right {
-				float: right;	
+				float: right;
 			}
 		}
 		.tabs {
@@ -1488,7 +1489,7 @@ Counter Area Style
 .counter-area  {
 	background-color: #f2f7fd;
 	overflow: hidden;
-	position: relative; 
+	position: relative;
 	z-index: 1;
 	.col-lg-3 {
 		&:nth-child(4) {
@@ -1578,7 +1579,7 @@ Achievement Area Style
 Agent Now Area Style
 ======================================================*/
 .agent-now-area {
-	background-color: #f2f7fd; 
+	background-color: #f2f7fd;
 	position: relative;
 	z-index: 1;
 	.call-now {
@@ -1611,7 +1612,7 @@ Agent Now Area Style
 	.subscribe-wrap {
 		background-color: $heading-color;
 		border-radius: 10px;
-		padding: 40px 50px; 
+		padding: 40px 50px;
 		p {
 			line-height: 1;
 			font-size: 20px;
@@ -1668,8 +1669,8 @@ Testimonial Area Style
 					left: 0;
 					transition: $transition;
 					color: $main-color;
-					font-size: 20px;	
-					line-height: 30px; 
+					font-size: 20px;
+					line-height: 30px;
 				}
 				.owl-next {
 					left: auto;
@@ -1886,7 +1887,7 @@ Blog Area Style
 
 /*
 Footer Top Area Style
-======================================================*/ 
+======================================================*/
 .footer-top-area {
 	background-image: url(/images/footer-bg.png);
 	background-position: center center;
@@ -2057,7 +2058,7 @@ Footer Top Area Style
 
 /*
 Footer Bottom Area Style
-======================================================*/ 
+======================================================*/
 .footer-bottom-area {
 	background-color: $main-color;
 	padding: 20px 0;
@@ -2185,7 +2186,7 @@ Service Area Two Style
 .service-area-two {
 	.single-service {
 		text-align: center;
-		margin-bottom: 30px; 
+		margin-bottom: 30px;
 		transition: $transition;
 		img {
 			border-radius: $border-radius $border-radius 0 0;
@@ -2358,8 +2359,8 @@ Testimonial Wrap Two Style
 				left: 0;
 				transition: $transition;
 				color: $main-color;
-				font-size: 20px;	
-				line-height: 30px; 
+				font-size: 20px;
+				line-height: 30px;
 			}
 			.owl-next {
 				left: auto;
@@ -2501,7 +2502,7 @@ Header Area Three Style
 
 /*
 Hero Slider Area Style
-======================================================*/ 
+======================================================*/
 .hero-slider-area {
 	.slider-item {
 		background-position: center center;
@@ -2563,7 +2564,7 @@ Hero Slider Area Style
 						color: $white-color;
 					}
 				}
-			}   
+			}
 		}
 	}
 	.owl-item {
@@ -2721,7 +2722,7 @@ Get Quat Area Style
 		height: 100%;
 		background-color: $heading-color;
 		opacity: 0.9;
-	} 
+	}
 	.get-quat-content {
 		.section-title {
 			text-align: left;
@@ -2764,7 +2765,7 @@ Get Quat Area Style
 			}
 		}
 	}
-} 
+}
 
 .work-area {
 	overflow: hidden;
@@ -2792,12 +2793,12 @@ Nav Style Four
 }
 
 
-/*==================================================== 
+/*====================================================
 INNER PAGE STYLE
 ======================================================*/
 
 
-/* 
+/*
 Page Title Area Style
 =====================================================*/
 .page-title-area {
@@ -2928,7 +2929,7 @@ Sign In & Log In  Area Style
 				font-weight: 600;
 				&.btn-two {
 					display: table;
-					margin: 0 auto 0; 
+					margin: 0 auto 0;
 					padding: 15px 40px;
 				}
 			}
@@ -2995,7 +2996,7 @@ Sign In & Log In  Area Style
 	}
 }
 
-/* 
+/*
 Coming Soon Area Style
 =====================================================*/
 .coming-soon-area {
@@ -3099,7 +3100,7 @@ Coming Soon Area Style
 				}
 			}
 			button {
-				position: absolute; 
+				position: absolute;
 				right: 0;
 				top: 0;
 				height: 60px;
@@ -3133,14 +3134,14 @@ Coming Soon Area Style
 			}
 		}
 	}
-} 
+}
 
 /*
 404 Error Area Style
 =====================================================*/
 .error-area {
 	padding: 50px 0;
-	height: 100vh;  
+	height: 100vh;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -3370,7 +3371,7 @@ Blog Details Area Style
 				margin-bottom: -10px;
 				ul {
 					padding-left: 0;
-					margin-bottom: 0; 
+					margin-bottom: 0;
 					list-style-type: none;
 					li {
 						position: relative;
@@ -3573,7 +3574,7 @@ Blog Details Area Style
 					i {
 						margin-left: 0;
 						font-size: 20px;
-						position: relative; 
+						position: relative;
 						top: 4px;
 					}
 				}
@@ -3733,7 +3734,7 @@ Blog Details Area Style
 				color: $heading-color;
 				margin-bottom: 5px;
 			}
-			
+
 			input[type="datetime-local"] {
 				display: block;
 				width: 100%;
@@ -3749,7 +3750,7 @@ Blog Details Area Style
 			input[type="week"] {
 				display: block;
 				width: 100%;
-				background-color: #f7f7f7;  
+				background-color: #f7f7f7;
 				border: 1px solid #eeeeee;
 				padding: 0.625em 0.7375em;
 				outline: 0;
@@ -3857,7 +3858,7 @@ Blog Details Area Style
 			textarea {
 				display: block;
 				width: 100%;
-				background-color: #f7f7f7; 
+				background-color: #f7f7f7;
 				border: 1px solid #eeeeee;
 				padding: 0.625em 0.7375em;
 				outline: 0;
@@ -3924,13 +3925,13 @@ Blog Details Area Style
 					}
 					&:focus {
 						color: $white-color;
-						background-color: $main-color;  
+						background-color: $main-color;
 					}
 				}
 			}
 		}
 	}
-	
+
 	/*
 	Sidebar Widget Area Style
 	================================*/
@@ -4358,7 +4359,7 @@ Blog Details Area Style
 			display: block;
 			margin-bottom: 4px;
 		}
-	} 
+	}
 }
 
 /*
@@ -4444,7 +4445,7 @@ Contact Area Style
 	}
 }
 
-/* 
+/*
 FAQ Area Style
 =====================================================*/
 .faq-area {
@@ -4470,7 +4471,7 @@ FAQ Area Style
 				margin-bottom: 20px;
 				border: none;
 				&:last-child {
-					margin-bottom: 0; 
+					margin-bottom: 0;
 				}
 			}
 			.accordion__button {
@@ -4555,7 +4556,7 @@ Client Area Style
 		transform: translateY(-5px);
 	}
 }
-	
+
 
 /*
 Portfolio Area Style
@@ -4601,7 +4602,7 @@ Portfolio Area Style
 		}
 	}
 	.portfolio-content {
-		position: absolute; 
+		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -4631,7 +4632,7 @@ Portfolio Area Style
 				a {
 					text-decoration: underline;
 				}
-					
+
 			}
 			a {
 				color: $white-color;
@@ -4640,7 +4641,7 @@ Portfolio Area Style
 				a {
 					color: $white-color;
 				}
-					
+
 			}
 		}
 		.read-more {
@@ -4650,7 +4651,7 @@ Portfolio Area Style
 		}
 	}
 	&:hover {
-		.portfolio-content { 
+		.portfolio-content {
 			transform: scaleY(1);
 		}
 		.portfolio-image {
@@ -5022,7 +5023,7 @@ Section Title Area Style*/
 	}
 	h2 {
 		font-size: 40px;
-		margin-bottom: 15px; 
+		margin-bottom: 15px;
 		position: relative;
 		display: block;
 		&:last-child {

@@ -7,7 +7,7 @@ const BlogPost = () => {
   const [posts, setPosts] = React.useState([]);
   React.useEffect(() => {
     axios
-      .get("https://sheltered-refuge-20729.herokuapp.com/api/allposts")
+      .get("http://localhost:8000/api/allposts")
       .then((response) => {
         setPosts(response.data.posts);
       })
@@ -33,7 +33,7 @@ const BlogPost = () => {
             </li>
           </ul>
 
-          <Link href={`post?id=${post.id}`}>
+          <Link href={`blog-details?id=${post.id}`}>
             <a>
               <h3>{post.title}</h3>
             </a>

@@ -149,7 +149,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/coming-soon" activeClassName="active">
+                    <Link href="/tenders-and-rfqs" activeClassName="active">
                       <a onClick={toggleNavbar} className="nav-link">
                         Tenders and RFQ
                       </a>
@@ -183,7 +183,7 @@ const Navbar = () => {
                       </li>
 
                       <li className="nav-item">
-                        <Link href="/coming-soon" activeClassName="active">
+                        <Link href="/careers" activeClassName="active">
                           <a onClick={toggleNavbar} className="nav-link">
                             Careers
                           </a>
@@ -191,7 +191,11 @@ const Navbar = () => {
                       </li>
 
                       <li className="nav-item">
-                        <Link href="/coming-soon" activeClassName="active">
+                        <Link
+                          href="/files/Memorandum & Articles of Association.pdf"
+                          activeClassName="active"
+                          download
+                        >
                           <a onClick={toggleNavbar} className="nav-link">
                             Memorandum & Articles of Association
                           </a>

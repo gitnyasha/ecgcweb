@@ -7,8 +7,8 @@ template.top-header-area
 
 This files table contents are outlined below>>>>>
 
-******************************************* 
-** - DEFAULT AREA STYLE 
+*******************************************
+** - DEFAULT AREA STYLE
 ** - Default Btn Area Style
 ** - Read More Area Style
 ** - Header Area Style
@@ -50,6 +50,7 @@ This files table contents are outlined below>>>>>
 /*
 Default Style
 ============================*/
+
 :root {
   scroll-behavior: inherit;
 }
@@ -3137,10 +3138,10 @@ Nav Style Four
   color: #1B75BA;
 }
 
-/*==================================================== 
+/*====================================================
 INNER PAGE STYLE
 ======================================================*/
-/* 
+/*
 Page Title Area Style
 =====================================================*/
 
@@ -3366,7 +3367,7 @@ Sign In & Log In  Area Style
   padding-left: 5px;
 }
 
-/* 
+/*
 Coming Soon Area Style
 =====================================================*/
 .coming-soon-area {
@@ -5067,7 +5068,7 @@ Contact Area Style
   margin-bottom: -8px;
 }
 
-/* 
+/*
 FAQ Area Style
 =====================================================*/
 .faq-area .faq-accordion {

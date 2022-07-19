@@ -5,8 +5,24 @@ import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import BlogSidebar from "../components/Blog/BlogSidebar";
 import Comments from "../components/Blog/comments";
+import { useRouter } from "next/router";
+import axios from "axios";
+import Moment from "moment";
 
 const BlogDetails = () => {
+  const [post, setPost] = React.useState([]);
+  const router = useRouter();
+  const { id: id } = router.query;
+  React.useEffect(() => {
+    axios
+      .get(`http://localhost:8000/api/allposts/${id}`)
+      .then((response) => {
+        setPost(response.data.data);
+        console.log(response.data.data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -36,80 +52,23 @@ const BlogDetails = () => {
                       <li>
                         <span>Posted On:</span>
                         <Link href="#">
-                          <a>April 20 , 2020</a>
+                          <a>
+                            {Moment(post.created_at).format("MMMM Do YYYY")}
+                          </a>
                         </Link>
                       </li>
                       <li>
                         <span>Posted By:</span>
                         <Link href="#">
-                          <a>John Anderson</a>
+                          <a>Admin</a>
                         </Link>
                       </li>
                     </ul>
                   </div>
 
-                  <h3>2020 Insurance Trends And Possible Challenge</h3>
+                  <h3>{post.title}</h3>
 
-                  <p>
-                    Quuntur magni dolores eos qui ratione voluptatem sequi
-                    nesciunt. Neque porro quia non numquam eius modi tempora
-                    incidunt ut labore et dolore magnam dolor sit, consectetur.
-                  </p>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in sed quia non
-                    numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat.
-                  </p>
-
-                  <blockquote className="flaticon-quote">
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellendus aliquid praesentium eveniet illum asperiores,
-                      quidem, ipsum voluptatum numquam ducimus nisi
-                      exercitationem dolorum facilis Repellendus aliquid
-                      praesentium eveniet illum asperiores.
-                    </p>
-                  </blockquote>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in sed quia non
-                    numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in sed quia non numquam eius modi tempora
-                    incidunt ut labore et dolore magnam aliquam quaerat.
-                  </p>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in sed quia non
-                    numquam eius modi tempora incidunt ut labore et dolore
-                    magnam aliquam quaerat.
-                  </p>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in sed quia non
-                    numquam.
-                  </p>
+                  {post.description}
                 </div>
 
                 <div className="post-navigation">
