@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import axios from "axios";
 import Alert from "react-bootstrap/Alert";
+import { backend } from "./api/api";
 
 const ExportPaymentInsuaranceForm = () => {
   const [registeredcompanyname, setRegisteredCompanyName] = React.useState("");
@@ -34,7 +34,7 @@ const ExportPaymentInsuaranceForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
+    backend
       .post("https://sheltered-refuge-20729.herokuapp.com/api/export-payment", {
         registeredcompanyname: registeredcompanyname,
         policynumber: policynumber,

@@ -6,16 +6,16 @@ import Link from "next/link";
 import BlogSidebar from "../components/Blog/BlogSidebar";
 import Comments from "../components/Blog/comments";
 import { useRouter } from "next/router";
-import axios from "axios";
 import Moment from "moment";
+import { backend } from "./api/api";
 
 const BlogDetails = () => {
   const [post, setPost] = React.useState([]);
   const router = useRouter();
   const { id: id } = router.query;
   React.useEffect(() => {
-    axios
-      .get(`https://sheltered-refuge-20729.herokuapp.com/api/allposts/${id}`)
+    backend
+      .get(`/api/allposts/${id}`)
       .then((response) => {
         setPost(response.data.data);
         console.log(response.data.data);

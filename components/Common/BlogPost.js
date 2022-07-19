@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import axios from "axios";
 import Moment from "moment";
+import { backend } from "../../pages/api/api";
 
 const BlogPost = () => {
   const [posts, setPosts] = React.useState([]);
   React.useEffect(() => {
-    axios
-      .get("https://sheltered-refuge-20729.herokuapp.com/api/allposts")
+    backend
+      .get("/api/allposts")
       .then((response) => {
         setPosts(response.data.posts);
       })

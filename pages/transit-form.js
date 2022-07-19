@@ -1,7 +1,7 @@
-import axios from "axios";
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
+import { backend } from "./api/api";
 
 const TransitForm = () => {
   const [email, setEmail] = React.useState("");
@@ -67,7 +67,7 @@ const TransitForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
+    backend
       .post("https://sheltered-refuge-20729.herokuapp.com/api/transit", {
         contractoraddress: contractoraddress,
         subcontratorpremium: subcontratorpremium,

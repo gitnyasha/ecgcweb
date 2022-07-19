@@ -3,22 +3,35 @@ import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import Navbar from "../components/_App/Navbar";
-import apiClient from "./api/api";
+import { apiClient } from "./api/api";
+import axios from "axios";
 
 const SignIn = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    apiClient.get("/sanctum/csrf-cookie").then((response) => {
-      apiClient
-        .post("/api/auth/sign-in", {
-          email: email,
-          password: password,
-        })
-        .then((response) => {
-          console.log(response);
-        });
+
+    let headersList = {
+      "X-Requested-With": "XMLHttpRequest",
+    };
+
+    let formdata = new FormData();
+    formdata.append("email", email);
+    formdata.append("password", password);
+
+    let bodyContent = formdata;
+
+    let reqOptions = {
+      url: "http://localhost:8000/api/auth/sign-in",
+      method: "POST",
+      headers: headersList,
+      data: bodyContent,
+      withCredentials: true,
+    };
+
+    axios.request(reqOptions).then(function(response) {
+      console.log(response.data);
     });
   };
   return (

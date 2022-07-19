@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import axios from "axios";
+import { backend } from "./api/api";
 
 const DomesticPaymentInsuaranceForm = () => {
   const [email, setEmail] = React.useState("");
@@ -45,47 +45,44 @@ const DomesticPaymentInsuaranceForm = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    axios
-      .post(
-        "https://sheltered-refuge-20729.herokuapp.com/api/domestic-payment",
-        {
-          email: email,
-          clientname: clientname,
-          policynumber: policynumber,
-          maximumliability: maximumliability,
-          physicaladdress: physicaladdress,
-          extenof: extenof,
-          amountnow: amountnow,
-          insolvency: insolvency,
-          failureradios: failureRadios,
-          date1: date1,
-          termsofpayment: termsofpayment,
-          amount: amount,
-          effectivedate: effectivedate,
-          dateofsales1: dateOfsales1,
-          itemsold1: itemsold1,
-          grossinvoice1: grossinvoice1,
-          termsofpayment1: termsofpayment1,
-          duedate1: duedate1,
-          datedeclared1: datedeclared1,
-          overdues: overdues,
-          declaration: particulars,
-          payreceive: payreceive,
-          nonfulfillment: nonfulfillment,
-          proceedsresale: proceedsresale,
-          setoff: setoff,
-          lessTotal: lesstotal,
-          expenses: expenses,
-          netamountloss: netamountloss,
-          check1: check1,
-          check2: check2,
-          check3: check3,
-          check4: check4,
-          check5: check5,
-          check6: check6,
-          check7: check7,
-        }
-      )
+    backend
+      .post("/api/domestic-payment", {
+        email: email,
+        clientname: clientname,
+        policynumber: policynumber,
+        maximumliability: maximumliability,
+        physicaladdress: physicaladdress,
+        extenof: extenof,
+        amountnow: amountnow,
+        insolvency: insolvency,
+        failureradios: failureRadios,
+        date1: date1,
+        termsofpayment: termsofpayment,
+        amount: amount,
+        effectivedate: effectivedate,
+        dateofsales1: dateOfsales1,
+        itemsold1: itemsold1,
+        grossinvoice1: grossinvoice1,
+        termsofpayment1: termsofpayment1,
+        duedate1: duedate1,
+        datedeclared1: datedeclared1,
+        overdues: overdues,
+        declaration: particulars,
+        payreceive: payreceive,
+        nonfulfillment: nonfulfillment,
+        proceedsresale: proceedsresale,
+        setoff: setoff,
+        lessTotal: lesstotal,
+        expenses: expenses,
+        netamountloss: netamountloss,
+        check1: check1,
+        check2: check2,
+        check3: check3,
+        check4: check4,
+        check5: check5,
+        check6: check6,
+        check7: check7,
+      })
       .then((response) => {
         console.log(response);
       });
