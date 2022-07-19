@@ -15,7 +15,7 @@ const BlogDetails = () => {
   const { id: id } = router.query;
   React.useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/allposts/${id}`)
+      .get(`https://sheltered-refuge-20729.herokuapp.com/api/allposts/${id}`)
       .then((response) => {
         setPost(response.data.data);
         console.log(response.data.data);

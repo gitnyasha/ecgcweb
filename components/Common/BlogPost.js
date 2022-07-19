@@ -7,7 +7,7 @@ const BlogPost = () => {
   const [posts, setPosts] = React.useState([]);
   React.useEffect(() => {
     axios
-      .get("http://localhost:8000/api/allposts")
+      .get("https://sheltered-refuge-20729.herokuapp.com/api/allposts")
       .then((response) => {
         setPosts(response.data.posts);
       })

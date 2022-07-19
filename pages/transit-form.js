@@ -68,7 +68,7 @@ const TransitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/api/transit", {
+      .post("https://sheltered-refuge-20729.herokuapp.com/api/transit", {
         contractoraddress: contractoraddress,
         subcontratorpremium: subcontratorpremium,
         vehicleregnumber: vehicleregnumber,
