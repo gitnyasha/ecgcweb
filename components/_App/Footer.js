@@ -108,7 +108,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/files/Memorandum%20&%20Articles%20of%20Association.pdf">
+                    <Link href="/files/Memorandum & Articles of Association.pdf">
                       <a>Memorandum and Articles</a>
                     </Link>
                   </li>
