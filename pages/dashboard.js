@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Router from "next/router";
+
 // import Tab from "react-bootstrap/Tab";
 // import Tabs from "react-bootstrap/Tabs";
 // import DashboardNavbar from "../components/dashboard-navbar";
@@ -10,6 +13,7 @@ import React, { useState } from "react";
 const Dashboard = () => {
   const [show, setShow] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = React.useState([]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -19,8 +23,38 @@ const Dashboard = () => {
     setLoggedIn(true);
   };
 
+  useEffect(() => {
+    let headersList = {
+      Authorization: "Bearer 13|Vy1h0SAVILE2jGAEfrrjSZiv9XJq2CXtbcydHeHz",
+    };
+
+    let formdata = new FormData();
+
+    let bodyContent = formdata;
+
+    let reqOptions = {
+      url: "http://localhost:8000/api/auth/profile",
+      method: "GET",
+      headers: headersList,
+      data: bodyContent,
+    };
+
+    axios.request(reqOptions).then(function(response) {
+      if (response.status === 200) {
+        console.log(response.data.user);
+        setUser(response.data.user);
+        login();
+      }
+    });
+  }, []);
+
+  if (!loggedIn) {
+    Router.push("/sign-in");
+  }
+
   return (
-    <h1>Dashboard</h1>
+    <h1>Dashboard - {user.name}</h1>
+
     // <SSRProvider>
     //   <DashboardNavbar />
     //   <Tabs

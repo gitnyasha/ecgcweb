@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "../components/_App/Navbar";
 import { apiClient } from "./api/api";
 import axios from "axios";
+import Router from "next/router";
 
 const SignIn = () => {
   const [email, setEmail] = React.useState("");
@@ -31,7 +32,10 @@ const SignIn = () => {
     };
 
     axios.request(reqOptions).then(function(response) {
-      console.log(response.data);
+      if (response.status === 200) {
+        localStorage.setItem("user", JSON.stringify(response.data.token));
+        Router.push("/dashboard");
+      }
     });
   };
   return (
