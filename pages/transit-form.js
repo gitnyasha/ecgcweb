@@ -68,7 +68,7 @@ const TransitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
-      .post("https://sheltered-refuge-20729.herokuapp.com/api/transit", {
+      .post("/api/transit", {
         contractoraddress: contractoraddress,
         subcontratorpremium: subcontratorpremium,
         vehicleregnumber: vehicleregnumber,

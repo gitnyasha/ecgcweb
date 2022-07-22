@@ -4,6 +4,7 @@ import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import { backend } from "./api/api";
+import Moment from "moment";
 
 const Careers = () => {
   const [careers, setCareers] = React.useState([]);
@@ -16,12 +17,11 @@ const Careers = () => {
       .catch((error) => console.error(error));
   }, []);
   const jobs = careers.map((job) => (
-    <div className="col-lg-4 col-sm-6">
-      <div className="single-client">
-        <h3>{job.title}</h3>
-        <p>{job.description}</p>
-      </div>
-    </div>
+    <tr key={job.id}>
+      <td>{job.title}</td>
+      <td>{job.description}</td>
+      <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
+    </tr>
   ));
   if (careers.length > 0) {
     return (
@@ -29,7 +29,7 @@ const Careers = () => {
         <Navbar />
 
         <PageBanner
-          pageTitle="careers"
+          pageTitle="ECGC Careers"
           homePageUrl="/"
           homePageText="Home"
           activePageText="careers"
@@ -38,48 +38,20 @@ const Careers = () => {
         <div className="client-area ptb-100">
           <div className="container">
             <div className="section-title">
-              <h2>ECGC Careers</h2>
+              <h2>Careers</h2>
             </div>
 
             <div className="row">
-              {jobs}
-
-              <div className="col-lg-12">
-                {/* Pagination */}
-                <div className="page-navigation-area text-center">
-                  <ul className="pagination">
-                    <li className="page-item">
-                      <Link href="#">
-                        <a className="page-link page-links">
-                          <i className="bx bx-chevrons-left"></i>
-                        </a>
-                      </Link>
-                    </li>
-                    <li className="page-item active">
-                      <Link href="#">
-                        <a className="page-link">1</a>
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link href="#">
-                        <a className="page-link">2</a>
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link href="#">
-                        <a className="page-link">3</a>
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link href="#">
-                        <a className="page-link">
-                          <i className="bx bx-chevrons-right"></i>
-                        </a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <table className="table top-selling-table" id="datatablesSimple">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date Posted</th>
+                  </tr>
+                </thead>
+                <tbody>{jobs}</tbody>
+              </table>
             </div>
           </div>
         </div>

@@ -35,7 +35,7 @@ const ExportPaymentInsuaranceForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
-      .post("https://sheltered-refuge-20729.herokuapp.com/api/export-payment", {
+      .post("/api/export-payment", {
         registeredcompanyname: registeredcompanyname,
         policynumber: policynumber,
         contactperson: contactperson,

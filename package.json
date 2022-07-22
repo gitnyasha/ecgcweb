@@ -24,7 +24,6 @@
         "nodemailer": "^6.7.2",
         "nodemailer-sendgrid-transport": "^0.2.0",
         "nuka-carousel": "^4.8.4",
-        "pdf-viewer-reactjs": "^2.2.3",
         "peer": "^0.6.1",
         "radium": "^0.26.1",
         "react": "^17.0.2",
@@ -38,6 +37,7 @@
         "react-modal-video": "^1.2.8",
         "react-owl-carousel3": "^2.2.5",
         "react-perfect-scrollbar": "^1.5.8",
+        "react-pro-sidebar": "^0.7.1",
         "react-responsive-carousel": "^3.2.22",
         "react-simple-chatbot": "^0.6.1",
         "sass": "^1.44.0",
@@ -48,10 +48,5 @@
     },
     "devDependencies": {
         "next-images": "^1.8.4"
-    },
-     "peerDependencies": {
-        "bulma": ">=0.8.1",
-        "bulma-helpers": ">=0.3.10",
-        "material-design-icons": ">=3.0.1"
     }
 }

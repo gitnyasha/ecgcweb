@@ -7,8 +7,10 @@ const apiClient = axios.create({
   withCredentials: true,
 });
 
+const uri = "http://localhost:8000";
+
 const backend = axios.create({
   baseURL: "http://localhost:8000",
   // baseURL: "https://sheltered-refuge-20729.herokuapp.com",
 });
-export { apiClient, backend };
+export { apiClient, backend, uri };

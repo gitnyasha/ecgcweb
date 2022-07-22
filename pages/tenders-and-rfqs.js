@@ -4,6 +4,7 @@ import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import { backend } from "./api/api";
+import Moment from "moment";
 
 const TendersAndRfqs = () => {
   const [tenders, setTenders] = React.useState([]);
@@ -15,13 +16,15 @@ const TendersAndRfqs = () => {
       })
       .catch((error) => console.error(error));
   }, []);
-  const tnq = tenders.map((job) => (
-    <div className="col-lg-4 col-sm-6">
-      <div className="single-client">
-        <h3>{job.title}</h3>
-        <p>{job.description}</p>
-      </div>
-    </div>
+  const tnq = tenders.map((p) => (
+    <tr key={p.id}>
+      <td>{p.title}</td>
+      <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
+      <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
+      <td>
+        <a href="#">Download</a>
+      </td>
+    </tr>
   ));
   if (tenders.length > 0) {
     return (
@@ -29,7 +32,7 @@ const TendersAndRfqs = () => {
         <Navbar />
 
         <PageBanner
-          pageTitle="tenders"
+          pageTitle="ECGC Tenders"
           homePageUrl="/"
           homePageText="Home"
           activePageText="tenders"
@@ -37,11 +40,24 @@ const TendersAndRfqs = () => {
 
         <div className="client-area ptb-100">
           <div className="container">
-            <div className="section-title">
-              <h2>ECGC tenders</h2>
+            <div className="row">
+              <div className="table-responsive">
+                <table
+                  className="table top-selling-table"
+                  id="datatablesSimple"
+                >
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Issued</th>
+                      <th>Deadline</th>
+                      <th>Document</th>
+                    </tr>
+                  </thead>
+                  <tbody>{tnq}</tbody>
+                </table>
+              </div>
             </div>
-
-            <div className="row">{tnq}</div>
           </div>
         </div>
 
