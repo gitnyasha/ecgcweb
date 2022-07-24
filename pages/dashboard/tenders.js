@@ -28,7 +28,6 @@ const Tenders = () => {
     e.preventDefault();
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
-      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();
