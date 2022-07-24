@@ -24,6 +24,7 @@ const Careers = () => {
     e.preventDefault();
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();
@@ -47,6 +48,7 @@ const Careers = () => {
     e.preventDefault();
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
     let formdata = new FormData();
     formdata.append("title", title);
@@ -71,6 +73,7 @@ const Careers = () => {
   useEffect(() => {
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();

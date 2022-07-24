@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import Alert from "react-bootstrap/Alert";
-import { backend } from "./api/api";
+import { backend, uri } from "./api/api";
 
 const ExportPaymentInsuaranceForm = () => {
   const [registeredcompanyname, setRegisteredCompanyName] = React.useState("");
@@ -35,31 +35,39 @@ const ExportPaymentInsuaranceForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
-      .post("/api/export-payment", {
-        registeredcompanyname: registeredcompanyname,
-        policynumber: policynumber,
-        contactperson: contactperson,
-        position: position,
-        phone: phone,
-        mobile: mobile,
-        fullname: fullname,
-        idnumber: idnumber,
-        contactdetails: contactdetails,
-        address: address,
-        cause: cause,
-        amountowed: amountowed,
-        purposeofloan: purposeofloan,
-        check1: check1,
-        check2: check2,
-        check3: check3,
-        check4: check4,
-        check5: check5,
-        check6: check6,
-        check7: check7,
-        applyname: applyname,
-        applyposition: applyposition,
-        datesigned: datesigned,
-      })
+      .post(
+        "/api/export-payment",
+        {
+          registeredcompanyname: registeredcompanyname,
+          policynumber: policynumber,
+          contactperson: contactperson,
+          position: position,
+          phone: phone,
+          mobile: mobile,
+          fullname: fullname,
+          idnumber: idnumber,
+          contactdetails: contactdetails,
+          address: address,
+          cause: cause,
+          amountowed: amountowed,
+          purposeofloan: purposeofloan,
+          check1: check1,
+          check2: check2,
+          check3: check3,
+          check4: check4,
+          check5: check5,
+          check6: check6,
+          check7: check7,
+          applyname: applyname,
+          applyposition: applyposition,
+          datesigned: datesigned,
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": uri + "/api",
+          },
+        }
+      )
       .then((response) => {
         if (response.data.status === "201") {
           setShow(true);

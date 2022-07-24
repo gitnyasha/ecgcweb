@@ -24,6 +24,7 @@ const BlogPosts = () => {
     e.preventDefault();
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();
@@ -48,6 +49,7 @@ const BlogPosts = () => {
     e.preventDefault();
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();
@@ -76,6 +78,7 @@ const BlogPosts = () => {
   useEffect(() => {
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();

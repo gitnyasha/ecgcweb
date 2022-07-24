@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import { backend } from "./api/api";
+import { backend, uri } from "./api/api";
 
 const TransitForm = () => {
   const [email, setEmail] = React.useState("");
@@ -68,62 +68,73 @@ const TransitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
-      .post("/api/transit", {
-        contractoraddress: contractoraddress,
-        subcontratorpremium: subcontratorpremium,
-        vehicleregnumber: vehicleregnumber,
-        ownvehicle: ownvehicle,
-        ownernameaddress: ownernameaddress,
-        involvedinaccident: involvedinaccident,
-        brief: brief,
-        email: email,
-        insuredname: insuredname,
-        policynumber: policynumber,
-        contactnumber: contactnumber,
-        position: position,
-        phone: phone,
-        mobile: mobile,
-        occurencedate: occurencedate,
-        occurencetime: occurencetime,
-        occurenceplace: occurenceplace,
-        detailsofload: detailsofload,
-        numpackagesofarticles1: numpackagesofarticles1,
-        tweight1: tweight1,
-        tvalue1: tvalue1,
-        descofgoodsdamaged: descofgoodsdamaged,
-        numpackagesofarticles2: numpackagesofarticles2,
-        tweight2: tweight2,
-        tvalue2: tvalue2,
-        salvage: salvage,
-        grossclaim: grossclaim,
-        netclaim: netclaim,
-        policestation: policestation,
-        nonfulfillment: nonfulfillment,
-        ownersinvolved: ownersinvolved,
-        setoff: setoff,
-        witnessess: witnessess,
-        partcularstaken: partcularstaken,
-        aretherewitnessess: aretherewitnessess,
-        policeaddress: policeaddress,
-        aretherewarnings: aretherewarnings,
-        consigneesaddress: consigneesaddress,
-        consignorsaddress: consignorsaddress,
-        whenwherewho: whenwherewho,
-        receipt: receipt,
-        goodspacked: goodspacked,
-        lessexcess: lessexcess,
-        policereferencenumber: policereferencenumber,
-        accordance: accordance,
-        journey: journey,
-        actiontaken: actiontaken,
-        deliveryaccepted: deliveryaccepted,
-        inspected: inspected,
-        recieptloading: recieptloading,
-        ownerorcarrier: ownerorcarrier,
-        contractor: contractor,
-        subcontractor: subcontractor,
-        capacity: capacity,
-      })
+      .post(
+        
+       
+          "/api/transit",
+          {
+            contractoraddress: contractoraddress,
+            subcontratorpremium: subcontratorpremium,
+            vehicleregnumber: vehicleregnumber,
+            ownvehicle: ownvehicle,
+            ownernameaddress: ownernameaddress,
+            involvedinaccident: involvedinaccident,
+            brief: brief,
+            email: email,
+            insuredname: insuredname,
+            policynumber: policynumber,
+            contactnumber: contactnumber,
+            position: position,
+            phone: phone,
+            mobile: mobile,
+            occurencedate: occurencedate,
+            occurencetime: occurencetime,
+            occurenceplace: occurenceplace,
+            detailsofload: detailsofload,
+            numpackagesofarticles1: numpackagesofarticles1,
+            tweight1: tweight1,
+            tvalue1: tvalue1,
+            descofgoodsdamaged: descofgoodsdamaged,
+            numpackagesofarticles2: numpackagesofarticles2,
+            tweight2: tweight2,
+            tvalue2: tvalue2,
+            salvage: salvage,
+            grossclaim: grossclaim,
+            netclaim: netclaim,
+            policestation: policestation,
+            nonfulfillment: nonfulfillment,
+            ownersinvolved: ownersinvolved,
+            setoff: setoff,
+            witnessess: witnessess,
+            partcularstaken: partcularstaken,
+            aretherewitnessess: aretherewitnessess,
+            policeaddress: policeaddress,
+            aretherewarnings: aretherewarnings,
+            consigneesaddress: consigneesaddress,
+            consignorsaddress: consignorsaddress,
+            whenwherewho: whenwherewho,
+            receipt: receipt,
+            goodspacked: goodspacked,
+            lessexcess: lessexcess,
+            policereferencenumber: policereferencenumber,
+            accordance: accordance,
+            journey: journey,
+            actiontaken: actiontaken,
+            deliveryaccepted: deliveryaccepted,
+            inspected: inspected,
+            recieptloading: recieptloading,
+            ownerorcarrier: ownerorcarrier,
+            contractor: contractor,
+            subcontractor: subcontractor,
+          capacity: capacity,
+        },
+        {
+          headers: {
+         
+         "Access-Control-Allow-Origin": uri + "/api",
+          },
+        }
+      )
       .then((response) => {
         console.log(response);
       });

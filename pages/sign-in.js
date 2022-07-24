@@ -15,6 +15,7 @@ const SignIn = () => {
 
     let headersList = {
       "X-Requested-With": "XMLHttpRequest",
+      "Access-Control-Allow-Origin": uri + "/api",
     };
 
     let formdata = new FormData();
