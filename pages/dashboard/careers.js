@@ -64,7 +64,7 @@ const Careers = () => {
       setShow(false);
       setTitle("");
       setDescription("");
-      alert("Post Added");
+      alert("Job post Added");
     });
   };
 
