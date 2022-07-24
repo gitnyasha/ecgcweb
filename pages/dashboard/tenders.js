@@ -10,6 +10,7 @@ import axios from "axios";
 import Moment from "moment";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
+import Link from "next/link";
 
 const Tenders = () => {
   const [show, setShow] = useState(false);
@@ -18,7 +19,7 @@ const Tenders = () => {
   const [description, setDescription] = useState("");
   const [date_posted, setDatePosted] = useState("");
   const [deadline, setDeadline] = useState("");
-  const [document, setDocument] = useState("");
+  const [document, setDocument] = useState(null);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -51,6 +52,7 @@ const Tenders = () => {
 
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
+      "Content-Type": "multipart/form-data",
     };
 
     let formdata = new FormData();
@@ -76,9 +78,13 @@ const Tenders = () => {
       setDescription("");
       setDatePosted("");
       setDeadline("");
-      setDocument("");
+      setDocument(null);
       alert("Tender Added");
     });
+  };
+
+  const handleFileSelect = (event) => {
+    setDocument(event.target.files[0]);
   };
 
   useEffect(() => {
@@ -111,7 +117,9 @@ const Tenders = () => {
       <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
       <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
       <td>
-        <a href="#">Download</a>
+        <Link href={p.document}>
+          <a>Download</a>
+        </Link>
       </td>
       <td>
         <Button
@@ -157,7 +165,7 @@ const Tenders = () => {
               <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
               </Modal.Header>
-              <form onSubmit={handleSubmit} enctype="multipart/form-data">
+              <form onSubmit={handleSubmit}>
                 <Modal.Body>
                   <div class="form-group my-1">
                     <label for="title">Title</label>
@@ -204,10 +212,9 @@ const Tenders = () => {
                   <div class="form-group my-1">
                     <label for="file">File</label>
                     <input
-                      type="text"
-                      value={document}
+                      type="file"
                       class="form-control"
-                      onChange={(e) => setDocument(e.target.value)}
+                      onChange={handleFileSelect}
                     />
                   </div>
                 </Modal.Body>

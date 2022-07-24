@@ -22,7 +22,9 @@ const TendersAndRfqs = () => {
       <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
       <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
       <td>
-        <a href="#">Download</a>
+        <Link href={p.document}>
+          <a>Download</a>
+        </Link>
       </td>
     </tr>
   ));
