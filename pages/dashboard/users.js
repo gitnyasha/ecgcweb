@@ -47,6 +47,7 @@ const Users = () => {
       setEmail("");
       setPassword("");
       setRole("");
+      alert("User Created");
     });
   };
 

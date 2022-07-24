@@ -40,6 +40,7 @@ const BlogPosts = () => {
     axios.request(reqOptions).then(function(response) {
       console.log(response.data);
       setPosts(post);
+      alert("Post Deleted");
     });
   };
 
@@ -68,6 +69,7 @@ const BlogPosts = () => {
       setTitle("");
       setDescription("");
       setPosts(post);
+      alert("Post created successfully");
     });
   };
 

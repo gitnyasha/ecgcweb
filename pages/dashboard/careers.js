@@ -39,6 +39,7 @@ const Careers = () => {
 
     axios.request(reqOptions).then(function(response) {
       console.log(response.data);
+      alert("Post Deleted");
     });
   };
 
@@ -63,6 +64,7 @@ const Careers = () => {
       setShow(false);
       setTitle("");
       setDescription("");
+      alert("Post Added");
     });
   };
 

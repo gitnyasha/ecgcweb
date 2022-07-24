@@ -42,6 +42,7 @@ const Tenders = () => {
 
     axios.request(reqOptions).then(function(response) {
       console.log(response.data);
+      alert("Tender Deleted");
     });
   };
 
@@ -76,6 +77,7 @@ const Tenders = () => {
       setDatePosted("");
       setDeadline("");
       setDocument("");
+      alert("Tender Added");
     });
   };
 
