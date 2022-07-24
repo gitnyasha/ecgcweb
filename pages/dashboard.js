@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Sidebar from "./dashboard/Sidebar";
 import Topbar from "./dashboard/Topbar";
+import { uri } from "./api/api";
 
 const Dashboard = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -18,7 +19,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     let headersList = {
-      Authorization: "Bearer 13|Vy1h0SAVILE2jGAEfrrjSZiv9XJq2CXtbcydHeHz",
+      Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
     };
 
     let formdata = new FormData();
@@ -26,7 +27,7 @@ const Dashboard = () => {
     let bodyContent = formdata;
 
     let reqOptions = {
-      url: "http://localhost:8000/api/auth/profile",
+      url: uri + "/api/auth/profile",
       method: "GET",
       headers: headersList,
       data: bodyContent,
