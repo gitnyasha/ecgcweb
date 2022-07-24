@@ -3138,12 +3138,42 @@ Nav Style Four
   color: #1B75BA;
 }
 
+.dashboard-sidebar {
+  height: 70vh;
+  }
+
 /*====================================================
 INNER PAGE STYLE
 ======================================================*/
 /*
 Page Title Area Style
 =====================================================*/
+
+.page-career {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 240px;
+  padding-bottom: 150px;
+  text-align: center;
+  background-image: url(/images/career.jpeg);
+  z-index: 1;
+  background-position: center center;
+  background-size: cover;
+}
+
+.page-tender {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 240px;
+  padding-bottom: 150px;
+  text-align: center;
+  background-image: url(/images/tenders-banner.jpeg);
+  z-index: 1;
+  background-position: top center;
+  background-size: cover;
+}
 
 .page-title-area {
   position: relative;
@@ -3185,6 +3215,20 @@ Page Title Area Style
 .page-title-area .page-title-content h2 {
   margin-bottom: 15px;
   color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.page-career .page-career-content h2 {
+  margin-bottom: 15px;
+  color: #1B75BA;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.page-tender .page-career-content h2 {
+  margin-bottom: 15px;
+  color: #1B75BA;
   font-size: 40px;
   font-weight: 700;
 }

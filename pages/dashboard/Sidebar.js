@@ -21,7 +21,7 @@ const Sidebar = () => {
           </Link>
         </Menu>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="dashboard-sidebar">
         <Menu iconShape="square">
           <Link href="/dashboard">
             <MenuItem>Home</MenuItem>

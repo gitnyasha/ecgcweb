@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/_App/Navbar";
-import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import { backend } from "./api/api";
@@ -28,12 +27,13 @@ const Careers = () => {
       <>
         <Navbar />
 
-        <PageBanner
-          pageTitle="ECGC Careers"
-          homePageUrl="/"
-          homePageText="Home"
-          activePageText="careers"
-        />
+        <div className="page-career">
+          <div className="container">
+            <div className="page-career-content">
+              <h2>Careers</h2>
+            </div>
+          </div>
+        </div>
 
         <div className="client-area ptb-100">
           <div className="container">
@@ -64,18 +64,16 @@ const Careers = () => {
       <>
         <Navbar />
 
-        <PageBanner
-          pageTitle="careers"
-          homePageUrl="/"
-          homePageText="Home"
-          activePageText="careers"
-        />
+        <div className="page-career">
+          <div className="container">
+            <div className="page-career-content">
+              <h2>Careers</h2>
+            </div>
+          </div>
+        </div>
 
         <div className="client-area ptb-100">
           <div className="container">
-            <div className="section-title">
-              <h2>ECGC Careers</h2>
-            </div>
             <div className="row">
               <h3>No jobs at the moment</h3>
             </div>

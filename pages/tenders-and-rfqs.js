@@ -31,12 +31,13 @@ const TendersAndRfqs = () => {
       <>
         <Navbar />
 
-        <PageBanner
-          pageTitle="ECGC Tenders"
-          homePageUrl="/"
-          homePageText="Home"
-          activePageText="tenders"
-        />
+        <div className="page-tender">
+          <div className="container">
+            <div className="page-tender-content">
+              <h2>Tenders & RFQs</h2>
+            </div>
+          </div>
+        </div>
 
         <div className="client-area ptb-100">
           <div className="container">
@@ -69,18 +70,16 @@ const TendersAndRfqs = () => {
       <>
         <Navbar />
 
-        <PageBanner
-          pageTitle="tenders"
-          homePageUrl="/"
-          homePageText="Home"
-          activePageText="tenders"
-        />
+        <div className="page-tender">
+          <div className="container">
+            <div className="page-tender-content">
+              <h2>Tenders & RFQs</h2>
+            </div>
+          </div>
+        </div>
 
         <div className="client-area ptb-100">
           <div className="container">
-            <div className="section-title">
-              <h2>ECGC tenders and rfqs</h2>
-            </div>
             <div className="row">
               <h3>No tenders at the moment</h3>
             </div>
