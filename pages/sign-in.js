@@ -3,7 +3,7 @@ import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import Navbar from "../components/_App/Navbar";
-import { apiClient } from "./api/api";
+import { apiClient, uri } from "./api/api";
 import axios from "axios";
 import Router from "next/router";
 
@@ -24,7 +24,7 @@ const SignIn = () => {
     let bodyContent = formdata;
 
     let reqOptions = {
-      url: "http://localhost:8000/api/auth/sign-in",
+      url: uri + "/api/auth/sign-in",
       method: "POST",
       headers: headersList,
       data: bodyContent,
@@ -104,15 +104,6 @@ const SignIn = () => {
                       <button className="default-btn btn-two" type="submit">
                         Login
                       </button>
-                    </div>
-
-                    <div className="col-12">
-                      <p className="account-desc">
-                        Not a member?
-                        <Link href="/sign-up">
-                          <a>Sign Up</a>
-                        </Link>
-                      </p>
                     </div>
                   </div>
                 </form>
