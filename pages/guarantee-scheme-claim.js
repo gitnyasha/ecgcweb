@@ -146,7 +146,7 @@ const GuaranteeSchemeClaim = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="exampleInputLeadingBankName">
-                  Leading Bank Name
+                  Lending Bank Name:
                 </label>
                 <input
                   type="text"
@@ -157,7 +157,7 @@ const GuaranteeSchemeClaim = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="exampleInputContactOfficer">
-                  Contact Officer
+                  Contact Officer Name:
                 </label>
                 <input
                   type="text"
@@ -188,7 +188,7 @@ const GuaranteeSchemeClaim = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="exampleInputClassifiedDate">
-                  Classified Date
+                  Date on which Account was Classified as NPA
                 </label>
                 <input
                   type="date"
@@ -210,7 +210,7 @@ const GuaranteeSchemeClaim = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="exampleInputClassifiedFraud">
-                  Classified Fraud
+                  Has the account been classified as fraud*
                 </label>
                 <input
                   type="text"
@@ -220,7 +220,9 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputEnquiry">Enquiry</label>
+                <label htmlFor="exampleInputEnquiry">
+                  Internal and/or external enquiry has been concluded
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -229,7 +231,9 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputReasons">Reasons</label>
+                <label htmlFor="exampleInputReasons">
+                  Reasons for Account turning NPA
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -238,16 +242,22 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputIssuedDate">Issued Date</label>
+                <label htmlFor="exampleInputIssuedDate">
+                  *Date of issue of Recall Notice
+                </label>
                 <input
                   type="date"
                   className="form-control"
                   value={issuedate}
                   onChange={(e) => setIssueDate(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputRecallNotice">Recall Notice</label>
+                <label htmlFor="exampleInputRecallNotice">
+                  Provide satisfactory reason for issuing recall notice prior to
+                  NPA date
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -256,25 +266,32 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputForum">forum</label>
+                <label htmlFor="exampleInputForum">
+                  Forum through which legal proceedings were initiated against
+                  borrower *
+                </label>
                 <input
                   type="text"
                   className="form-control"
                   value={forum}
                   onChange={(e) => setForum(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputFilingSuit">Filing Suit</label>
+                <label htmlFor="exampleInputFilingSuit">Suit / Case No.*</label>
                 <input
                   type="text"
                   className="form-control"
                   value={filingsuit}
                   onChange={(e) => setFileSuit(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="date Of Possession">Date Of Possession</label>
+                <label htmlFor="date Of Possession">
+                  Provide satisfactory reason for filing suit before NPA date
+                </label>
                 <input
                   type="date"
                   className="form-control"
@@ -283,21 +300,25 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="amountClaimed">Amount Claimed</label>
+                <label htmlFor="amountClaimed">
+                  Amount Claimed in the Suit *
+                </label>
                 <input
                   type="number"
                   className="form-control"
                   value={amountclaimed}
                   onChange={(e) => setAmountClaimed(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label>Any Attachments</label>
+                <label>Any Attachments *</label>
                 <input
                   type="text"
                   className="form-control"
                   value={anyattchment}
                   onChange={(e) => setAnyAttachment(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -409,7 +430,7 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label>FPB</label>
+                <label>LI's Comment on financial position of Borrower</label>
                 <input
                   type="text"
                   className="form-control"
@@ -418,7 +439,10 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Financial Assistance</label>
+                <label>
+                  Details of Financial Assistance provided/being considered by
+                  MLI to minimize default
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -427,7 +451,10 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Credit Support</label>
+                <label>
+                  Does the LI propose to provide credit support to
+                  Shareholder/Borrower for any other project
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -436,7 +463,9 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Bank facilities</label>
+                <label>
+                  Details of Bank Facility already provided to Borrower
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -445,7 +474,10 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label> Watchlist</label>
+                <label>
+                  Does the MLI advise placing the Borrower and/or Chief Promoter
+                  under Watch-List of MSME CGS
+                </label>
                 <input
                   type="text"
                   className="form-control"

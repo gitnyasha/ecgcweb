@@ -65,6 +65,24 @@ const Claims = () => {
               </div>
             </div>
           </div>
+          <div className="media text-muted pt-3">
+            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <div className="d-flex justify-content-between align-items-center w-100">
+                <strong className="text-gray-dark">Property Claim</strong>
+                <Link href="/property-claim">Apply Online</Link>
+              </div>
+            </div>
+          </div>
+          <div className="media text-muted pt-3">
+            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <div className="d-flex justify-content-between align-items-center w-100">
+                <strong className="text-gray-dark">
+                  Public Liabilty Claim
+                </strong>
+                <Link href="/public-liability">Apply Online</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
