@@ -12,7 +12,7 @@ import ReactDOMServer from "react-dom/server";
 
 const doc = new jsPDF();
 
-const DomesticPayment = () => {
+const MotorGlass = () => {
   const [post, setPosts] = useState([]);
 
   const pdf = post?.map((p) => (
@@ -20,9 +20,10 @@ const DomesticPayment = () => {
       <table>
         <tbody>
           <tr>
-            <td>{p.clientname}</td>
             <td>{p.policynumber}</td>
-            <td>{p.amount}</td>
+            <td>{p.claimnumber}</td>
+            <td>{p.nameofinsured}</td>
+            <td>{p.occupation}</td>
           </tr>
         </tbody>
       </table>
@@ -32,7 +33,7 @@ const DomesticPayment = () => {
   const save = () => {
     doc.html(ReactDOMServer.renderToStaticMarkup(pdf), {
       callback: () => {
-        doc.save("domestic-payment.pdf");
+        doc.save("motor-glass.pdf");
       },
     });
   };
@@ -47,25 +48,31 @@ const DomesticPayment = () => {
     let bodyContent = formdata;
 
     let reqOptions = {
-      url: uri + "/api/forms/domestic-payment-insuarances",
+      url: uri + "/api/forms/motor-glass",
       method: "GET",
       headers: headersList,
       data: bodyContent,
     };
 
-    axios.request(reqOptions).then(function(response) {
-      if (response.status === 200) {
-        console.log(response.data);
-        setPosts(response.data.DomesticPayments);
-      }
-    });
+    axios
+      .request(reqOptions)
+      .then(function(response) {
+        if (response.status === 200) {
+          console.log(response.data);
+          setPosts(response.data.motorglasses);
+        }
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }, []);
 
-  const posts = post?.map((p) => (
+  const posts = post.map((p) => (
     <tr key={p.id}>
-      <td>{p.clientname}</td>
       <td>{p.policynumber}</td>
-      <td>{p.amount}</td>
+      <td>{p.claimnumber}</td>
+      <td>{p.nameofinsured}</td>
+      <td>{p.occupation}</td>
       <td>
         <button onClick={save}>download pdf</button>
       </td>
@@ -83,15 +90,16 @@ const DomesticPayment = () => {
         </Col>
         <Col sm={9}>
           <SSRProvider>
-            <h3>Domestic Payment Insuarances</h3>
+            <h3>Motor Glass</h3>
 
             <div className="table-responsive">
               <table className="table top-selling-table" id="datatablesSimple">
                 <thead>
                   <tr>
-                    <th>Client Name</th>
                     <th>Policy Number</th>
-                    <th>Amount</th>
+                    <th>Claim Number</th>
+                    <th>Name of Insured</th>
+                    <th>Occupation</th>
                   </tr>
                 </thead>
                 <tbody>{posts}</tbody>
@@ -104,4 +112,4 @@ const DomesticPayment = () => {
   );
 };
 
-export default DomesticPayment;
+export default MotorGlass;

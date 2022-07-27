@@ -36,6 +36,18 @@ const Sidebar = () => {
             <Link href="/dashboard/transit">
               <MenuItem>Goods in Transit</MenuItem>
             </Link>
+            <Link href="/dashboard/guarantee-scheme">
+              <MenuItem>Guarantee Scheme</MenuItem>
+            </Link>
+            <Link href="/dashboard/public-liability">
+              <MenuItem>Public Liability</MenuItem>
+            </Link>
+            <Link href="/dashboard/property-claim">
+              <MenuItem>Property Claim</MenuItem>
+            </Link>
+            <Link href="/dashboard/motor-glass">
+              <MenuItem>Motor Glass</MenuItem>
+            </Link>
           </SubMenu>
           <Link href="/dashboard/blog-posts">
             <MenuItem>Blog Posts</MenuItem>
@@ -51,11 +63,6 @@ const Sidebar = () => {
           </Link>
         </Menu>
       </SidebarContent>
-      <SidebarFooter>
-        <Menu>
-          <MenuItem>Footer</MenuItem>
-        </Menu>
-      </SidebarFooter>
     </ProSidebar>
   );
 };

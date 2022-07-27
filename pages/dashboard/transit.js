@@ -7,9 +7,36 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
+import { jsPDF } from "jspdf";
+import ReactDOMServer from "react-dom/server";
+
+const doc = new jsPDF();
 
 const transit = () => {
   const [post, setPosts] = useState([]);
+
+  const pdf = post?.map((p) => (
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>{p.insuredname}</td>
+            <td>{p.contactnumber}</td>
+            <td>{p.occurencedate}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  ));
+
+  const save = () => {
+    doc.html(ReactDOMServer.renderToStaticMarkup(pdf), {
+      callback: () => {
+        doc.save("transit.pdf");
+      },
+    });
+  };
+
   useEffect(() => {
     let headersList = {
       Authorization: `Bearer ${JSON.parse(localStorage.user)}`,
@@ -35,6 +62,9 @@ const transit = () => {
       <td>{p.insuredname}</td>
       <td>{p.contactnumber}</td>
       <td>{p.occurencedate}</td>
+      <td>
+        <button onClick={save}>download pdf</button>
+      </td>
     </tr>
   ));
 
