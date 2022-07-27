@@ -19,7 +19,7 @@ const Claims = () => {
             <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div className="d-flex justify-content-between align-items-center w-100">
                 <strong className="text-gray-dark">
-                  Export Payment Insuarance
+                  Credit Claim Insuarance
                 </strong>
                 <Link href="/export-payment-insuarance-form">Apply Online</Link>
               </div>

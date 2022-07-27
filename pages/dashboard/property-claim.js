@@ -16,11 +16,11 @@ const PropertyClaim = () => {
   const [post, setPosts] = useState([]);
 
   const pdf = post?.map((p) => (
-    <div>
+    <div style={{ backgroundcolor: "red" }}>
       <table>
         <tbody>
           <tr>
-            <td>{p.policynumber}</td>
+            <td style={{ color: "green" }}>{p.policynumber}</td>
             <td>{p.policyholder}</td>
             <td>{p.insurer}</td>
             <td>{p.telephone}</td>
