@@ -13,15 +13,7 @@ const MemorandumAndArticlesOfAssociation = () => {
       <br />
       <div className="container">
         <div className="row">
-          <div className="col">
-            <nav>
-              <button onClick={goToPrevPage}>Prev</button>
-              <button onClick={goToNextPage}>Next</button>
-              <p>
-                Page {pageNumber} of {numPages}
-              </p>
-            </nav>
-          </div>
+          <div className="col"></div>
         </div>
       </div>
       <Footer />
