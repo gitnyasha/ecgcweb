@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import { backend, uri } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const TransitForm = () => {
   const [email, setEmail] = React.useState("");
@@ -64,6 +65,7 @@ const TransitForm = () => {
   const [involvedinaccident, setinvolvedinaccident] = React.useState("");
   const [brief, setbrief] = React.useState("");
   const [capacity, setcapacity] = React.useState("");
+  const [show, setShow] = React.useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -134,6 +136,9 @@ const TransitForm = () => {
       )
       .then((response) => {
         console.log(response);
+        if (response.status === 201) {
+          setShow(true);
+        }
       });
   };
   return (
@@ -213,7 +218,7 @@ const TransitForm = () => {
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputMobile4">Agent reference</label>
                   <input
-                    type="number"
+                    type="text"
                     value={mobile}
                     className="form-control"
                     id="inputMobile4"
@@ -299,7 +304,7 @@ const TransitForm = () => {
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputLN4">Total Value</label>
                   <input
-                    type="text"
+                    type="number"
                     value={tvalue1}
                     className="form-control"
                     id="inputLN4"
@@ -348,7 +353,7 @@ const TransitForm = () => {
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputLN4">Total Value</label>
                   <input
-                    type="text"
+                    type="number"
                     value={tvalue2}
                     className="form-control"
                     id="inputLN4"
@@ -493,30 +498,62 @@ const TransitForm = () => {
               <div className="form-group my-2 col-md-12 col-sm-12">
                 <label for="inputBuyer">
                   <small>
-                    Were netclaim taken by a Police Officer at the scene?
+                    Were particulars taken by a Police Officer at the scene?
                   </small>
                 </label>
-                <input
-                  className="form-check-input"
-                  type="text"
-                  value={netclaim}
-                  id="netclaimtaken1"
-                  placeholder="yes / no"
-                  onChange={(e) => setnetclaim(e.target.value)}
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="partcularstaken1"
+                    value="yes"
+                    onChange={(e) => setpartcularstaken(e.target.value)}
+                  />
+                  <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="partcularstaken1"
+                    value="no"
+                    onChange={(e) => setpartcularstaken(e.target.value)}
+                    checked
+                  />
+                  <label class="form-check-label">No</label>
+                </div>
               </div>
               <div className="form-group my-2 col-md-12 col-sm-12">
                 <label for="inputNID2">
-                  <small>Were they a witness?</small>
+                  <small>Were there any witness?</small>
                 </label>
-                <input
-                  className="form-check-input"
-                  type="text"
-                  value={aretherewitnessess}
-                  id="aretherewitnessess1"
-                  placeholder="yes / no"
-                  onChange={(e) => setaretherewarnings(e.target.value)}
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="aretherewitnessess1"
+                    name="aretherewitnessess1"
+                    value="yes"
+                    onChange={(e) => setaretherewarnings(e.target.value)}
+                  />
+                  <label class="form-check-label" for="inso1">
+                    Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="aretherewitnessess2"
+                    name="aretherewitnessess1"
+                    value="no"
+                    onChange={(e) => setaretherewarnings(e.target.value)}
+                    checked
+                  />
+                  <label class="form-check-label" for="aretherewitnessess2">
+                    No
+                  </label>
+                </div>
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12">
@@ -559,14 +596,33 @@ const TransitForm = () => {
                     any other person might be prosecuted?
                   </small>
                 </label>
-                <input
-                  className="form-check-input"
-                  type="text"
-                  value={aretherewarnings}
-                  id="aretherewarnings1"
-                  onChange={(e) => setaretherewarnings(e.target.value)}
-                  placeholder="yes / no"
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="aretherewarnings1"
+                    name="aretherewarnings1"
+                    value="yes"
+                    onChange={(e) => setaretherewarnings(e.target.value)}
+                  />
+                  <label class="form-check-label" for="aretherewarnings1">
+                    Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="aretherewarnings2"
+                    name="aretherewarnings1"
+                    value="no"
+                    onChange={(e) => setaretherewarnings(e.target.value)}
+                    checked
+                  />
+                  <label class="form-check-label" for="aretherewarnings2">
+                    No
+                  </label>
+                </div>
               </div>
               <div className="card-header my-3">
                 DETAIL OF CONSIGNORS / CONSIGNEES
@@ -642,14 +698,27 @@ const TransitForm = () => {
                 <label for="inputBuyer">
                   <small>Were above done in accordance Trade Custom?</small>
                 </label>
-                <input
-                  className="form-check-input"
-                  type="text"
-                  value={accordance}
-                  id="accordance1"
-                  placeholder="yes / no"
-                  onChange={(e) => setaccordance(e.target.value)}
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accordance1"
+                    value="yes"
+                    onChange={(e) => setaccordance(e.target.value)}
+                  />
+                  <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accordance1"
+                    value="no"
+                    onChange={(e) => setaccordance(e.target.value)}
+                    checked
+                  />
+                  <label class="form-check-label">No</label>
+                </div>
               </div>
 
               <div className="form-group my-2 col-md-12">
@@ -689,13 +758,27 @@ const TransitForm = () => {
                   <label for="inputNID2">
                     <small>Have Consignees accepted Delivery?</small>
                   </label>
-                  <input
-                    className="form-check-input"
-                    type="text"
-                    value={deliveryaccepted}
-                    id="deliveryaccepted1"
-                    onChange={(e) => setdeliveryaccepted(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="setdeliveryaccepted"
+                      value="yes"
+                      onChange={(e) => setdeliveryaccepted(e.target.value)}
+                    />
+                    <label class="form-check-label">Yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="setdeliveryaccepted"
+                      value="no"
+                      onChange={(e) => setdeliveryaccepted(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label">No</label>
+                  </div>
                 </div>
                 <div className="form-group my-2 col-sm-12">
                   <label for="inputName4">
@@ -753,14 +836,27 @@ const TransitForm = () => {
                       of this load?
                     </small>
                   </label>
-                  <input
-                    className="form-check-input"
-                    type="text"
-                    value={subcontractor}
-                    id="subcontrator1"
-                    placeholder="yes / no"
-                    onChange={(e) => set(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="subcontrator1"
+                      value="yes"
+                      onChange={(e) => setsubcontractor(e.target.value)}
+                    />
+                    <label class="form-check-label">Yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="subcontrator1"
+                      value="no"
+                      onChange={(e) => setsubcontractor(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label">No</label>
+                  </div>
                 </div>
                 <div className="form-group my-2 col-sm-12">
                   <label for="inputPo4">
@@ -782,14 +878,27 @@ const TransitForm = () => {
                       for this load?
                     </small>
                   </label>
-                  <input
-                    className="form-check-input"
-                    type="text"
-                    value={subcontratorpremium}
-                    id="subcontratorpremium1"
-                    placeholder="yes / no"
-                    onChange={(e) => setsubcontratorpremium(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="subcontratorpremium1"
+                      value="yes"
+                      onChange={(e) => setsubcontratorpremium(e.target.value)}
+                    />
+                    <label class="form-check-label">Yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="subcontratorpremium1"
+                      value="no"
+                      onChange={(e) => setsubcontratorpremium(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label">No</label>
+                  </div>
                 </div>
 
                 <div className="form-group my-2 col-sm-12">
@@ -809,14 +918,27 @@ const TransitForm = () => {
                   <label for="inputNID2">
                     <small>Do you own the vehicle?</small>
                   </label>
-                  <input
-                    className="form-check-input"
-                    type="text"
-                    value={ownvehicle}
-                    id="ownvehicle1"
-                    placeholder="yes / no"
-                    onChange={(e) => setownvehicle(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="setownvehicle1"
+                      value="yes"
+                      onChange={(e) => setownvehicle(e.target.value)}
+                    />
+                    <label class="form-check-label">Yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="setownvehicle1"
+                      value="no"
+                      onChange={(e) => setownvehicle(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label">No</label>
+                  </div>
                 </div>
 
                 <div className="form-group my-2 col-sm-12">
@@ -858,7 +980,6 @@ const TransitForm = () => {
                   onChange={(e) => setbrief(e.target.value)}
                 />
               </div>
-              <div className="card-header my-3">lessexcess</div>
               <small>
                 I/we warrant and declare that the netclaim given above are true
                 in every respect and that I/we have not withheld any information
@@ -873,16 +994,6 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputPo4"
                     onChange={(e) => setcapacity(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-md-12 col-sm-12">
-                  <label for="inputPo4">DATE</label>
-                  <input
-                    type="date"
-                    value={contractoraddress}
-                    className="form-control"
-                    id="inputPo4"
-                    onChange={(e) => setcontractoraddress(e.target.value)}
                   />
                 </div>
               </div>
@@ -900,6 +1011,15 @@ const TransitForm = () => {
             </form>
           </div>
         </div>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </div>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import { backend } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const PropertyClaim = () => {
   const [policynumber, setPolicynumber] = useState("");
@@ -29,6 +30,7 @@ const PropertyClaim = () => {
   const [authorized, setauthorized] = useState("");
   const [witness, setwitness] = useState("");
   const [datesigned, setDateSigned] = useState("");
+  const [show, setShow] = React.useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,11 +59,13 @@ const PropertyClaim = () => {
         amountclaimed,
         authorized,
         witness,
-        datesigned,
+        datesigned: new Date(),
       })
       .then((res) => {
         console.log(res);
-        alert("Successfully submitted");
+        if (res.status === 201) {
+          setShow(true);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -125,7 +129,7 @@ const PropertyClaim = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-3">
                   Loss or damage occurred at:
                 </div>
                 <div className="form-group col-md-12">
@@ -161,25 +165,23 @@ const PropertyClaim = () => {
                   </label>
                   <select
                     className="form-control"
-                    value={premisesoccupied}
                     onChange={(e) => setpremisesoccupied(e.target.value)}
                   >
-                    <option>Occupied</option>
-                    <option>Unoccupied</option>
-                    <option>Let</option>
-                    <option>Unlet</option>
+                    <option value="occupied">Occupied</option>
+                    <option value="unoccupied">Unoccupied</option>
+                    <option value="let">Let</option>
+                    <option value="unlet">Unlet</option>
                   </select>
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Type of premises:</label>
                   <select
                     className="form-control"
-                    value={typeofpremise}
                     onChange={(e) => settypeofpremise(e.target.value)}
                   >
-                    <option>Commercial</option>
-                    <option>Residential</option>
-                    <option>Block of Flats</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Block of Flats">Block of Flats</option>
                   </select>
                 </div>
                 <div className="form-group col-md-12">
@@ -189,12 +191,12 @@ const PropertyClaim = () => {
                     value={causeofdamage}
                     onChange={(e) => setcauseofdamage(e.target.value)}
                   >
-                    <option>Fire</option>
-                    <option>Storm</option>
-                    <option>Theft</option>
-                    <option>Burst Pipes</option>
-                    <option>Malicious Damage</option>
-                    <option>Glass</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Storm">Storm</option>
+                    <option value="Theft">Theft</option>
+                    <option value="Burst Pipes">Burst Pipes</option>
+                    <option value="Malicious Damage">Malicious Damage</option>
+                    <option value="Glass">Glass</option>
                   </select>
                 </div>
                 <div className="form-group col-md-12">
@@ -326,15 +328,7 @@ const PropertyClaim = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-12">
-                  <label for="inputPN4">Date:</label>
-                  <input
-                    type="date"
-                    value={datesigned}
-                    onChange={(e) => setDateSigned(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
+
                 <button type="submit" className="btn btn-primary my-4">
                   Submit
                 </button>
@@ -342,8 +336,16 @@ const PropertyClaim = () => {
             </form>
           </Col>
         </Row>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </Container>
-
       <Footer />
     </div>
   );

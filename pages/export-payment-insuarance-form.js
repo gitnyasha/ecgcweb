@@ -5,20 +5,36 @@ import Alert from "react-bootstrap/Alert";
 import { backend, uri } from "./api/api";
 
 const ExportPaymentInsuaranceForm = () => {
-  const [registeredcompanyname, setRegisteredCompanyName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [clientname, setClientName] = React.useState("");
   const [policynumber, setPolicyNumber] = React.useState("");
-  const [contactperson, setContactPerson] = React.useState("");
-  const [position, setPosition] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [mobile, setMobile] = React.useState("");
-  const [fullname, setFullName] = React.useState("");
-  const [idnumber, setIdNumber] = React.useState("");
-  const [contactdetails, setContactDetails] = React.useState("");
-  const [address, setAddress] = React.useState("");
-  const [cause, setCause] = React.useState("");
-  const [amountowed, setAmountOwed] = React.useState("");
-  const [loanamount, setLoanAmount] = React.useState("");
-  const [purposeofloan, setPurposeOfLoan] = React.useState("");
+  const [maximumliability, setMaximumLiability] = React.useState("");
+  const [physicaladdress, setPhysicalAddress] = React.useState("");
+  const [extenof, setExtendOf] = React.useState("");
+  const [amountnow, setAmountNow] = React.useState("");
+  const [insolvency, setInsolvency] = React.useState("");
+  const [failureRadios, setFailureRadios] = React.useState("");
+  const [date1, setDate1] = React.useState("");
+  const [termsofpayment, setTermsofpayment] = React.useState("");
+  const [amount, setAmount] = React.useState("");
+  const [effectivedate, setEffectiveDate] = React.useState("");
+  const [dateOfsales1, setDateOfSales1] = React.useState("");
+  const [itemsold1, setItemSold1] = React.useState("");
+  const [grossinvoice1, setGrossInvoice1] = React.useState("");
+  const [termsofpayment1, setTermsofpayment1] = React.useState("");
+  const [duedate1, setDueDate1] = React.useState("");
+  const [datedeclared1, setDateDeclared1] = React.useState("");
+  const [overdues, setOverdues] = React.useState("");
+  const [declaration, setDeclaration] = React.useState("");
+  const [particulars, setParticulars] = React.useState("");
+  const [payreceive, setPayReceive] = React.useState("");
+  const [nonfulfillment, setNonFulFillment] = React.useState("");
+  const [proceedsresale, setProceedsResale] = React.useState("");
+  const [setoff, setSetOff] = React.useState("");
+  const [lesstotal, setLessTotal] = React.useState("");
+  const [expenses, setExpenses] = React.useState("");
+  const [netamountloss, setNetAmountLoss] = React.useState("");
+  const [place, setPlace] = React.useState("");
   const [check1, setCheck1] = React.useState("");
   const [check2, setCheck2] = React.useState("");
   const [check3, setCheck3] = React.useState("");
@@ -26,31 +42,42 @@ const ExportPaymentInsuaranceForm = () => {
   const [check5, setCheck5] = React.useState("");
   const [check6, setCheck6] = React.useState("");
   const [check7, setCheck7] = React.useState("");
-  const [applyname, setApplyName] = React.useState("");
-  const [applyposition, setApplyPosition] = React.useState("");
-  const [datesigned, setDateSigned] = React.useState("");
-
   const [show, setShow] = React.useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
     backend
       .post(
         "/api/export-payment",
         {
-          registeredcompanyname: registeredcompanyname,
+          email: email,
+          clientname: clientname,
           policynumber: policynumber,
-          contactperson: contactperson,
-          position: position,
-          phone: phone,
-          mobile: mobile,
-          fullname: fullname,
-          idnumber: idnumber,
-          contactdetails: contactdetails,
-          address: address,
-          cause: cause,
-          amountowed: amountowed,
-          purposeofloan: purposeofloan,
+          maximumliability: maximumliability,
+          physicaladdress: physicaladdress,
+          extenof: extenof,
+          amountnow: amountnow,
+          insolvency: insolvency,
+          failureradios: failureRadios,
+          date1: date1,
+          termsofpayment: termsofpayment,
+          amount: amount,
+          effectivedate: effectivedate,
+          dateofsales1: dateOfsales1,
+          itemsold1: itemsold1,
+          grossinvoice1: grossinvoice1,
+          termsofpayment1: termsofpayment1,
+          duedate1: duedate1,
+          datedeclared1: datedeclared1,
+          overdues: overdues,
+          declaration: particulars,
+          payreceive: payreceive,
+          nonfulfillment: nonfulfillment,
+          proceedsresale: proceedsresale,
+          setoff: setoff,
+          lessTotal: lesstotal,
+          expenses: expenses,
+          netamountloss: netamountloss,
           check1: check1,
           check2: check2,
           check3: check3,
@@ -58,9 +85,8 @@ const ExportPaymentInsuaranceForm = () => {
           check5: check5,
           check6: check6,
           check7: check7,
-          applyname: applyname,
-          applyposition: applyposition,
-          datesigned: datesigned,
+          signdate: new Date(),
+          place: place,
         },
         {
           headers: {
@@ -69,37 +95,74 @@ const ExportPaymentInsuaranceForm = () => {
         }
       )
       .then((response) => {
-        if (response.data.status === "201") {
+        console.log(response);
+        if (response.status === 201) {
           setShow(true);
-          console.log(response);
+          setEmail("");
+          setClientName("");
+          setPolicyNumber("");
+          setMaximumLiability("");
+          setPhysicalAddress("");
+          setExtendOf("");
+          setAmountNow("");
+          setInsolvency("");
+          setFailureRadios("");
+          setDate1("");
+          setTermsofpayment("");
+          setAmount("");
+          setEffectiveDate("");
+          setDateOfSales1("");
+          setItemSold1("");
+          setGrossInvoice1("");
+          setTermsofpayment1("");
+          setDueDate1("");
+          setDateDeclared1("");
+          setOverdues("");
+          setDeclaration("");
+          setParticulars("");
+          setPayReceive("");
+          setNonFulFillment("");
+          setProceedsResale("");
+          setSetOff("");
+          setLessTotal("");
+          setExpenses("");
+          setNetAmountLoss("");
+          setPlace("");
+          setCheck1("");
+          setCheck2("");
+          setCheck3("");
+          setCheck4("");
+          setCheck5("");
+          setCheck6("");
+          setCheck7("");
+          setPlace("");
         }
       });
   };
+
   return (
     <>
       <Navbar />
       <div className="container py-5 my-5">
         <h1 className="mt-5 pt-5 text-center">
-          Credit Claim Insuarance Form
+          Export Payment Insuarance Form
         </h1>
         <div className="row my-2">
           <div className="col">
-            <form onSubmit={handleSubmit}>
-              <div className="card-header bg-secondary text-white py-5 my-5">
-                1. POLICYHOLDER DETAILS
-              </div>
+            <form onSubmit={handleSubmitForm}>
               <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputRC4">Registered Company Name</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputRC4">Name of Client</label>
                   <input
                     type="text"
+                    value={clientname}
                     className="form-control"
                     id="inputRC4"
-                    value={registeredcompanyname}
-                    onChange={(e) => setRegisteredCompanyName(e.target.value)}
+                    onChange={(e) => setClientName(e.target.value)}
+                    required
                   />
                 </div>
-                <div className="form-group my-2 col-sm-12">
+                <div className="form-group my-2 col-md-12">
                   <label for="inputPN4">Policy Number</label>
                   <input
                     type="text"
@@ -110,359 +173,535 @@ const ExportPaymentInsuaranceForm = () => {
                   />
                 </div>
               </div>
-              <small>
-                Give details of the person who is authorised to provide us with
-                any information we may request and to discuss this claim.
-              </small>
               <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputRC4">Contact Person</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputRC4">Maximum Liability</label>
                   <input
                     type="text"
-                    value={contactperson}
-                    onChange={(e) => setContactPerson(e.target.value)}
+                    value={maximumliability}
                     className="form-control"
                     id="inputRC4"
+                    onChange={(e) => setMaximumLiability(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputPositon4">Position</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputPositon4">Physical Address</label>
                   <input
                     type="text"
-                    value={position}
-                    onChange={(e) => setPosition(e.target.value)}
+                    value={physicaladdress}
                     className="form-control"
                     id="inputPosition4"
+                    onChange={(e) => setPhysicalAddress(e.target.value)}
                   />
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputNum4">Phone</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputNum4">
+                    <small>
+                      We declare that the under-mentioned buyer is indebted to
+                      us to the extent of US$
+                    </small>
+                  </label>
                   <input
                     type="number"
+                    value={extenof}
                     className="form-control"
                     id="inputNum4"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={(e) => setExtendOf(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputMobile4">Mobile</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputinsolvency4">
+                    <small>
+                      Amount now, for months overdue and we hereby claim the
+                      amount in terms of the captioned Domestic Payment
+                      Insurance Policy.
+                    </small>
+                  </label>
                   <input
                     type="number"
+                    name={amountnow}
                     className="form-control"
-                    id="inputMobile4"
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
+                    id="inputinsolvency4"
+                    onChange={(e) => setAmountNow(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="card-header bg-secondary text-white my-3">
-                2. BORROWER’S DETAILS
-              </div>
-              <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputFullNames">Full Names</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputFullNames"
-                    value={fullname}
-                    onChange={(e) => setFullName(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputNID2">National ID/ Company</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputNID2"
-                    value={idnumber}
-                    onChange={(e) => setIdNumber(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputCD2">Contact Number / Email</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputCD2"
-                    value={contactdetails}
-                    onChange={(e) => setContactDetails(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputAddress">Address</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputAddress"
-                    placeholder="1234 Main St"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="card-header bg-secondary text-white my-3">
-                3. CLAIM DETAILS
+              <div className="card-header my-3">
+                1. EVENTS WHICH IS THE effectivedate OF LOSS (PLEASE SELECT
+                AGAINST THE APPROPRIATE ITEM)
               </div>
               <div className="form-row">
-                <div className="form-group col-sm-12">
-                  <label for="exampleFormControlTextarea1">
-                    Cause of loss: (Death; Sickness; Absconsion) (Brief
-                    explanation where applicable)
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputBuyer">
+                    <small>Insolvency of buyer</small>
                   </label>
-                  <textarea
-                    className="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                    value={cause}
-                    onChange={(e) => setCause(e.target.value)}
-                  ></textarea>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="inso1"
+                      name="insolvency"
+                      value="yes"
+                      onChange={(e) => setInsolvency(e.target.value)}
+                    />
+                    <label class="form-check-label" for="inso1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="inso2"
+                      name="insolvency"
+                      value="no"
+                      onChange={(e) => setInsolvency(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label" for="inso2">
+                      No
+                    </label>
+                  </div>
                 </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputAm4">
-                    Total amount owed by the debtor $
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputNID2">
+                    <small>Failure of buyer to pay for accepted goods:</small>
                   </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputAm4"
-                    value={amountowed}
-                    onChange={(e) => setAmountOwed(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputLN4">Loan Amount $</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputLN4"
-                    value={loanamount}
-                    onChange={(e) => setLoanAmount(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="exampleRadios1"
+                      name="failure"
+                      value="yes"
+                      onChange={(e) => setFailureRadios(e.target.value)}
+                    />
+                    <label class="form-check-label" for="exampleRadios1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="exampleRadios2"
+                      name="failure"
+                      value="no"
+                      onChange={(e) => setFailureRadios(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios2">
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div className="card-header bg-secondary text-white my-3">
-                4. PURPOSE OF LOAN
+              <div className="card-header my-3">
+                2 PARTICULARS OF CREDIT LIMIT APPROVED BY THE CORPORATION ON THE
+                BUYER
               </div>
               <div className="form-row">
-                <div className="form-group col-sm-122">
-                  <label for="inputPe4">Purpose of loan</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputPe4"
-                    value={purposeofloan}
-                    onChange={(e) => setPurposeOfLoan(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="card-header bg-secondary text-white my-3">
-                5. CHECKLIST OF SUPPORTING DOCUMENTATION
-              </div>
-              <small>
-                You must include the following: Summary of circumstances giving
-                rise to the loss.
-              </small>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value={check1}
-                  id="defaultCheck1"
-                  onChange={(e) => setCheck1(e.target.value)}
-                />
-                <label className="form-check-label" for="defaultCheck1">
-                  Details of, and all correspondence in relation to your loss
-                  and attempts to minimize the loss.
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck2(e.target.value)}
-                  type="checkbox"
-                  value={check2}
-                  id="defaultCheck2"
-                />
-                <label className="form-check-label" for="defaultCheck2">
-                  Contract with the borrower including terms and conditions of
-                  credit.
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck3(e.target.value)}
-                  type="checkbox"
-                  value={check3}
-                  id="defaultCheck1"
-                />
-                <label className="form-check-label" for="defaultCheck1">
-                  The Invoices where applicable
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck4(e.target.value)}
-                  type="checkbox"
-                  value={check4}
-                  id="defaultCheck2"
-                />
-                <label className="form-check-label" for="defaultCheck2">
-                  Copies and/or details of any guarantees and securities or
-                  information relating to a retention of title which are held in
-                  relation to the debt together with details of action taken to
-                  enforce your security.
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck5(e.target.value)}
-                  type="checkbox"
-                  value={check5}
-                  id="defaultCheck1"
-                />
-                <label className="form-check-label" for="defaultCheck1">
-                  If the cause of loss is insolvency then we require evidence of
-                  the insolvency, including that the debt has been registered.
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck6(e.target.value)}
-                  type="checkbox"
-                  value={check6}
-                  id="defaultCheck2"
-                />
-                <label className="form-check-label" for="defaultCheck2">
-                  If you have re-sold the goods, then we require invoices and
-                  correspondence relating to the resale of the goods.
-                </label>
-              </div>
-              <hr />
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  onChange={(e) => setCheck7(e.target.value)}
-                  type="checkbox"
-                  value={check7}
-                  id="defaultCheck1"
-                />
-                <label className="form-check-label" for="defaultCheck1">
-                  Statement of Account for the outstanding balances subject to
-                  the claim.
-                </label>
-              </div>
-              <div className="card-header bg-secondary text-white my-3">
-                6. AUTHORITY
-              </div>
-              <small>
-                We (the insured entity) authorize Export Credit Guarantee
-                Corporation of Zimbabwe P/L (ECGC) to contact the buyer and any
-                other party ECGC considers relevant to check our claim. Further,
-                should it be required, we will allow ECGC to come onto our
-                property, during normal business hours, to examine and take
-                copies of any books and records required for the assessment of
-                this claim.
-              </small>
-              <div className="card-header bg-secondary text-white my-3">
-                7. DECLARATION
-              </div>
-              <small>
-                On behalf of the insured entity whose details are set out above,
-                I declare that:
-              </small>
-              <ol>
-                <li>
-                  <small>
-                    All the information we have given ECGC is accurate and
-                    complete.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    We have not withheld any information which might affect our
-                    claim.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    We understand that if we discounted the documents with a
-                    financier on a without recourse basis, we cannot claim from
-                    ECGC. At the date of this claim we own all of the debt.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    If ECGC pays this claim, we will ensure that ECGC promptly
-                    receives all funds and anything else received from anyone in
-                    relation to this claim and the debt to which this claim
-                    relates.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    We attach to this form related claim documentation. The
-                    information contained is accurate and complete.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    We have no interest, including financial interest, in the
-                    buyer nor have they any such interest in our business.
-                  </small>
-                </li>
-                <li>
-                  <small>
-                    I have authority to complete and sign this claim form.
-                  </small>
-                </li>
-                <li>
-                  <small>I have authority to make this declaration.</small>
-                </li>
-              </ol>
-              <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputName4">Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputName4"
-                    value={applyname}
-                    onChange={(e) => setApplyName(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputPo4">Position</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputPo4"
-                    value={applyposition}
-                    onChange={(e) => setApplyPosition(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputDate4">Date</label>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputAm4">Date</label>
                   <input
                     type="date"
+                    value={date1}
+                    className="form-control"
+                    id="inputAm4"
+                    onChange={(e) => setDate1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputLN4">Amount $</label>
+                  <input
+                    type="number"
+                    value={amount}
+                    className="form-control"
+                    id="inputLN4"
+                    onChange={(e) => setAmount(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputAm4">Terms of Payment</label>
+                  <input
+                    type="text"
+                    value={termsofpayment}
+                    className="form-control"
+                    id="inputAm4"
+                    onChange={(e) => setTermsofpayment(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputLN4">Effective Date</label>
+                  <input
+                    type="date"
+                    value={effectivedate}
+                    className="form-control"
+                    id="inputLN4"
+                    onChange={(e) => setEffectiveDate(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="card-header my-3">
+                3 PARTICULARS OF SALE(S) FOR WHICH PAYMENT(S) IS OVERDUE AND
+                WHICH FORM THE SUBJECT OF THIS CLAIM
+              </div>
+              <div className="form-row">
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>Date Of Sales</small>
+                  </label>
+                  <input
+                    type="date"
+                    value={dateOfsales1}
                     className="form-control"
                     id="inputDate4"
-                    value={datesigned}
-                    onChange={(e) => setDateSigned(e.target.value)}
+                    onChange={(e) => setDateOfSales1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputPe4">
+                    <small>Item Sold</small>
+                  </label>
+                  <input
+                    type="text"
+                    value={itemsold1}
+                    className="form-control"
+                    id="inputPe4"
+                    onChange={(e) => setItemSold1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputName4">
+                    <small>Gross Invoice Value Finance US$</small>
+                  </label>
+                  <input
+                    type="number"
+                    value={grossinvoice1}
+                    className="form-control"
+                    id="inputName4"
+                    onChange={(e) => setGrossInvoice1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputPo4">
+                    <small>Terms of Payment</small>
+                  </label>
+                  <input
+                    type="text"
+                    value={termsofpayment1}
+                    className="form-control"
+                    id="inputPo4"
+                    onChange={(e) => setTermsofpayment1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputSig4">
+                    <small>Due Date</small>
+                  </label>
+                  <input
+                    type="date"
+                    value={duedate1}
+                    className="form-control"
+                    id="inputSig4"
+                    onChange={(e) => setDueDate1(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>Date on which declared to the Corporation</small>
+                  </label>
+                  <input
+                    type="date"
+                    value={datedeclared1}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setDateDeclared1(e.target.value)}
+                  />
+                </div>
+              </div>
+              <hr />
+              <div className="form-row">
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>
+                      Date(s) on which the overdues were notified to the
+                      Corporation
+                    </small>
+                  </label>
+                  <input
+                    type="date"
+                    value={overdues}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setOverdues(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputPe4">
+                    <small>
+                      Date(s) on which Default Declaration was submitted to the
+                      Corporation
+                    </small>
+                  </label>
+                  <input
+                    type="date"
+                    value={declaration}
+                    className="form-control"
+                    id="inputPe4"
+                    onChange={(e) => setDeclaration(e.target.value)}
+                  />
+                </div>
+                <h6>Less</h6>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputName4">
+                    <small>
+                      Particulars of the amount of loss Gross Invoice Value of
+                      sales: US$
+                    </small>
+                  </label>
+                  <input
+                    type="number"
+                    value={particulars}
+                    className="form-control"
+                    id="inputName4"
+                    onChange={(e) => setParticulars(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputPo4">
+                    <small>Payment received, if any: US$</small>
+                  </label>
+                  <input
+                    type="number"
+                    value={payreceive}
+                    className="form-control"
+                    id="inputPo4"
+                    onChange={(e) => setPayReceive(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputSig4">
+                    <small>
+                      Payment saved by non-fulfillment of contract: US$ e.g.
+                      Agent Commission
+                    </small>
+                  </label>
+                  <input
+                    type="number"
+                    value={nonfulfillment}
+                    className="form-control"
+                    id="inputSig4"
+                    onChange={(e) => setNonFulFillment(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>Proceeds of resale of goods: US$</small>
+                  </label>
+                  <input
+                    type="number"
+                    value={proceedsresale}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setProceedsResale(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>
+                      Any credit, set-off or counterclaim, which can: US$ be
+                      adjusted against the payment(s) due
+                    </small>
+                  </label>
+                  <input
+                    type="number"
+                    value={setoff}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setSetOff(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>Total US$</small>
+                  </label>
+                  <input
+                    type="number"
+                    value={lesstotal}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setLessTotal(e.target.value)}
+                  />
+                </div>
+                <hr />
+                <h6>Plus</h6>
+                <hr />
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>
+                      Expenses incurred for recovery with the approval of the
+                      Corporation: US$
+                    </small>
+                  </label>
+                  <input
+                    type="number"
+                    value={expenses}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setExpenses(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputDate4">
+                    <small>Net Amount Loss: US$</small>
+                  </label>
+                  <input
+                    type="number"
+                    value={netamountloss}
+                    className="form-control"
+                    id="inputDate4"
+                    onChange={(e) => setNetAmountLoss(e.target.value)}
+                  />
+                </div>
+                <hr />
+                <small>
+                  Documents attached in support of the claim (please tick
+                  against the appropriate items)
+                </small>
+                <hr />
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultCheck1"
+                    onChange={(e) => setCheck1(e.target.value)}
+                  />
+                  <label className="form-check-label" for="defaultCheck1">
+                    Copies of the sales contract(s) / orders
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    onChange={(e) => setCheck2(e.target.value)}
+                  />
+                  <label className="form-check-label">Proof of delivery</label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultdatedeclared1"
+                    onChange={(e) => setCheck3(e.target.value)}
+                  />
+                  <label
+                    className="form-check-label"
+                    for="defaultdatedeclared1"
+                  >
+                    Any other relevant documents
+                  </label>
+                </div>
+                <hr />
+                <small>
+                  If the effective date of loss is insolvency of buyer
+                </small>
+                <hr />
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultoverdues"
+                    onChange={(e) => setCheck4(e.target.value)}
+                  />
+                  <label className="form-check-label" for="defaultoverdues">
+                    Evidence of insolvency
+                  </label>
+                </div>
+                <hr />
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultdeclaration"
+                    onChange={(e) => setCheck5(e.target.value)}
+                  />
+                  <label className="form-check-label" for="defaultdeclaration">
+                    Copy of the claim filed with the liquidator
+                  </label>
+                </div>
+                <hr />
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultparticulars"
+                    onChange={(e) => setCheck6(e.target.value)}
+                  />
+                  <label className="form-check-label" for="defaultparticulars">
+                    Copy of the letter from liquidator receiving/admiting the
+                    claim:
+                  </label>
+                </div>
+                <hr />
+                <small>
+                  If the effectivedate of loss is failure to pay for accepted
+                  goods
+                </small>
+                <hr />
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultpayreceive"
+                    onChange={(e) => setCheck7(e.target.value)}
+                  />
+                  <label className="form-check-label" for="defaultpayreceive">
+                    Copy of all correspondence with buyer
+                  </label>
+                </div>
+              </div>
+              <hr />
+              <small>
+                We declare that the information given herein are true and
+                correct in every particular and that wehave not omitted to state
+                any information relating to the claim.
+                <br />
+                <br />
+                We undertake to pursue all steps, including institution of legal
+                proceedings, which may be advisedby the Corporation to effect
+                recovery of the debt to which this claim relates.
+                <br />
+                <br />
+                Upon payment of this claim, we shall forth with pay to the
+                Corporation any and all amounts that weour agents or any other
+                persons acting on our behalf may receive from the buyer or from
+                any othersource in respect of the debt to which this claim
+                relates and we acknowledge and declare that allsuch amounts are
+                moneys to which the Corporation alone is beneficially entitled
+                and that, until payment to the Corporation is made as aforesaid,
+                the said amounts will be held by us in trust for the
+                Corporation.
+              </small>
+              <div className="form-row">
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputRC4">Place:</label>
+                  <input
+                    type="text"
+                    value={place}
+                    className="form-control"
+                    id="inputRC4"
+                    onChange={(e) => setPlace(e.target.value)}
                   />
                 </div>
               </div>

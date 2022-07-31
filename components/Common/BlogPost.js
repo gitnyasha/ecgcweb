@@ -17,9 +17,9 @@ const BlogPost = () => {
   const postList = posts.map((post) => (
     <div className="col-lg-6" key={post.id}>
       <div className="single-blog">
-        <Link href="#">
+        <Link href={`blog-details?id=${post.id}`}>
           <a>
-            <img src="/images/blog/newsletter.jpg" alt="Image" />
+            <img src={post.image} alt="Image" className="blog-fluid" />
           </a>
         </Link>
 
@@ -27,7 +27,7 @@ const BlogPost = () => {
           <ul>
             <li>{Moment(post.created_at).format("MMMM Do YYYY")} </li>
             <li>
-              <Link href="#">
+              <Link href={`blog-details?id=${post.id}`}>
                 <a>By Admin</a>
               </Link>
             </li>
@@ -39,7 +39,7 @@ const BlogPost = () => {
             </a>
           </Link>
 
-          <Link href="#">
+          <Link href={`blog-details?id=${post.id}`}>
             <a className="read-more">
               Read More <i className="bx bx-plus" />
             </a>

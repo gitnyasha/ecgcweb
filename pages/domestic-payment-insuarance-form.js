@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import { backend, uri } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const DomesticPaymentInsuaranceForm = () => {
   const [email, setEmail] = React.useState("");
@@ -33,7 +34,6 @@ const DomesticPaymentInsuaranceForm = () => {
   const [lesstotal, setLessTotal] = React.useState("");
   const [expenses, setExpenses] = React.useState("");
   const [netamountloss, setNetAmountLoss] = React.useState("");
-  const [signdate, setSignDate] = React.useState("");
   const [place, setPlace] = React.useState("");
   const [check1, setCheck1] = React.useState("");
   const [check2, setCheck2] = React.useState("");
@@ -42,6 +42,7 @@ const DomesticPaymentInsuaranceForm = () => {
   const [check5, setCheck5] = React.useState("");
   const [check6, setCheck6] = React.useState("");
   const [check7, setCheck7] = React.useState("");
+  const [show, setShow] = React.useState(false);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -84,6 +85,8 @@ const DomesticPaymentInsuaranceForm = () => {
           check5: check5,
           check6: check6,
           check7: check7,
+          signdate: new Date(),
+          place: place,
         },
         {
           headers: {
@@ -93,6 +96,47 @@ const DomesticPaymentInsuaranceForm = () => {
       )
       .then((response) => {
         console.log(response);
+        if (response.status === 201) {
+          setShow(true);
+          setEmail("");
+          setClientName("");
+          setPolicyNumber("");
+          setMaximumLiability("");
+          setPhysicalAddress("");
+          setExtendOf("");
+          setAmountNow("");
+          setInsolvency("");
+          setFailureRadios("");
+          setDate1("");
+          setTermsofpayment("");
+          setAmount("");
+          setEffectiveDate("");
+          setDateOfSales1("");
+          setItemSold1("");
+          setGrossInvoice1("");
+          setTermsofpayment1("");
+          setDueDate1("");
+          setDateDeclared1("");
+          setOverdues("");
+          setDeclaration("");
+          setParticulars("");
+          setPayReceive("");
+          setNonFulFillment("");
+          setProceedsResale("");
+          setSetOff("");
+          setLessTotal("");
+          setExpenses("");
+          setNetAmountLoss("");
+          setPlace("");
+          setCheck1("");
+          setCheck2("");
+          setCheck3("");
+          setCheck4("");
+          setCheck5("");
+          setCheck6("");
+          setCheck7("");
+          setPlace("");
+        }
       });
   };
 
@@ -115,6 +159,7 @@ const DomesticPaymentInsuaranceForm = () => {
                     className="form-control"
                     id="inputRC4"
                     onChange={(e) => setClientName(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -125,16 +170,6 @@ const DomesticPaymentInsuaranceForm = () => {
                     id="inputPN4"
                     value={policynumber}
                     onChange={(e) => setPolicyNumber(e.target.value)}
-                  />
-                </div>
-                <div className="form-group my-2 col-md-12">
-                  <label for="inputPN4">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="inputPN4"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -202,27 +237,65 @@ const DomesticPaymentInsuaranceForm = () => {
                   <label for="inputBuyer">
                     <small>Insolvency of buyer</small>
                   </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="insolvency1"
-                    value={insolvency}
-                    placeholder="yes / no"
-                    onChange={(e) => setInsolvency(e.target.value)}
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="inso1"
+                      name="insolvency"
+                      value="yes"
+                      onChange={(e) => setInsolvency(e.target.value)}
+                    />
+                    <label class="form-check-label" for="inso1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="inso2"
+                      name="insolvency"
+                      value="no"
+                      onChange={(e) => setInsolvency(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label" for="inso2">
+                      No
+                    </label>
+                  </div>
                 </div>
                 <div className="form-group my-2 col-md-12">
                   <label for="inputNID2">
                     <small>Failure of buyer to pay for accepted goods:</small>
                   </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="failureRadios1"
-                    value={failureRadios}
-                    onChange={(e) => setFailureRadios(e.target.value)}
-                    placeholder="yes / no"
-                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="exampleRadios1"
+                      name="failure"
+                      value="yes"
+                      onChange={(e) => setFailureRadios(e.target.value)}
+                    />
+                    <label class="form-check-label" for="exampleRadios1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="exampleRadios2"
+                      name="failure"
+                      value="no"
+                      onChange={(e) => setFailureRadios(e.target.value)}
+                      checked
+                    />
+                    <label class="form-check-label" for="exampleRadios2">
+                      No
+                    </label>
+                  </div>
                 </div>
               </div>
               <div className="card-header my-3">
@@ -369,7 +442,7 @@ const DomesticPaymentInsuaranceForm = () => {
                 <div className="form-group my-2 col-md-12">
                   <label for="inputPe4">
                     <small>
-                      Date(s) on which Default Declaration was submi�ed to the
+                      Date(s) on which Default Declaration was submitted to the
                       Corporation
                     </small>
                   </label>
@@ -501,40 +574,30 @@ const DomesticPaymentInsuaranceForm = () => {
                 <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    type="text"
-                    value={check1}
-                    id="defaulttermsofpayment1"
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
+                    id="defaultCheck1"
                     onChange={(e) => setCheck1(e.target.value)}
                   />
-                  <label
-                    className="form-check-label"
-                    for="defaulttermsofpayment1"
-                  >
+                  <label className="form-check-label" for="defaultCheck1">
                     Copies of the sales contract(s) / orders
                   </label>
                 </div>
-                <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="duedate1"
-                    type="text"
-                    value={check2}
-                    id="defaultduedate1"
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     onChange={(e) => setCheck2(e.target.value)}
                   />
-                  <label className="form-check-label" for="defaultduedate1">
-                    Proof of delivery
-                  </label>
+                  <label className="form-check-label">Proof of delivery</label>
                 </div>
-                <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="datedeclared1"
-                    type="text"
-                    value={check3}
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     id="defaultdatedeclared1"
                     onChange={(e) => setCheck3(e.target.value)}
                   />
@@ -547,15 +610,14 @@ const DomesticPaymentInsuaranceForm = () => {
                 </div>
                 <hr />
                 <small>
-                  If the effectivedate of loss is insolvency of buyer
+                  If the effective date of loss is insolvency of buyer
                 </small>
                 <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="overdues"
-                    type="text"
-                    value={check4}
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     id="defaultoverdues"
                     onChange={(e) => setCheck4(e.target.value)}
                   />
@@ -566,10 +628,9 @@ const DomesticPaymentInsuaranceForm = () => {
                 <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="declaration"
-                    type="text"
-                    value={check5}
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     id="defaultdeclaration"
                     onChange={(e) => setCheck5(e.target.value)}
                   />
@@ -580,10 +641,9 @@ const DomesticPaymentInsuaranceForm = () => {
                 <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="particulars"
-                    type="text"
-                    value={check6}
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     id="defaultparticulars"
                     onChange={(e) => setCheck6(e.target.value)}
                   />
@@ -600,10 +660,9 @@ const DomesticPaymentInsuaranceForm = () => {
                 <hr />
                 <div className="form-check">
                   <input
-                    className="form-control"
-                    name="payreceive"
-                    type="text"
-                    value={check7}
+                    className="form-check-input"
+                    type="checkbox"
+                    value="yes"
                     id="defaultpayreceive"
                     onChange={(e) => setCheck7(e.target.value)}
                   />
@@ -645,16 +704,6 @@ const DomesticPaymentInsuaranceForm = () => {
                     onChange={(e) => setPlace(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-md-12">
-                  <label for="inputPositon4">Date</label>
-                  <input
-                    type="date"
-                    value={signdate}
-                    className="form-control"
-                    id="inputPosition4"
-                    onChange={(e) => setSignDate(e.target.value)}
-                  />
-                </div>
               </div>
               <button type="submit" className="btn btn-primary">
                 Submit
@@ -662,6 +711,15 @@ const DomesticPaymentInsuaranceForm = () => {
             </form>
           </div>
         </div>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </div>
       <Footer />
     </>

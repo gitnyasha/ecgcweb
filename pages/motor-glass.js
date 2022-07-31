@@ -3,8 +3,11 @@ import Navbar from "../components/_App/Navbar";
 import Footer from "../components/_App/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import { backend } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const MotorGlass = () => {
+  const [show, setShow] = React.useState(false);
+
   const [policynumber, setPolicynumber] = React.useState("");
   const [claimnumber, setClaimNumber] = React.useState("");
   const [nameofinsured, setNameofinsured] = React.useState("");
@@ -59,11 +62,13 @@ const MotorGlass = () => {
         place,
         wasanydamage,
         windscreen,
-        formdate,
+        formdate: new Date(),
       })
       .then((res) => {
         console.log(res);
-        alert("Form submitted successfully");
+        if (res.status === 201) {
+          setShow(true);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -225,9 +230,7 @@ const MotorGlass = () => {
               </div>
               <div className="form-row my-3">
                 <div className="form-group col-md-12">
-                  <label for="inputDate4">
-                    <small>Registration Number</small>
-                  </label>
+                  <label for="inputDate4">Registration Number</label>
                   <input
                     type="text"
                     value={regnumber}
@@ -236,9 +239,7 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="form-group col-md-12">
-                  <label for="inputPe4">
-                    <small>Make of Vehicle</small>
-                  </label>
+                  <label for="inputPe4">Make of Vehicle</label>
                   <input
                     type="text"
                     value={vehiclemake}
@@ -247,9 +248,7 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="form-group col-md-12">
-                  <label for="inputName4">
-                    <small>Type of Body (lorry, sedan)</small>
-                  </label>
+                  <label for="inputName4">Type of Body (lorry, sedan)</label>
                   <input
                     type="text"
                     value={typeofbody}
@@ -258,9 +257,7 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="form-group col-md-12">
-                  <label for="inputSig4">
-                    <small>Year of Make</small>
-                  </label>
+                  <label for="inputSig4">Year of Make</label>
                   <input
                     type="date"
                     value={yearofmake}
@@ -269,11 +266,9 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="form-group col-md-12">
-                  <label for="inputDate4">
-                    <small>Sum Insured</small>
-                  </label>
+                  <label for="inputDate4">Sum Insured</label>
                   <input
-                    type="text"
+                    type="number"
                     value={suminsured}
                     onChange={(e) => setSuminsured(e.target.value)}
                     className="form-control"
@@ -359,17 +354,6 @@ const MotorGlass = () => {
                   />
                 </div>
               </div>
-              <div className="form-row my-3">
-                <div className="col-sm-12">
-                  <label for="inputNID2">Date</label>
-                  <input
-                    type="date"
-                    value={formdate}
-                    onChange={(e) => setFormdate(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
-              </div>
 
               <div className="form-group">
                 <small>
@@ -383,6 +367,15 @@ const MotorGlass = () => {
             </form>
           </Col>
         </Row>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </Container>
       <Footer />
     </>

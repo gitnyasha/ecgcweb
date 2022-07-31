@@ -20,6 +20,11 @@ const Careers = () => {
       <td>{job.title}</td>
       <td>{job.description}</td>
       <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
+      <td>
+        <Link href={job.document}>
+          <a>Download</a>
+        </Link>
+      </td>
     </tr>
   ));
   if (careers.length > 0) {
@@ -37,10 +42,6 @@ const Careers = () => {
 
         <div className="client-area ptb-100">
           <div className="container">
-            <div className="section-title">
-              <h2>Careers</h2>
-            </div>
-
             <div className="row">
               <table className="table top-selling-table" id="datatablesSimple">
                 <thead>

@@ -10,76 +10,140 @@ const Claims = () => {
       <br />
       <br />
       <br />
-      <div className="container">
+      <div className="container my-5">
         <div className="my-3 p-3 bg-white rounded shadow-sm">
-          <h2 className="border-bottom text-center border-gray pb-2 mb-0">
-            Claim Forms
-          </h2>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">
-                  Credit Claim Insuarance
-                </strong>
-                <Link href="/export-payment-insuarance-form">Apply Online</Link>
-              </div>
-            </div>
+          <div className="section-title pt-5">
+            <h2>Claim Forms</h2>
           </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">
-                  Domestic Payment Insuarance
-                </strong>
-                <Link href="/domestic-payment-insuarance-form">
-                  Apply Online
+          <div className="row">
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/credit-claim">
+                  <img
+                    src="/images/clients/banks.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
                 </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/credit-claim">
+                    <h3 style={{ fontSize: 16 }}>Credit Claim Form</h3>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">
-                  Claim Form Goods In Transit
-                </strong>
-                <Link href="/transit-form">Apply Online</Link>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/public-liability">
+                  <img
+                    src="/images/services/personal-accident.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/public-liability">
+                    <h3 style={{ fontSize: 16 }}>Public Liability Form</h3>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">Motor Glass Claim</strong>
-                <Link href="/motor-glass">Apply Online</Link>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/property-claim">
+                  <img
+                    src="/images/services/home.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/property-claim">
+                    <h3 style={{ fontSize: 16 }}>Property Claim Form</h3>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">
-                  Guarantee Scheme Claim
-                </strong>
-                <Link href="/guarantee-scheme-claim">Apply Online</Link>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/guarantee-scheme-claim">
+                  <img
+                    src="/images/ecgc/msme.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/guarantee-scheme-claim">
+                    <h3 style={{ fontSize: 16 }}>Guarantee Scheme Claim</h3>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">Property Claim</strong>
-                <Link href="/property-claim">Apply Online</Link>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/motor-glass">
+                  <img
+                    src="/images/services/motor.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/motor-glass">
+                    <h3 style={{ fontSize: 16 }}>Motor Glass Claim</h3>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="media text-muted pt-3">
-            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <div className="d-flex justify-content-between align-items-center w-100">
-                <strong className="text-gray-dark">
-                  Public Liabilty Claim
-                </strong>
-                <Link href="/public-liability">Apply Online</Link>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/transit-form">
+                  <img
+                    src="/images/services/marine-insurance.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/transit-form">
+                    <h3 style={{ fontSize: 16 }}>Goods In Transit Claim</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/domestic-payment-insuarance-form">
+                  <img
+                    src="/images/ecgc/domestic-payment.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/domestic-payment-insuarance-form">
+                    <h3 style={{ fontSize: 16 }}>
+                      Domestic Payment Insuarance
+                    </h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/export-payment-insuarance-form">
+                  <img
+                    src="/images/ecgc/export-credit.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/export-payment-insuarance-form">
+                    <h3 style={{ fontSize: 16 }}>Export Payment Insuarance</h3>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

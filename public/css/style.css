@@ -8,6 +8,13 @@
   font-size: 0.8em;
  }
 
+ .blog-fluid {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+ }
+
 #sidebar {
   position: absolute;
   top: 0;

@@ -47,6 +47,11 @@ const Dashboard = () => {
   return (
     <Container fluid>
       <Row>
+        <Col>
+          <Topbar />
+        </Col>
+      </Row>
+      <Row>
         <Col sm={3}>
           <Sidebar />
         </Col>

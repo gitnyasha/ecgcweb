@@ -8,6 +8,7 @@ import Comments from "../components/Blog/comments";
 import { useRouter } from "next/router";
 import Moment from "moment";
 import { backend } from "./api/api";
+import parse from "html-react-parser";
 
 const BlogDetails = () => {
   const [post, setPost] = React.useState([]);
@@ -27,22 +28,18 @@ const BlogDetails = () => {
     <>
       <Navbar />
 
-      <PageBanner
-        pageTitle="Blog Details"
-        homePageUrl="/"
-        homePageText="Home"
-        activePageText="Blog Details"
-      />
-
       <div className="blog-details-area ptb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 col-md-12">
+        <div className="container my-5">
+          <div className="row my-5">
+            <div className="col-lg-8 col-md-12 my-5">
               <div className="blog-details-desc">
+                <h2>{post.title}</h2>
+
                 <div className="article-image">
                   <img
-                    src="/images/blog-details/blog-details.jpg"
-                    alt="image"
+                    src={post.image}
+                    alt="blog image"
+                    className="blog-fluid"
                   />
                 </div>
 
@@ -65,33 +62,12 @@ const BlogDetails = () => {
                       </li>
                     </ul>
                   </div>
-
-                  <h3>{post.title}</h3>
-
-                  {post.description}
-                </div>
-
-                <div className="post-navigation">
-                  <div className="navigation-links">
-                    <div className="nav-previous">
-                      <Link href="#">
-                        <a>
-                          <i className="bx bx-left-arrow-alt"></i> Prev Post
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="nav-next">
-                      <Link href="#">
-                        <a>
-                          Next Post <i className="bx bx-right-arrow-alt"></i>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
+                  <br></br>
+                  <div className="wysiwyg">{parse(`${post.description}`)}</div>
                 </div>
 
                 {/* Comments & Form */}
-                <Comments />
+                {/* <Comments /> */}
               </div>
             </div>
 

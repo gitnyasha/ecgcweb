@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import { backend } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const GuaranteeSchemeClaim = () => {
   const [guaranteeno, setGuaranteeNo] = useState("");
@@ -43,6 +44,7 @@ const GuaranteeSchemeClaim = () => {
   const [bankfacilities, setBankFacilities] = useState("");
   const [watchlist, setWatchList] = useState("");
   const [remarks, setRemarks] = useState("");
+  const [show, setShow] = React.useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -89,7 +91,9 @@ const GuaranteeSchemeClaim = () => {
       })
       .then((res) => {
         console.log(res);
-        alert("Successfully submitted");
+        if (res.status === 201) {
+          setShow(true);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -500,6 +504,15 @@ const GuaranteeSchemeClaim = () => {
             </form>
           </Col>
         </Row>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </Container>
       <Footer />
     </>

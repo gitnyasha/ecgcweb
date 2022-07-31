@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
 import { backend } from "./api/api";
+import Alert from "react-bootstrap/Alert";
 
 const PublicLiability = () => {
   const [policynumber, setPolicynumber] = useState("");
@@ -33,6 +34,7 @@ const PublicLiability = () => {
   const [insuredfullname, setInsuredfullname] = useState("");
   const [insuredcapacity, setInsuredcapacity] = useState("");
   const [datesigned, setDateSigned] = useState("");
+  const [show, setShow] = React.useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,11 +67,13 @@ const PublicLiability = () => {
         witness2contact,
         insuredfullname,
         insuredcapacity,
-        datesigned,
+        datesigned: new Date(),
       })
       .then((res) => {
         console.log(res);
-        alert("Successfully submitted");
+        if (res.status === 201) {
+          setShow(true);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -106,7 +110,7 @@ const PublicLiability = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-5">
                   1. Insured
                 </div>
                 <small>
@@ -135,7 +139,7 @@ const PublicLiability = () => {
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Telephone</label>
                   <input
-                    type="text"
+                    type="number"
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
@@ -150,7 +154,7 @@ const PublicLiability = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-5">
                   2. Details of loss/Damage
                 </div>
                 <div className="form-group col-md-12">
@@ -222,7 +226,7 @@ const PublicLiability = () => {
                     className="form-control"
                   ></textarea>
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-5">
                   3. Third Party Details
                 </div>
                 <div className="form-group col-md-12">
@@ -239,7 +243,7 @@ const PublicLiability = () => {
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Tel / Cell No:</label>
                   <input
-                    type="text"
+                    type="number"
                     value={thirdpartyphone1}
                     onChange={(e) => setThirdpartyphone1(e.target.value)}
                     className="form-control"
@@ -268,7 +272,7 @@ const PublicLiability = () => {
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Tel / Cell no:</label>
                   <input
-                    type="text"
+                    type="number"
                     value={thirdpartyphone2}
                     onChange={(e) => setThirdpartyphone2(e.target.value)}
                     className="form-control"
@@ -283,7 +287,7 @@ const PublicLiability = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-5">
                   4. Witnesses
                 </div>
                 <div className="form-group col-md-12">
@@ -340,7 +344,7 @@ const PublicLiability = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="card-header bg-secondary text-white py-5 my-5">
+                <div className="card-header bg-secondary text-white py-1 my-5">
                   5. Declaration
                 </div>
                 <div className="form-group col-md-12">
@@ -361,15 +365,6 @@ const PublicLiability = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-12">
-                  <label for="inputPN4">Date:</label>
-                  <input
-                    type="date"
-                    value={datesigned}
-                    onChange={(e) => setDateSigned(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
                 <button type="submit" className="btn btn-primary my-4">
                   Submit
                 </button>
@@ -377,6 +372,15 @@ const PublicLiability = () => {
             </form>
           </Col>
         </Row>
+        <Alert
+          show={show}
+          variant="success"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Success!</Alert.Heading>
+          <p>Form has been successfully sent.</p>
+        </Alert>
       </Container>
 
       <Footer />

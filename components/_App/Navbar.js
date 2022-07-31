@@ -192,9 +192,8 @@ const Navbar = () => {
 
                       <li className="nav-item">
                         <Link
-                          href="/files/Memorandum & Articles of Association.pdf"
+                          href="/memorandum-and-articles-of-association"
                           activeClassName="active"
-                          download
                         >
                           <a onClick={toggleNavbar} className="nav-link">
                             Memorandum & Articles of Association
@@ -222,6 +221,17 @@ const Navbar = () => {
                       toggleSearchModal();
                     }}
                   />
+                </div>
+
+                <div className="subscribe mx-1">
+                  <Link
+                    href="https://sheltered-refuge-20729.herokuapp.com"
+                    passHref
+                  >
+                    <a className="default-btn" rel="noreferrer">
+                      Login
+                    </a>
+                  </Link>
                 </div>
 
                 <div className="subscribe">
@@ -353,8 +363,8 @@ const Navbar = () => {
 
                   <ul>
                     <li>
-                      <Link href="/coming-soon">
-                        <a>Carriers</a>
+                      <Link href="/careers">
+                        <a>Careers</a>
                       </Link>
                     </li>
                     <li>
@@ -363,12 +373,12 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/coming-soon">
+                      <Link href="/memorandum-and-articles-of-association">
                         <a>Memorandum and Articles Of Association</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/coming-soon">
+                      <Link href="/tenders-and-rfqs">
                         <a>RFQs</a>
                       </Link>
                     </li>
