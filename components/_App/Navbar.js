@@ -192,7 +192,7 @@ const Navbar = () => {
 
                       <li className="nav-item">
                         <Link
-                          href="/files/Memorandum & Articles of Association.pdf"
+                          href="/memorandum-and-articles-of-association"
                           activeClassName="active"
                         >
                           <a onClick={toggleNavbar} className="nav-link">
