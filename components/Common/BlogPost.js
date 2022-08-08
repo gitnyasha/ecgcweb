@@ -1,10 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import Moment from "moment";
-import { backend } from "../../pages/api/api";
+import { backend, uri } from "../../pages/api/api";
+import Pagination from "react-bootstrap/Pagination";
 
 const BlogPost = () => {
   const [posts, setPosts] = React.useState([]);
+
+  let active = 1;
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active}>
+        {number}
+      </Pagination.Item>
+    );
+  }
+
   React.useEffect(() => {
     backend
       .get("/api/allposts")
@@ -17,9 +29,9 @@ const BlogPost = () => {
   const postList = posts.map((post) => (
     <div className="col-lg-6" key={post.id}>
       <div className="single-blog">
-        <Link href={`blog-details?id=${post.id}`}>
+        <Link href={`/post/${post.slug}`}>
           <a>
-            <img src={post.image} alt="Image" className="blog-fluid" />
+            <img src={uri + post.image} alt="Image" className="blog-fluid" />
           </a>
         </Link>
 
@@ -27,19 +39,19 @@ const BlogPost = () => {
           <ul>
             <li>{Moment(post.created_at).format("MMMM Do YYYY")} </li>
             <li>
-              <Link href={`blog-details?id=${post.id}`}>
+              <Link href={`/post/${post.slug}`}>
                 <a>By Admin</a>
               </Link>
             </li>
           </ul>
 
-          <Link href={`blog-details?id=${post.id}`}>
+          <Link href={`/post/${post.slug}`}>
             <a>
               <h3>{post.title}</h3>
             </a>
           </Link>
 
-          <Link href={`blog-details?id=${post.id}`}>
+          <Link href={`/post/${post.slug}`}>
             <a className="read-more">
               Read More <i className="bx bx-plus" />
             </a>
@@ -55,29 +67,7 @@ const BlogPost = () => {
         <div className="row">
           {postList}
           <div className="col-lg-12">
-            <div className="page-navigation-area">
-              <ul className="pagination">
-                <li className="page-item">
-                  <Link href="#">
-                    <a className="page-link page-links">
-                      <i className="bx bx-chevrons-left"></i>
-                    </a>
-                  </Link>
-                </li>
-                <li className="page-item active">
-                  <Link href="#">
-                    <a className="page-link" href="#">
-                      1
-                    </a>
-                  </Link>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    <i className="bx bx-chevrons-right"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <Pagination size="lg">{items}</Pagination>
           </div>
         </div>
       </div>

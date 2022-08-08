@@ -1,33 +1,41 @@
-import React from 'react';
-import Navbar from '../components/_App/Navbar';
-import MainBanner from '../components/HomeOne/MainBanner';
-import Services from '../components/HomeOne/Services';
-import Footer from '../components/_App/Footer';
+import React from "react";
+import Navbar from "../components/_App/Navbar";
+import MainBanner from "../components/HomeOne/MainBanner";
+import Services from "../components/HomeOne/Services";
+import Footer from "../components/_App/Footer";
 import dynamic from "next/dynamic";
 import Clients from "../components/clients/Clients";
 import MakePayment from "../components/Payments/MakePayment";
+import { backend } from "./api/api";
 
-const ChatBot = dynamic(import('../components/chatbot'), { ssr: false });
+const ChatBot = dynamic(import("../components/chatbot"), { ssr: false });
 
 const Index = () => {
-    return (
-        <>
-            <Navbar />
+  React.useEffect(() => {
+    backend
+      .get(`/api/track-visitors`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+  return (
+    <>
+      <Navbar />
 
-            <br/>
-            <br/>
-            <MainBanner />
+      <br />
+      <br />
+      <MainBanner />
 
-            <Services />
+      <Services />
 
-            <Clients />
+      <Clients />
 
-            <MakePayment />
+      <MakePayment />
 
-            <Footer />
-
-        </>
-    )
-}
+      <Footer />
+    </>
+  );
+};
 
 export default Index;

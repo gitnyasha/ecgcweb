@@ -1,22 +1,23 @@
 import React from "react";
-import Navbar from "../components/_App/Navbar";
-import PageBanner from "../components/Common/PageBanner";
-import Footer from "../components/_App/Footer";
+import Navbar from "../../components/_App/Navbar";
+import PageBanner from "../../components/Common/PageBanner";
+import Footer from "../../components/_App/Footer";
 import Link from "next/link";
-import BlogSidebar from "../components/Blog/BlogSidebar";
-import Comments from "../components/Blog/comments";
+import BlogSidebar from "../../components/Blog/BlogSidebar";
+import Comments from "../../components/Blog/comments";
 import { useRouter } from "next/router";
 import Moment from "moment";
-import { backend } from "./api/api";
+import { backend, uri } from "../api/api";
 import parse from "html-react-parser";
 
 const BlogDetails = () => {
   const [post, setPost] = React.useState([]);
   const router = useRouter();
-  const { id: id } = router.query;
+  const { slug } = router.query;
+
   React.useEffect(() => {
     backend
-      .get(`/api/allposts/${id}`)
+      .get(`/api/post/${slug}`)
       .then((response) => {
         setPost(response.data.data);
         console.log(response.data.data);
@@ -37,7 +38,7 @@ const BlogDetails = () => {
 
                 <div className="article-image">
                   <img
-                    src={post.image}
+                    src={uri + post.image}
                     alt="blog image"
                     className="blog-fluid"
                   />
@@ -70,7 +71,6 @@ const BlogDetails = () => {
                 {/* <Comments /> */}
               </div>
             </div>
-
             <div className="col-lg-4 col-md-12">
               <div className="blog-right-sidebar">
                 <BlogSidebar />
