@@ -393,8 +393,8 @@ const MotorGlass = () => {
                   <label for="inputCD2">Place where damaged vehicle can be seen</label>
                   <input
                     type="text"
-                    value={placeofdamage}
-                    onChange={(e) => setPlaceofdamage(e.target.value)}
+                    value={placeseen}
+                    onChange={(e) => setPlaceseen(e.target.value)}
                     className="form-control"
                   />
                 </div>
