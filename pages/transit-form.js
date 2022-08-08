@@ -184,7 +184,7 @@ const TransitForm = () => {
                   />
                 </div>
                 <div className="form-group my-2 col-md-12 col-sm-12">
-                  <label for="inputPositon4">Position</label>
+                  <label for="inputPositon4">Insured Address:</label>
                   <input
                     type="text"
                     value={position}
@@ -193,22 +193,12 @@ const TransitForm = () => {
                     onChange={(e) => setposition(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-md-12 col-sm-12">
-                  <label for="inputPositon4">Email</label>
-                  <input
-                    type="email"
-                    value={email}
-                    className="form-control"
-                    id="inputPosition4"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12 col-sm-12">
-                  <label for="inputNum4">Agent Number</label>
+                  <label for="inputNum4">Agent Name & Number</label>
                   <input
-                    type="number"
+                    type="text"
                     value={phone}
                     className="form-control"
                     id="inputNum4"

@@ -22,6 +22,7 @@ const GuaranteeSchemeClaim = () => {
   const [issuedate, setIssueDate] = useState("");
   const [recallnotice, setRecallNotice] = useState("");
   const [forum, setForum] = useState("");
+  const [casenumber, setCaseNumber] = useState("");
   const [filingsuit, setFileSuit] = useState("");
   const [dateofpossession, setDateOfPossession] = useState("");
   const [amountclaimed, setAmountClaimed] = useState("");
@@ -66,6 +67,7 @@ const GuaranteeSchemeClaim = () => {
         issuedate,
         recallnotice,
         forum,
+        casenumber,
         filingsuit,
         dateofpossession,
         amountclaimed,
@@ -279,6 +281,18 @@ const GuaranteeSchemeClaim = () => {
                   className="form-control"
                   value={forum}
                   onChange={(e) => setForum(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="exampleInputForumDate">
+                Suit / Case No.*
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={casenumber}
+                  onChange={(e) => setCaseNumber(e.target.value)}
                   required
                 />
               </div>

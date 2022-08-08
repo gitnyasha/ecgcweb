@@ -21,6 +21,7 @@ const MotorGlass = () => {
   const [drrelation, setDrrelation] = React.useState("");
   const [drlicence, setDrlicence] = React.useState("");
   const [offense, setOffense] = React.useState("");
+  const [dateofissue, setDateofissue] = React.useState("");
   const [regnumber, setRegNumber] = React.useState("");
   const [vehiclemake, setVehicleMake] = React.useState("");
   const [typeofbody, setTypeofbody] = React.useState("");
@@ -30,8 +31,13 @@ const MotorGlass = () => {
   const [dateofoccurence, setDateOfOccurence] = React.useState("");
   const [occurencetime, setOccurencetime] = React.useState("");
   const [place, setPlace] = React.useState("");
+  const [causeofdamage, setCauseofdamage] = React.useState("");
   const [wasanydamage, setWasanydamage] = React.useState("");
   const [windscreen, setWindscreen] = React.useState("");
+  const [alreadydamaged, setAlreadydamaged] = React.useState("");
+  const [placeseen, setPlaceseen] = React.useState("");
+  const [fitted, setFitted] = React.useState("");
+  const [estimation, setEstimation] = React.useState("");
   const [formdate, setFormdate] = React.useState("");
 
   const handleSubmit = (e) => {
@@ -51,6 +57,7 @@ const MotorGlass = () => {
         drrelation,
         drlicence,
         offense,
+        dateofissue,
         regnumber,
         vehiclemake,
         typeofbody,
@@ -60,8 +67,13 @@ const MotorGlass = () => {
         dateofoccurence,
         occurencetime,
         place,
+        causeofdamage,
         wasanydamage,
         windscreen,
+        alreadydamaged,
+        placeseen,
+        fitted,
+        estimation,
         formdate: new Date(),
       })
       .then((res) => {
@@ -213,6 +225,17 @@ const MotorGlass = () => {
                 </div>
                 <div className="form-group col-sm-12">
                   <label for="inputCD2">
+                    Date of issue of Drivers Licence
+                  </label>
+                  <input
+                    type="date"
+                    value={dateofissue}
+                    onChange={(e) => setDateofissue(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
+                <div className="form-group col-sm-12">
+                  <label for="inputCD2">
                     Has driver ever been convicted of a driving offence? If so,
                     give brief details and dates
                   </label>
@@ -321,6 +344,19 @@ const MotorGlass = () => {
               </Row>
 
               <div className="form-row my-3">
+                <div className="form-group col-sm-12">
+                  <label for="inputFullNames">
+                    Cause of Damage (if any)
+                  </label>
+                  <input
+                    type="text"
+                    value={causeofdamage}
+                    onChange={(e) => setCauseofdamage(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
+              </div>
+              <div className="form-row my-3">
                 <div className="col-sm-12">
                   <label for="inputNID2">
                     Was there any other damage to the vehicle?
@@ -348,11 +384,41 @@ const MotorGlass = () => {
                   <label for="inputCD2">Was it already damaged?</label>
                   <input
                     type="text"
-                    value={wasanydamage}
-                    onChange={(e) => setWasanydamage(e.target.value)}
+                    value={alreadydamaged}
+                    onChange={(e) => setAlreadydamaged(e.target.value)}
                     className="form-control"
                   />
                 </div>
+                <div className="col-sm-12">
+                  <label for="inputCD2">Place where damaged vehicle can be seen</label>
+                  <input
+                    type="text"
+                    value={placeofdamage}
+                    onChange={(e) => setPlaceofdamage(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-sm-12">
+                  <label for="inputCD2">
+                  Have you given instructions for a replacement to be fitted?
+                  </label>
+                  <input
+                    type="text"
+                    value={fitted}
+                    onChange={(e) => setFitted(e.target.value)}
+                    className="form-control"
+                  />
+                  </div>
+                  <div className="col-sm-12">
+                  <label for="inputCD2">Estimated Cost $</label>
+                  <input
+                    type="number"
+                    value={estimation}
+                    onChange={(e) => setEstimation(e.target.value)}
+                    className="form-control"
+                  />
+                  </div>
               </div>
 
               <div className="form-group">
