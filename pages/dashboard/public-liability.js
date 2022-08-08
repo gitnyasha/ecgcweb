@@ -7,36 +7,9 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
-import { jsPDF } from "jspdf";
-import ReactDOMServer from "react-dom/server";
-
-const doc = new jsPDF();
 
 const PublicLiability = () => {
   const [post, setPosts] = useState([]);
-
-  const pdf = post?.map((p) => (
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>{p.policynumber}</td>
-            <td>{p.broker}</td>
-            <td>{p.insured}</td>
-            <td>{p.telephone}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  ));
-
-  const save = () => {
-    doc.html(ReactDOMServer.renderToStaticMarkup(pdf), {
-      callback: () => {
-        doc.save("public-liability.pdf");
-      },
-    });
-  };
 
   useEffect(() => {
     let headersList = {
