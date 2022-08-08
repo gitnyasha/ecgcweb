@@ -8,8 +8,6 @@ import axios from "axios";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
 
-const doc = new jsPDF();
-
 const MotorGlass = () => {
   const [post, setPosts] = useState([]);
 
