@@ -7,36 +7,11 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
-import { jsPDF } from "jspdf";
-import ReactDOMServer from "react-dom/server";
 
 const doc = new jsPDF();
 
 const MotorGlass = () => {
   const [post, setPosts] = useState([]);
-
-  const pdf = post?.map((p) => (
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>{p.policynumber}</td>
-            <td>{p.claimnumber}</td>
-            <td>{p.nameofinsured}</td>
-            <td>{p.occupation}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  ));
-
-  const save = () => {
-    doc.html(ReactDOMServer.renderToStaticMarkup(pdf), {
-      callback: () => {
-        doc.save("motor-glass.pdf");
-      },
-    });
-  };
 
   useEffect(() => {
     let headersList = {
@@ -73,9 +48,6 @@ const MotorGlass = () => {
       <td>{p.claimnumber}</td>
       <td>{p.nameofinsured}</td>
       <td>{p.occupation}</td>
-      <td>
-        <button onClick={save}>download pdf</button>
-      </td>
     </tr>
   ));
 
