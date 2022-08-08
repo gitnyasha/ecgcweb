@@ -7,10 +7,6 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import Topbar from "./Topbar";
 import { uri } from "../api/api";
-import { jsPDF } from "jspdf";
-import ReactDOMServer from "react-dom/server";
-
-const doc = new jsPDF();
 
 const DomesticPayment = () => {
   const [post, setPosts] = useState([]);
@@ -28,14 +24,6 @@ const DomesticPayment = () => {
       </table>
     </div>
   ));
-
-  const save = () => {
-    doc.html(ReactDOMServer.renderToStaticMarkup(pdf), {
-      callback: () => {
-        doc.save("domestic-payment.pdf");
-      },
-    });
-  };
 
   useEffect(() => {
     let headersList = {
@@ -66,9 +54,6 @@ const DomesticPayment = () => {
       <td>{p.clientname}</td>
       <td>{p.policynumber}</td>
       <td>{p.amount}</td>
-      <td>
-        <button onClick={save}>download pdf</button>
-      </td>
     </tr>
   ));
 
