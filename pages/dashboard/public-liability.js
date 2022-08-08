@@ -46,9 +46,6 @@ const PublicLiability = () => {
       <td>{p.broker}</td>
       <td>{p.insured}</td>
       <td>{p.telephone}</td>
-      <td>
-        <button onClick={save}>download pdf</button>
-      </td>
     </tr>
   ));
 
