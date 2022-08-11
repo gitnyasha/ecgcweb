@@ -38,7 +38,7 @@ const BlogDetails = () => {
 
                 <div className="article-image">
                   <img
-                    src={uri + post.image}
+                    src={post.image}
                     alt="blog image"
                     className="blog-fluid"
                   />

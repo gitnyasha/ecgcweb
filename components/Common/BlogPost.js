@@ -31,7 +31,7 @@ const BlogPost = () => {
       <div className="single-blog">
         <Link href={`/post/${post.slug}`}>
           <a>
-            <img src={uri + post.image} alt="Image" className="blog-fluid" />
+            <img src={post.image} alt="Image" className="blog-fluid" />
           </a>
         </Link>
 
