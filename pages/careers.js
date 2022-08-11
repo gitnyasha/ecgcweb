@@ -4,6 +4,7 @@ import Footer from "../components/_App/Footer";
 import Link from "next/link";
 import { backend } from "./api/api";
 import Moment from "moment";
+import parse from "html-react-parser";
 
 const Careers = () => {
   const [careers, setCareers] = React.useState([]);
@@ -18,7 +19,7 @@ const Careers = () => {
   const jobs = careers.map((job) => (
     <tr key={job.id}>
       <td>{job.title}</td>
-      <td>{job.description}</td>
+      <td>{parse(`${job.description}`)}</td>
       <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
       <td>
         <Link href={job.document}>
