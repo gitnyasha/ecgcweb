@@ -36,7 +36,7 @@ const ExportAndDomesticCreditInsuranceProducts = () => {
                     </Link>
                   </div>
                   <div className="col-lg-6 subscribe">
-                    <Link href="/export-payment-insuarance-form">
+                    <Link href="/coming-soon">
                       <a className="default-btn">Apply Now</a>
                     </Link>
                   </div>
@@ -71,7 +71,7 @@ const ExportAndDomesticCreditInsuranceProducts = () => {
                   </div>
 
                   <div className="subscribe col-lg-6">
-                    <Link href="/domestic-payment-insuarance-form">
+                    <Link href="/coming-soon">
                       <a className="default-btn">Apply Now</a>
                     </Link>
                   </div>
