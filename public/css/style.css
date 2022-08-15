@@ -1638,7 +1638,6 @@ Default Btn Area Style*/
   border-radius: 4px;
   text-align: center;
   overflow: hidden;
-  z-index: 1;
   background-color: #1B75BA;
 }
 
@@ -1889,7 +1888,6 @@ Nav Area Style
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 999;
   background-color: #D3D3D3;
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
           box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);

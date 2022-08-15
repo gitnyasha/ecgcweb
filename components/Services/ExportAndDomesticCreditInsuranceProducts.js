@@ -28,7 +28,6 @@ const ExportAndDomesticCreditInsuranceProducts = () => {
                     "Export Credit Insurance is designed to protect Zimbabwe’s exporters from losses that may arise from a variety of commercial and political risks inherent in all export transactions. This protection will also enhance their capacity to compete in the international markets and enable them to break into new markets, introduce new products and take up new buyers."
                   }
                 />
-
                 <div className={"row"}>
                   <div className={"col-lg-6 subscribe"}>
                     <Link href="/products/export-payment-insurance">

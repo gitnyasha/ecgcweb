@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { Top } from "./style";
 import FloatingWhatsApp from "react-floating-whatsapp";
 
-const ChatBot = dynamic(import("../chatbot"), { ssr: false });
+// const ChatBot = dynamic(import("../chatbot"), { ssr: false });
 const Navbar = () => {
   const [menu, setMenu] = React.useState(true);
   const [sidebarModal, setSidebar] = React.useState(false);
@@ -18,8 +18,8 @@ const Navbar = () => {
   };
 
   const config = {
-    left: "95%",
-    top: "90.5%",
+    right: "8%",
+    bottom: "5%",
     position: "fixed",
   };
 
@@ -50,7 +50,6 @@ const Navbar = () => {
       <header className="header-area fixed-top">
         {/* TopHeader */}
         <TopHeader />
-
         <div id="navbar" className="navbar-area">
           <div className="main-nav">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -258,16 +257,17 @@ const Navbar = () => {
             </nav>
           </div>
         </div>
-
+        {/* phoneNumber="263719745452" */}
         <FloatingWhatsApp
-          phoneNumber="263719745452"
+          phoneNumber="263773662924"
           accountName="ECGC"
           allowClickAway
           notification
           notificationDelay={60000} // 1 minute
           notificationSound={false}
           styles={config}
-          height={500}
+          height={450}
+          zIndex={9999}
           avatar={"/images/profile.png"}
           chatMessage={
             "Hi, thank you for contacting ECGC.\n" + "\n" + "How can we assist?"
@@ -275,7 +275,7 @@ const Navbar = () => {
         />
       </header>
 
-      {/* <ChatBot />*/}
+      {/* <ChatBot /> */}
       {/* Search Overlay */}
       <div
         className={`search-overlay ${
