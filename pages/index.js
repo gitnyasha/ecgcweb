@@ -13,9 +13,9 @@ const ChatBot = dynamic(import("../components/chatbot"), { ssr: false });
 const Index = () => {
   React.useEffect(() => {
     backend
-      .get(`/api/track-visitors`)
+      .get("/api/track-visitors")
       .then((response) => {
-        console.log(response);
+        setCareers(response.data.careers);
       })
       .catch((error) => console.error(error));
   }, []);
