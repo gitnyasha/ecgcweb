@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/_App/Navbar";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
-import { backend } from "./api/api";
+import { backend, uri } from "./api/api";
 import Moment from "moment";
 import parse from "html-react-parser";
 
@@ -22,7 +22,7 @@ const Careers = () => {
       <td>{parse(`${job.description}`)}</td>
       <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
       <td>
-        <Link href={job.document}>
+        <Link href={uri + job.document}>
           <a>Download</a>
         </Link>
       </td>

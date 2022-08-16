@@ -3,7 +3,7 @@ import Navbar from "../components/_App/Navbar";
 import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
 import Link from "next/link";
-import { backend } from "./api/api";
+import { backend, uri } from "./api/api";
 import Moment from "moment";
 
 const TendersAndRfqs = () => {
@@ -22,7 +22,7 @@ const TendersAndRfqs = () => {
       <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
       <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
       <td>
-        <Link href={p.document}>
+        <Link href={uri + p.document}>
           <a>Download</a>
         </Link>
       </td>
