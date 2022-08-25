@@ -7,7 +7,7 @@ const apiClient = axios.create({
   withCredentials: true,
 });
 
-const uri = "https://sheltered-refuge-20729.herokuapp.com";
+const uri = "https://sheltered-refuge-20729.herokuapp.com/";
 
 const backend = axios.create({
   baseURL: "https://sheltered-refuge-20729.herokuapp.com",
