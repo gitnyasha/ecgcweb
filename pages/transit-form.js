@@ -365,9 +365,7 @@ const TransitForm = () => {
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-4 col-sm-12">
-                  <label for="inputAm4">
-                    Gross numpackagesofarticles1 Of Claim
-                  </label>
+                  <label for="inputAm4">Gross amount of claim</label>
                   <input
                     type="number"
                     value={grossclaim}
@@ -379,7 +377,7 @@ const TransitForm = () => {
 
                 <div className="form-group my-2 col-md-4 col-sm-12">
                   <label for="inputLN4">
-                    Less Excess under Policy (if any)
+                    Less Excess under policy (if any)
                   </label>
                   <input
                     type="number"
@@ -391,9 +389,7 @@ const TransitForm = () => {
                 </div>
 
                 <div className="form-group my-2 col-md-4 col-sm-12">
-                  <label for="inputLN4">
-                    Net numpackagesofarticles1 of claim
-                  </label>
+                  <label for="inputLN4">Net amount of claim</label>
                   <input
                     type="number"
                     value={netclaim}

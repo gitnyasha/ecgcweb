@@ -224,9 +224,7 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="form-group col-sm-12">
-                  <label for="inputCD2">
-                    Date of issue of Drivers Licence
-                  </label>
+                  <label for="inputCD2">Date of issue of Drivers Licence</label>
                   <input
                     type="date"
                     value={dateofissue}
@@ -345,9 +343,7 @@ const MotorGlass = () => {
 
               <div className="form-row my-3">
                 <div className="form-group col-sm-12">
-                  <label for="inputFullNames">
-                    Cause of Damage (if any)
-                  </label>
+                  <label for="inputFullNames">Cause of Breakage (if any)</label>
                   <input
                     type="text"
                     value={causeofdamage}
@@ -390,7 +386,9 @@ const MotorGlass = () => {
                   />
                 </div>
                 <div className="col-sm-12">
-                  <label for="inputCD2">Place where damaged vehicle can be seen</label>
+                  <label for="inputCD2">
+                    Place where damaged vehicle can be seen
+                  </label>
                   <input
                     type="text"
                     value={placeseen}
@@ -401,7 +399,7 @@ const MotorGlass = () => {
 
                 <div className="col-sm-12">
                   <label for="inputCD2">
-                  Have you given instructions for a replacement to be fitted?
+                    Have you given instructions for a replacement to be fitted?
                   </label>
                   <input
                     type="text"
@@ -409,8 +407,8 @@ const MotorGlass = () => {
                     onChange={(e) => setFitted(e.target.value)}
                     className="form-control"
                   />
-                  </div>
-                  <div className="col-sm-12">
+                </div>
+                <div className="col-sm-12">
                   <label for="inputCD2">Estimated Cost $</label>
                   <input
                     type="number"
@@ -418,7 +416,7 @@ const MotorGlass = () => {
                     onChange={(e) => setEstimation(e.target.value)}
                     className="form-control"
                   />
-                  </div>
+                </div>
               </div>
 
               <div className="form-group">
