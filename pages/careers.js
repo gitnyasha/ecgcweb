@@ -28,7 +28,7 @@ const Careers = () => {
       </td>
     </tr>
   ));
-  if (careers.length > 0) {
+  if (careers.length) {
     return (
       <>
         <Navbar />
