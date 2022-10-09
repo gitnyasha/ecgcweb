@@ -103,15 +103,6 @@ const PropertyClaim = () => {
                   />
                 </div>
                 <div className="form-group col-md-12">
-                  <label for="inputPN4">Insurer</label>
-                  <input
-                    type="text"
-                    value={insurer}
-                    onChange={(e) => setInsurer(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group col-md-12">
                   <label for="inputPN4">Address where damage occurred:</label>
                   <input
                     type="text"
@@ -251,7 +242,8 @@ const PropertyClaim = () => {
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">
-                    Are there any other persons interested in the property?
+                    Are there any other persons interested in the property? if
+                    yes state name and interest
                   </label>
                   <input
                     type="text"
@@ -319,6 +311,15 @@ const PropertyClaim = () => {
                   I/We declare that the information given on this form is true
                   to the best of my/our knowledge and belief.
                 </small>
+                <div className="form-group col-md-12">
+                  <label for="inputPN4">Name / Signature</label>
+                  <input
+                    type="text"
+                    value={insurer}
+                    onChange={(e) => setInsurer(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Witness:</label>
                   <input

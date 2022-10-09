@@ -132,6 +132,17 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="exampleInputLeadingBankName">
+                  Lending Bank Name:
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={leadingbankname}
+                  onChange={(e) => setLeadingBankName(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
                 <label htmlFor="exampleInputPhone">Phone</label>
                 <input
                   type="number"
@@ -150,17 +161,7 @@ const GuaranteeSchemeClaim = () => {
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="exampleInputLeadingBankName">
-                  Lending Bank Name:
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={leadingbankname}
-                  onChange={(e) => setLeadingBankName(e.target.value)}
-                />
-              </div>
+
               <div className="form-group">
                 <label htmlFor="exampleInputContactOfficer">
                   Contact Officer Name:
@@ -285,9 +286,7 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputForumDate">
-                Suit / Case No.*
-                </label>
+                <label htmlFor="exampleInputForumDate">Suit / Case No.*</label>
                 <input
                   type="text"
                   className="form-control"
@@ -297,7 +296,9 @@ const GuaranteeSchemeClaim = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="exampleInputFilingSuit">Suit / Case No.*</label>
+                <label htmlFor="exampleInputFilingSuit">
+                  Provide satisfactory reason for filing suit before NPA date
+                </label>
                 <input
                   type="text"
                   className="form-control"
@@ -308,7 +309,7 @@ const GuaranteeSchemeClaim = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="date Of Possession">
-                  Provide satisfactory reason for filing suit before NPA date
+                  Date of possession of assets under PRIMARY SECURITY*
                 </label>
                 <input
                   type="date"

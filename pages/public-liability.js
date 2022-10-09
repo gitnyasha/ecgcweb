@@ -18,6 +18,7 @@ const PublicLiability = () => {
   const [connectedtobusiness, setConnectedtobusiness] = useState("");
   const [circumstances, setCircumstances] = useState("");
   const [negligence, setNegligence] = useState("");
+  const [declaration, setDeclaration] = useState("");
   const [prevent, setPrevent] = useState("");
   const [thirdpartydetails1, setThirdpartydetails1] = useState("");
   const [thirdpartyphone1, setThirdpartyphone1] = useState("");
@@ -52,6 +53,7 @@ const PublicLiability = () => {
         connectedtobusiness,
         circumstances,
         negligence,
+        declaration,
         prevent,
         thirdpartydetails1,
         thirdpartyphone1,
@@ -346,6 +348,22 @@ const PublicLiability = () => {
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">
                   5. Declaration
+                </div>
+                <div className="form-group col-md-12">
+                  <label for="inputPN4">
+                    I / We warrant that the foregoing information provided is
+                    true and correct, and that no information has been withheld
+                    in respect of the loss / damage. I / We undertake to advise
+                    Hollard in writing in the event of any changes to supplied
+                    information, and in the event of the recovery of any part of
+                    the property forming the subject of this claim.
+                  </label>
+                  <input
+                    type="text"
+                    value={declaration}
+                    onChange={(e) => setDeclaration(e.target.value)}
+                    className="form-control"
+                  />
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Insured’s full name:</label>

@@ -229,8 +229,8 @@ const ExportPaymentInsuaranceForm = () => {
                 </div>
               </div>
               <div className="card-header my-3">
-                1. EVENTS WHICH IS THE effectivedate OF LOSS (PLEASE SELECT
-                AGAINST THE APPROPRIATE ITEM)
+                1. EVENTS WHICH IS THE CAUSE OF LOSS (PLEASE SELECT AGAINST THE
+                APPROPRIATE ITEM)
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12">
@@ -609,9 +609,7 @@ const ExportPaymentInsuaranceForm = () => {
                   </label>
                 </div>
                 <hr />
-                <small>
-                  If the effective date of loss is insolvency of buyer
-                </small>
+                <small>If the cause of loss is insolvency of buyer</small>
                 <hr />
                 <div className="form-check">
                   <input
@@ -673,24 +671,24 @@ const ExportPaymentInsuaranceForm = () => {
               </div>
               <hr />
               <small>
-                We declare that the information given herein are true and
-                correct in every particular and that wehave not omitted to state
-                any information relating to the claim.
+                We declare that the information given here in are true and
+                correct in every particular and that we have not omitted to
+                state any information relating to the claim.
                 <br />
                 <br />
                 We undertake to pursue all steps, including institution of legal
-                proceedings, which may be advisedby the Corporation to effect
+                proceedings, which may be advised by the Corporation to effect
                 recovery of the debt to which this claim relates.
                 <br />
                 <br />
                 Upon payment of this claim, we shall forth with pay to the
-                Corporation any and all amounts that weour agents or any other
+                Corporation any and all amounts that we our agents or any other
                 persons acting on our behalf may receive from the buyer or from
-                any othersource in respect of the debt to which this claim
-                relates and we acknowledge and declare that allsuch amounts are
+                any other source in respect of the debt to which this claim
+                relates and we acknowledge and declare that all such amounts are
                 moneys to which the Corporation alone is beneficially entitled
-                and that, until payment to the Corporation is made as aforesaid,
-                the said amounts will be held by us in trust for the
+                and that, until payment to the Corporation is made as afore
+                said, the said amounts will be held by us in trust for the
                 Corporation.
               </small>
               <div className="form-row">

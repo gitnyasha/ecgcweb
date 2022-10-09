@@ -7,6 +7,7 @@ import { backend, uri } from "./api/api";
 const CreditClaim = () => {
   const [registeredcompanyname, setRegisteredCompanyName] = React.useState("");
   const [policynumber, setPolicyNumber] = React.useState("");
+  const [email, setEmail] = React.useState("");
   const [contactperson, setContactPerson] = React.useState("");
   const [position, setPosition] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -19,6 +20,7 @@ const CreditClaim = () => {
   const [amountowed, setAmountOwed] = React.useState("");
   const [loanamount, setLoanAmount] = React.useState("");
   const [purposeofloan, setPurposeOfLoan] = React.useState("");
+  const [collaterial, setCollaterial] = React.useState("");
   const [check1, setCheck1] = React.useState("");
   const [check2, setCheck2] = React.useState("");
   const [check3, setCheck3] = React.useState("");
@@ -39,6 +41,7 @@ const CreditClaim = () => {
         {
           registeredcompanyname: registeredcompanyname,
           policynumber: policynumber,
+          email: email,
           contactperson: contactperson,
           position: position,
           phone: phone,
@@ -50,6 +53,7 @@ const CreditClaim = () => {
           cause: cause,
           amountowed: amountowed,
           purposeofloan: purposeofloan,
+          collaterial: collaterial,
           check1: check1,
           check2: check2,
           check3: check3,
@@ -72,6 +76,7 @@ const CreditClaim = () => {
           setShow(true);
           setRegisteredCompanyName("");
           setPolicyNumber("");
+          setEmail("");
           setContactPerson("");
           setPosition("");
           setPhone("");
@@ -84,6 +89,7 @@ const CreditClaim = () => {
           setAmountOwed("");
           setLoanAmount("");
           setPurposeOfLoan("");
+          setCollaterial("");
           setCheck1("");
           setCheck2("");
           setCheck3("");
@@ -126,6 +132,16 @@ const CreditClaim = () => {
                     id="inputPN4"
                     value={policynumber}
                     onChange={(e) => setPolicyNumber(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-sm-12">
+                  <label for="inputEmail4">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="inputEmail4"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -269,7 +285,7 @@ const CreditClaim = () => {
                 4. PURPOSE OF LOAN
               </div>
               <div className="form-row">
-                <div className="form-group col-sm-122">
+                <div className="form-group col-sm-12">
                   <label for="inputPe4">Purpose of loan</label>
                   <input
                     type="text"
@@ -277,6 +293,16 @@ const CreditClaim = () => {
                     id="inputPe4"
                     value={purposeofloan}
                     onChange={(e) => setPurposeOfLoan(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-sm-12">
+                  <label for="inputAm4">Collateral Security</label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="inputAm4"
+                    value={collaterial}
+                    onChange={(e) => setCollaterial(e.target.value)}
                   />
                 </div>
               </div>

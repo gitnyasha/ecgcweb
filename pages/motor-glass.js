@@ -38,7 +38,7 @@ const MotorGlass = () => {
   const [placeseen, setPlaceseen] = React.useState("");
   const [fitted, setFitted] = React.useState("");
   const [estimation, setEstimation] = React.useState("");
-  const [formdate, setFormdate] = React.useState("");
+  const [signature, setSignature] = React.useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,6 +74,7 @@ const MotorGlass = () => {
         placeseen,
         fitted,
         estimation,
+        signature,
         formdate: new Date(),
       })
       .then((res) => {
@@ -343,7 +344,9 @@ const MotorGlass = () => {
 
               <div className="form-row my-3">
                 <div className="form-group col-sm-12">
-                  <label for="inputFullNames">Cause of Breakage (if any)</label>
+                  <label for="inputFullNames">
+                    Cause of Damage (if any)? if yes give details
+                  </label>
                   <input
                     type="text"
                     value={causeofdamage}
@@ -424,6 +427,17 @@ const MotorGlass = () => {
                   I / We declare that, to the best of my/our knowledge and
                   belief, these statements are true.
                 </small>
+              </div>
+              <div className="form-row my-3">
+                <div className="form-group col-sm-12">
+                  <label for="inputFullNames">Name</label>
+                  <input
+                    type="text"
+                    value={signature}
+                    onChange={(e) => setSignature(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
               </div>
               <button type="submit" className="btn btn-primary my-4">
                 Submit

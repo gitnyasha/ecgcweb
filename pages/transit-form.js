@@ -65,6 +65,7 @@ const TransitForm = () => {
   const [involvedinaccident, setinvolvedinaccident] = React.useState("");
   const [brief, setbrief] = React.useState("");
   const [capacity, setcapacity] = React.useState("");
+  const [name, setname] = React.useState("");
   const [show, setShow] = React.useState(false);
 
   const handleSubmit = (e) => {
@@ -127,6 +128,8 @@ const TransitForm = () => {
           contractor: contractor,
           subcontractor: subcontractor,
           capacity: capacity,
+          name: name,
+          datesigned: new Date(),
         },
         {
           headers: {
@@ -450,10 +453,6 @@ const TransitForm = () => {
                   />
                 </div>
               </div>
-              <div className="card-header my-3">
-                IF LOSS OR DAMAGE WAS CAUSED BY AN ACCIDENT TO THE VEHICLE,
-                STATE:
-              </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12">
                   <label for="inputSig4">
@@ -520,7 +519,7 @@ const TransitForm = () => {
                     id="aretherewitnessess1"
                     name="aretherewitnessess1"
                     value="yes"
-                    onChange={(e) => setaretherewarnings(e.target.value)}
+                    onChange={(e) => setaretherewitnessess(e.target.value)}
                   />
                   <label class="form-check-label" for="inso1">
                     Yes
@@ -533,7 +532,7 @@ const TransitForm = () => {
                     id="aretherewitnessess2"
                     name="aretherewitnessess1"
                     value="no"
-                    onChange={(e) => setaretherewarnings(e.target.value)}
+                    onChange={(e) => setaretherewitnessess(e.target.value)}
                     checked
                   />
                   <label class="form-check-label" for="aretherewitnessess2">
@@ -655,18 +654,7 @@ const TransitForm = () => {
                     onChange={(e) => setwhenwherewho(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-sm-12">
-                  <label for="inputPo4">
-                    What receipt was given at time of loading?
-                  </label>
-                  <input
-                    type="text"
-                    value={receipt}
-                    className="form-control"
-                    id="inputPo4"
-                    onChange={(e) => setreceipt(e.target.value)}
-                  />
-                </div>
+
                 <div className="form-group my-2 col-sm-12">
                   <label for="inputPo4">
                     How were the goods packed, stowed and sheeted?
@@ -972,6 +960,16 @@ const TransitForm = () => {
                 whatsoever in connection with the claim.
               </small>
               <div className="row my-3">
+                <div className="form-group my-2 col-md-12 col-sm-12">
+                  <label for="inputPo4">NAME / SIGNATURE</label>
+                  <input
+                    type="text"
+                    value={name}
+                    className="form-control"
+                    id="inputPo4"
+                    onChange={(e) => setname(e.target.value)}
+                  />
+                </div>
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputPo4">CAPACITY</label>
                   <input
