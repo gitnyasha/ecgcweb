@@ -146,6 +146,22 @@ const Claims = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                <Link href="/motor-accident">
+                  <img
+                    src="/images/services/motor-insuarance.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/motor-accident">
+                    <h3 style={{ fontSize: 16 }}>Motor Accident Insuarance</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
