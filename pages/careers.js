@@ -18,12 +18,14 @@ const Careers = () => {
   }, []);
   const jobs = careers.map((job) => (
     <tr key={job.id}>
-      <td>{job.title}</td>
+      <td>
+        <Link href={`/careers/${job.id}`}>{job.title}</Link>
+      </td>
       <td>{parse(`${job.description}`)}</td>
       <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
       <td>
-        <Link href={uri + job.document}>
-          <a>Download</a>
+        <Link href={`/careers/${job.id}`}>
+          <a>Open</a>
         </Link>
       </td>
     </tr>

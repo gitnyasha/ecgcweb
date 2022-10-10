@@ -9,7 +9,7 @@ const MotorAccident = () => {
   const [show, setShow] = React.useState(false);
 
   const [policynumber, setPolicynumber] = React.useState("");
-  const [claimnumber, setClaimNumber] = React.useState("");
+  const [dateofbirth1, setDateOfBirth1] = React.useState("");
   const [nameofinsured, setNameofinsured] = React.useState("");
   const [occupation, setOccupation] = React.useState("");
   const [address, setAddress] = React.useState("");
@@ -102,7 +102,7 @@ const MotorAccident = () => {
     backend
       .post("/api/motor-accident", {
         policynumber,
-        claimnumber,
+        dateofbirth1,
         nameofinsured,
         occupation,
         address,
@@ -121,16 +121,6 @@ const MotorAccident = () => {
         yearofmake,
         engine,
         chassis,
-        dateofoccurence,
-        occurencetime,
-        place,
-        causeofdamage,
-        wasanydamage,
-        windscreen,
-        alreadydamaged,
-        placeseen,
-        fitted,
-        estimation,
         signature,
         formdate: new Date(),
         ownedbyinsured,
@@ -193,6 +183,84 @@ const MotorAccident = () => {
         console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setPolicynumber("");
+          setDateofbirth1("");
+          setNameofinsured("");
+          setOccupation("");
+          setAddress("");
+          setEmail("");
+          setMobile("");
+          setDateofbirth("");
+          setNameofdriver("");
+          setAddressofdriver("");
+          setPlaceofissue("");
+          setDrlicence("");
+          setEndorsed("");
+          setDateofissue("");
+          setRegnumber("");
+          setVehiclemake("");
+          setTypeofbody("");
+          setYearofmake("");
+          setEngine("");
+          setChassis("");
+          setSignature("");
+          setOwnedbyinsured("");
+          setOwnedbyinsured2("");
+          setVehiclemodified("");
+          setVehiclemodified2("");
+          setVdescription("");
+          setVdescription2("");
+          setVdescription3("");
+          setEstimatedcost("");
+          setSidecar("");
+          setPillion("");
+          setLearner("");
+          setTelephonenumber("");
+          setDriveroccupation("");
+          setPobox("");
+          setReasonforuse("");
+          setInsureddriver("");
+          setInsureddriverdetails("");
+          setEmployedbyinsured("");
+          setEmployedbyinsureddetails("");
+          setAlcoholinfluence("");
+          setAlcoholinfluencedetails("");
+          setAlcoholtest("");
+          setAlcoholtestdetails("");
+          setMentalphysicaldefect("");
+          setMentalPhysicalDefectDetails("");
+          setMotoringOffence("");
+          setMotoringOffenceDetails("");
+          setMotorAccident("");
+          setMotorAccidentDetails("");
+          setMotorInsurance("");
+          setMotorInsuranceDetails("");
+          setSpecialTerms("");
+          setSpecialTermsDetails("");
+          setMotorPolicy("");
+          setMotorPolicyDetails("");
+          setCharged("");
+          setChargedDetails("");
+          setDateofaccident("");
+          setTimeofaccident("");
+          setLocationofaccident("");
+          setTimeandDateofAdvice("");
+          setAdmitLiability("");
+          setAdmitLiabilityDetails("");
+          setBlamed("");
+          setPassengers("");
+          setInjured("");
+          setInjuredDetails("");
+          setEmploy("");
+          setWitnesses("");
+          setPoliceOfficer("");
+          setOtherDrivers("");
+          setOtherDriversInEmploy("");
+          setOtherDriversInjured("");
+          setOtherVehicles("");
+          setOtherInsurers("");
+          setOtherDamageDetails("");
+          setOtherClaims("");
         }
       })
       .catch((err) => {
@@ -236,8 +304,8 @@ const MotorAccident = () => {
                   <label for="inputPN4">Date of Birth</label>
                   <input
                     type="date"
-                    value={claimnumber}
-                    onChange={(e) => setClaimNumber(e.target.value)}
+                    value={dateofbirth1}
+                    onChange={(e) => setDateOfBirth1(e.target.value)}
                     className="form-control"
                   />
                 </div>
