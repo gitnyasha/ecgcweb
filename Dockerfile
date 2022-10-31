@@ -28,7 +28,5 @@ COPY --from=builder /opt/app/public ./public
 COPY --from=builder /opt/app/.next ./.next
 COPY --from=builder /opt/app/node_modules ./node_modules
 
-EXPOSE 3000
-
 CMD ["node_modules/.bin/next", "start"]
 

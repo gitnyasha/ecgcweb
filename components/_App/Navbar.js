@@ -222,7 +222,7 @@ const Navbar = () => {
                   />
                 </div>
 
-                <div className="subscribe mx-1">
+                {/* <div className="subscribe mx-1">
                   <Link
                     href="https://sheltered-refuge-20729.herokuapp.com"
                     passHref
@@ -231,7 +231,7 @@ const Navbar = () => {
                       Login
                     </a>
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="subscribe">
                   <Link href="https://www.paynow.co.zw/ecgc" passHref>
