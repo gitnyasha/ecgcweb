@@ -222,16 +222,13 @@ const Navbar = () => {
                   />
                 </div>
 
-                {/* <div className="subscribe mx-1">
-                  <Link
-                    href="https://sheltered-refuge-20729.herokuapp.com"
-                    passHref
-                  >
+                <div className="subscribe mx-1">
+                  <Link href="http://167.71.66.220/" passHref>
                     <a className="default-btn" rel="noreferrer">
                       Login
                     </a>
                   </Link>
-                </div> */}
+                </div>
 
                 <div className="subscribe">
                   <Link href="https://www.paynow.co.zw/ecgc" passHref>
