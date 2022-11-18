@@ -1,15 +1,15 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "http://161.35.205.217",
+  baseURL: "https://dev.jorkshield.co.zw",
   headers: {
     "X-Requested-With": "XMLHttpRequest",
   },
   withCredentials: true,
 });
 
-const uri = "http://161.35.205.217/";
+const uri = "https://dev.jorkshield.co.zw/";
 
 const backend = axios.create({
-  baseURL: "http://161.35.205.217",
+  baseURL: "https://dev.jorkshield.co.zw",
 });
 export { apiClient, backend, uri };
