@@ -66,9 +66,9 @@ const BlogPost = () => {
       <div className="container">
         <div className="row">
           {postList}
-          <div className="col-lg-12">
+          {/* <div className="col-lg-12">
             <Pagination size="lg">{items}</Pagination>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
