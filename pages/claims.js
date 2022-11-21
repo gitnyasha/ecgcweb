@@ -16,7 +16,7 @@ const Claims = () => {
             <h2>Claim Forms</h2>
           </div>
           <div className="row">
-            <div className="col-lg-3 col-md-3">
+            {/* <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/credit-claim">
                   <img
@@ -31,7 +31,7 @@ const Claims = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/public-liability">
@@ -150,7 +150,7 @@ const Claims = () => {
               <div className="single-blog">
                 <Link href="/motor-accident">
                   <img
-                    src="/images/services/motor-insuarance.jpg"
+                    src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
