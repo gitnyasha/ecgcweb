@@ -25,6 +25,20 @@ const BlogDetails = () => {
       .catch((error) => console.error(error));
   }, []);
 
+  if (post.length === 0) {
+    return (
+      <>
+        <Navbar />
+        {/* spinner */}
+        <div className="spinner-area">
+          <div className="spinner-box">
+            <div className="lds-hourglass"></div>
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
   return (
     <>
       <Navbar />

@@ -31,6 +31,16 @@ const CareerDetails = () => {
   const [experience, setExperience] = useState("");
   const [education, setEducation] = useState("");
 
+  React.useEffect(() => {
+    backend
+      .get(`/api/jobs/${slug}`)
+      .then((response) => {
+        setJob(response.data.data);
+        console.log(response.data.data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
   const handleApply = (e) => {
     e.preventDefault();
 
@@ -79,15 +89,20 @@ const CareerDetails = () => {
     });
   };
 
-  React.useEffect(() => {
-    backend
-      .get(`/api/jobs/${slug}`)
-      .then((response) => {
-        setJob(response.data.data);
-        console.log(response.data.data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
+  if (job.length === 0) {
+    return (
+      <>
+        <Navbar />
+        {/* spinner */}
+        <div className="spinner-area">
+          <div className="spinner-box">
+            <div className="lds-hourglass"></div>
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
