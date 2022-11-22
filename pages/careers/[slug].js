@@ -96,7 +96,7 @@ const CareerDetails = () => {
         {/* spinner */}
         <div className="spinner-area">
           <div className="spinner-box">
-            <div className="lds-hourglass"></div>
+            <div className="lds-hourglass">Lodding...</div>
           </div>
         </div>
         <Footer />
