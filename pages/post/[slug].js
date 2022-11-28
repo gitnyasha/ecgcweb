@@ -29,6 +29,9 @@ const BlogDetails = () => {
     return (
       <>
         <Navbar />
+        <br />
+        <br />
+        <br />
         {/* spinner */}
         <div className="spinner-area">
           <div className="spinner-box">

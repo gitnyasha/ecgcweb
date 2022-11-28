@@ -93,7 +93,9 @@ const CareerDetails = () => {
     return (
       <>
         <Navbar />
-        {/* spinner */}
+        <br />
+        <br />
+        <br />
         <div className="spinner-area">
           <div className="spinner-box">
             <div className="lds-hourglass">Lodding...</div>
