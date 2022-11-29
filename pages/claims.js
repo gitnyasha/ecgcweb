@@ -64,7 +64,7 @@ const Claims = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3">
+            {/* <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/guarantee-scheme-claim">
                   <img
@@ -79,7 +79,7 @@ const Claims = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/motor-glass">
