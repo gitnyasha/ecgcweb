@@ -723,10 +723,7 @@ const TransitForm = () => {
                   onChange={(e) => setactiontaken(e.target.value)}
                 ></textarea>
               </div>
-              <div className="card-header my-3">
-                IF LOSS OR DAMAGE WAS CAUSED BY AN ACCIDENT TO THE VEHICLE,
-                STATE:
-              </div>
+
               <div className="form-row">
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputNID2">
@@ -766,7 +763,7 @@ const TransitForm = () => {
                     onChange={(e) => setinspected(e.target.value)}
                   />
                 </div>
-                <div className="form-group my-2 col-sm-12">
+                {/* <div className="form-group my-2 col-sm-12">
                   <label for="inputPo4">
                     What receipt was given at time of loading?
                   </label>
@@ -777,7 +774,7 @@ const TransitForm = () => {
                     id="inputPo4"
                     onChange={(e) => setrecieptloading(e.target.value)}
                   />
-                </div>
+                </div> */}
                 <div className="form-group my-2 col-sm-12">
                   <label for="inputPo4">
                     Are you the Owner or Carrier of the Goods?
