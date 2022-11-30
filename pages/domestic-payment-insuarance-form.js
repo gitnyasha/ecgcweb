@@ -35,6 +35,7 @@ const DomesticPaymentInsuaranceForm = () => {
   const [expenses, setExpenses] = React.useState("");
   const [netamountloss, setNetAmountLoss] = React.useState("");
   const [place, setPlace] = React.useState("");
+  const [signature, setSignature] = React.useState("");
   const [check1, setCheck1] = React.useState("");
   const [check2, setCheck2] = React.useState("");
   const [check3, setCheck3] = React.useState("");
@@ -87,6 +88,7 @@ const DomesticPaymentInsuaranceForm = () => {
           check7: check7,
           signdate: new Date(),
           place: place,
+          signature: signature,
         },
         {
           headers: {
@@ -456,6 +458,7 @@ const DomesticPaymentInsuaranceForm = () => {
                 </div>
 
                 <div className="form-group my-2 col-md-12">
+                  <h6>Less</h6>
                   <label for="inputName4">
                     <small>
                       Particulars of the amount of loss Gross Invoice Value of
@@ -470,7 +473,7 @@ const DomesticPaymentInsuaranceForm = () => {
                     onChange={(e) => setParticulars(e.target.value)}
                   />
                 </div>
-                <h6>Less</h6>
+
                 <div className="form-group my-2 col-md-12">
                   <label for="inputPo4">
                     <small>Payment received, if any: US$</small>
@@ -701,6 +704,16 @@ const DomesticPaymentInsuaranceForm = () => {
                     className="form-control"
                     id="inputRC4"
                     onChange={(e) => setPlace(e.target.value)}
+                  />
+                </div>
+                <div className="form-group my-2 col-md-12">
+                  <label for="inputRC4">Name/Signature:</label>
+                  <input
+                    type="text"
+                    value={signature}
+                    className="form-control"
+                    id="inputRC4"
+                    onChange={(e) => setSignature(e.target.value)}
                   />
                 </div>
               </div>
