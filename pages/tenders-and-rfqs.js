@@ -21,6 +21,7 @@ const TendersAndRfqs = () => {
       <td>{p.title}</td>
       <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
       <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
+      <td>{p.description}</td>
       <td>
         <Link href={uri + p.document}>
           <a>Download</a>
@@ -54,6 +55,7 @@ const TendersAndRfqs = () => {
                       <th>Title</th>
                       <th>Issued</th>
                       <th>Deadline</th>
+                      <th>Description</th>
                       <th>Document</th>
                     </tr>
                   </thead>
