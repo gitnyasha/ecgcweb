@@ -61,7 +61,17 @@ const BlogPost = () => {
     <div className="blog-area">
       <div className="container">
         <div className="row">
-          {postList}
+          {postList.length > 0 ? (
+            postList
+          ) : (
+            <div className="col-lg-12">
+              <div className="single-blog">
+                <div className="blog-content">
+                  <h3>No Posts Found</h3>
+                </div>
+              </div>
+            </div>
+          )}
           <div className="col-lg-12">
             <Pagination
               nPages={nPages}
