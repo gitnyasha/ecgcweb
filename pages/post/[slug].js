@@ -16,14 +16,16 @@ const BlogDetails = () => {
   const { slug } = router.query;
 
   React.useEffect(() => {
-    backend
-      .get(`/api/post/${slug}`)
-      .then((response) => {
-        setPost(response.data.data);
-        console.log(response.data.data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
+    if (router.isReady) {
+      backend
+        .get(`/api/post/${slug}`)
+        .then((response) => {
+          setPost(response.data.data);
+          console.log(response.data.data);
+        })
+        .catch((error) => console.error(error));
+    }
+  }, [router.isReady]);
 
   if (post.length === 0) {
     return (

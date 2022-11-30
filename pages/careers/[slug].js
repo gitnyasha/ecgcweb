@@ -32,14 +32,16 @@ const CareerDetails = () => {
   const [education, setEducation] = useState("");
 
   React.useEffect(() => {
-    backend
-      .get(`/api/jobs/${slug}`)
-      .then((response) => {
-        setJob(response.data.data);
-        console.log(response.data.data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
+    if (router.isReady) {
+      backend
+        .get(`/api/jobs/${slug}`)
+        .then((response) => {
+          setJob(response.data.data);
+          console.log(response.data.data);
+        })
+        .catch((error) => console.error(error));
+    }
+  }, [router.isReady]);
 
   const handleApply = (e) => {
     e.preventDefault();
