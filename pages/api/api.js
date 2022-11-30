@@ -1,15 +1,15 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "https://app.jorkshield.co.zw",
+  baseURL: "http://localhost:8000",
   headers: {
     "X-Requested-With": "XMLHttpRequest",
   },
   withCredentials: true,
 });
 
-const uri = "https://app.jorkshield.co.zw/";
+const uri = "http://localhost:8000/";
 
 const backend = axios.create({
-  baseURL: "https://app.jorkshield.co.zw",
+  baseURL: "http://localhost:8000",
 });
 export { apiClient, backend, uri };

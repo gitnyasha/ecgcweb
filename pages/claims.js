@@ -82,6 +82,22 @@ const Claims = () => {
             </div> */}
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
+                <Link href="/all-risks-claim">
+                  <img
+                    src="/images/ecgc/msme.jpg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link>
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/all-risks-claim">
+                    <h3 style={{ fontSize: 16 }}>All Risk Claim</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
                 <Link href="/motor-glass">
                   <img
                     src="/images/services/motor.jpg"
@@ -130,7 +146,7 @@ const Claims = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/export-payment-insuarance-form">
                   <img
@@ -145,7 +161,7 @@ const Claims = () => {
                   </Link>
                 </div>
               </div>
-            </div> */}
+            </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/motor-accident">
