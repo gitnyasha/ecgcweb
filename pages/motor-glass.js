@@ -345,7 +345,8 @@ const MotorGlass = () => {
               <div className="form-row my-3">
                 <div className="form-group col-sm-12">
                   <label for="inputFullNames">
-                    Cause of Damage (if any)? if yes give details
+                    Cause of Breakage Add if yes give details after Any other
+                    damage?
                   </label>
                   <input
                     type="text"
