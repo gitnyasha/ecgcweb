@@ -44,7 +44,6 @@ const BlogSidebar = () => {
               ""
             )
           )}
-          ;
         </div>
       </div>
     </div>
