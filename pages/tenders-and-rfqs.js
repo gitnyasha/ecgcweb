@@ -21,7 +21,11 @@ const TendersAndRfqs = () => {
       <td>{p.title}</td>
       <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
       <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
-      <td>{p.description}</td>
+      <td
+        dangerouslySetInnerHTML={{
+          __html: `${p.description.substring(0, 60)}`,
+        }}
+      />
       <td>
         <Link href={uri + p.document}>
           <a>Download</a>

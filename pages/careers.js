@@ -21,7 +21,7 @@ const Careers = () => {
       <td>
         <Link href={`/careers/${job.id}`}>{job.title}</Link>
       </td>
-      <td>{parse(`${job.description}`)}</td>
+      <td>{parse(`${job.description.substring(0, 20)}`)}</td>
       <td>{Moment(job.created_at).format("MMMM Do YYYY")}</td>
       <td>
         <Link href={`/careers/${job.id}`}>

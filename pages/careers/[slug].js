@@ -95,9 +95,13 @@ const CareerDetails = () => {
     return (
       <>
         <Navbar />
-        <br />
-        <br />
-        <br />
+        <div className="page-career">
+          <div className="container">
+            <div className="page-career-content">
+              <h2>Careers</h2>
+            </div>
+          </div>
+        </div>
         <div className="spinner-area">
           <div className="spinner-box">
             <div className="lds-hourglass">Lodding...</div>
@@ -111,11 +115,17 @@ const CareerDetails = () => {
   return (
     <>
       <Navbar />
-
+      <div className="page-career">
+        <div className="container">
+          <div className="page-career-content">
+            <h2>Careers</h2>
+          </div>
+        </div>
+      </div>
       <div className="blog-details-area ptb-100">
-        <div className="container my-5">
-          <div className="row my-5">
-            <div className="col-lg-8 col-md-12 my-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-12 ">
               <div className="blog-details-desc">
                 <h2>{job.title}</h2>
 
