@@ -223,7 +223,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="subscribe mx-1">
-                  <Link href="https://dev.jorkshield.co.zw/" passHref>
+                  <Link href="https://app.jorkshield.co.zw/" passHref>
                     <a className="default-btn" rel="noreferrer">
                       Login
                     </a>
