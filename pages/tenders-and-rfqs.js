@@ -27,10 +27,9 @@ const TendersAndRfqs = () => {
   }, []);
 
   const mytenders = tenders.map((p) => (
-    <div className="client-area ptb-100">
+    <div className="client-area">
       <div className="container">
         <div className="row">
-          <h3>Tenders</h3>
           <div className="table-responsive">
             <table className="table top-selling-table" id="datatablesSimple">
               <thead>
@@ -52,7 +51,7 @@ const TendersAndRfqs = () => {
                   <td>{p.deadline_time}</td>
                   <td
                     dangerouslySetInnerHTML={{
-                      __html: `${p.description.substring(0, 60)}`,
+                      __html: `${p.description.substring(0, 15)}`,
                     }}
                   />
                   <td>{p.prebid_meeting}</td>
@@ -71,10 +70,9 @@ const TendersAndRfqs = () => {
   ));
 
   const myrfqs = rfqs.map((p) => (
-    <div className="client-area ptb-100">
+    <div className="client-area">
       <div className="container">
         <div className="row">
-          <h3>Rfqs</h3>
           <div className="table-responsive">
             <table className="table top-selling-table" id="datatablesSimple">
               <thead>
@@ -96,7 +94,7 @@ const TendersAndRfqs = () => {
                   <td>{p.deadline_time}</td>
                   <td
                     dangerouslySetInnerHTML={{
-                      __html: `${p.description.substring(0, 60)}`,
+                      __html: `${p.description.substring(0, 15)}`,
                     }}
                   />
                   <td>{p.prebid_meeting}</td>
@@ -129,12 +127,22 @@ const TendersAndRfqs = () => {
       <div className="client-area ptb-100">
         <div className="container">
           {mytenders.length > 0 ? (
-            <>{mytenders}</>
+            <>
+              <h3>Tenders</h3>
+              {mytenders}
+            </>
           ) : (
             <h3>No Tenders Available</h3>
           )}
           <hr />
-          {myrfqs.length > 0 ? <>{myrfqs}</> : <h3>No Rfqs Available</h3>}
+          {myrfqs.length > 0 ? (
+            <>
+              <h3>Rfqs</h3>
+              {myrfqs}
+            </>
+          ) : (
+            <h3>No Rfqs Available</h3>
+          )}
         </div>
       </div>
 
