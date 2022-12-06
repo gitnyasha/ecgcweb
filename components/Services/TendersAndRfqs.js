@@ -15,7 +15,7 @@ const TendersAndRfqs = () => {
           <div className="col-lg-6 col-sm-6">
             <div className="single-service">
               <img
-                src="/images/ecgc/export-credit.jpg"
+                src="/images/tenders.jpeg"
                 alt="Image"
                 style={{ borderRadius: "15px" }}
               />
@@ -37,7 +37,7 @@ const TendersAndRfqs = () => {
           <div className="col-lg-6 col-sm-6">
             <div className="single-service">
               <img
-                src="/images/ecgc/domestic-payment.jpg"
+                src="/images/rfqs.jpeg"
                 alt="Image"
                 style={{ borderRadius: "15px" }}
               />
