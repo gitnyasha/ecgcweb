@@ -8,96 +8,139 @@ import Moment from "moment";
 
 const TendersAndRfqs = () => {
   const [tenders, setTenders] = React.useState([]);
+  const [rfqs, setRfqs] = React.useState([]);
+
   React.useEffect(() => {
     backend
-      .get("/api/tenders-and-rfqs")
+      .get("/api/tenders")
       .then((response) => {
         setTenders(response.data.tenders);
       })
       .catch((error) => console.error(error));
+
+    backend
+      .get("/api/rfqs")
+      .then((response) => {
+        setRfqs(response.data.rfqs);
+      })
+      .catch((error) => console.error(error));
   }, []);
-  const tnq = tenders.map((p) => (
-    <tr key={p.id}>
-      <td>{p.title}</td>
-      <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
-      <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
-      <td
-        dangerouslySetInnerHTML={{
-          __html: `${p.description.substring(0, 60)}`,
-        }}
-      />
-      <td>
-        <Link href={uri + p.document}>
-          <a>Download</a>
-        </Link>
-      </td>
-    </tr>
+
+  const mytenders = tenders.map((p) => (
+    <div className="client-area ptb-100">
+      <div className="container">
+        <div className="row">
+          <h3>Tenders</h3>
+          <div className="table-responsive">
+            <table className="table top-selling-table" id="datatablesSimple">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Issued</th>
+                  <th>Deadline Date</th>
+                  <th>Deadline Time</th>
+                  <th>Description</th>
+                  <th>Prebid Meeting</th>
+                  <th>Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr key={p.id}>
+                  <td>{p.title}</td>
+                  <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
+                  <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
+                  <td>{p.deadline_time}</td>
+                  <td
+                    dangerouslySetInnerHTML={{
+                      __html: `${p.description.substring(0, 60)}`,
+                    }}
+                  />
+                  <td>{p.prebid_meeting}</td>
+                  <td>
+                    <Link href={uri + p.document}>
+                      <a>Download</a>
+                    </Link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   ));
-  if (tenders.length > 0) {
-    return (
-      <>
-        <Navbar />
 
-        <div className="page-tender">
-          <div className="container">
-            <div className="page-tender-content">
-              <h2>Tenders & RFQs</h2>
-            </div>
+  const myrfqs = rfqs.map((p) => (
+    <div className="client-area ptb-100">
+      <div className="container">
+        <div className="row">
+          <h3>Rfqs</h3>
+          <div className="table-responsive">
+            <table className="table top-selling-table" id="datatablesSimple">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Issued</th>
+                  <th>Deadline Date</th>
+                  <th>Deadline Time</th>
+                  <th>Description</th>
+                  <th>Prebid Meeting</th>
+                  <th>Document</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr key={p.id}>
+                  <td>{p.title}</td>
+                  <td>{Moment(p.date_posted).format("MMMM Do YYYY")}</td>
+                  <td>{Moment(p.deadline).format("MMMM Do YYYY")}</td>
+                  <td>{p.deadline_time}</td>
+                  <td
+                    dangerouslySetInnerHTML={{
+                      __html: `${p.description.substring(0, 60)}`,
+                    }}
+                  />
+                  <td>{p.prebid_meeting}</td>
+                  <td>
+                    <Link href={uri + p.document}>
+                      <a>Download</a>
+                    </Link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+      </div>
+    </div>
+  ));
 
-        <div className="client-area ptb-100">
-          <div className="container">
-            <div className="row">
-              <div className="table-responsive">
-                <table
-                  className="table top-selling-table"
-                  id="datatablesSimple"
-                >
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Issued</th>
-                      <th>Deadline</th>
-                      <th>Description</th>
-                      <th>Document</th>
-                    </tr>
-                  </thead>
-                  <tbody>{tnq}</tbody>
-                </table>
-              </div>
-            </div>
+  return (
+    <>
+      <Navbar />
+
+      <div className="page-tender">
+        <div className="container">
+          <div className="page-tender-content">
+            <h2>Tenders & RFQs</h2>
           </div>
         </div>
+      </div>
 
-        <Footer />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Navbar />
-
-        <div className="page-tender">
-          <div className="container">
-            <div className="page-tender-content">
-              <h2>Tenders & RFQs</h2>
-            </div>
-          </div>
+      <div className="client-area ptb-100">
+        <div className="container">
+          {mytenders.length > 0 ? (
+            <>{mytenders}</>
+          ) : (
+            <h3>No Tenders Available</h3>
+          )}
+          <hr />
+          {myrfqs.length > 0 ? <>{myrfqs}</> : <h3>No Rfqs Available</h3>}
         </div>
+      </div>
 
-        <div className="client-area ptb-100">
-          <div className="container">
-            <div className="row">
-              <h3>No tenders at the moment</h3>
-            </div>
-          </div>
-        </div>
-
-        <Footer />
-      </>
-    );
-  }
+      <Footer />
+    </>
+  );
 };
 
 export default TendersAndRfqs;
