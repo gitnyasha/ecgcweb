@@ -84,7 +84,7 @@ const Claims = () => {
               <div className="single-blog">
                 <Link href="/all-risks-claim">
                   <img
-                    src="/images/ecgc/msme.jpg"
+                    src="/images/allrisk.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
