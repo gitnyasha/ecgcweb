@@ -77,11 +77,11 @@ const Rfqs = () => {
         <div className="container">
           {myrfqs.length > 0 ? (
             <>
-              <h3>Rfqs</h3>
+              <h3>RFQs</h3>
               {myrfqs}
             </>
           ) : (
-            <h3>No Rfqs Available</h3>
+            <h3>No RFQs Available</h3>
           )}
         </div>
       </div>
