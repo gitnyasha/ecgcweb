@@ -43,7 +43,7 @@ const TendersAndRfqs = () => {
               />
 
               <div className="service-content">
-                <h3>Rfqs</h3>
+                <h3>RFQs</h3>
 
                 <div className={"row"}>
                   <div className="subscribe col-lg-12">
