@@ -147,7 +147,7 @@ const DomesticPaymentInsuaranceForm = () => {
       <Navbar />
       <div className="container py-5 my-5">
         <h1 className="mt-5 pt-5 text-center">
-          Domestic Payment Insuarance Form
+          Domestic Payment Insurance Form
         </h1>
         <div className="row my-2">
           <div className="col">

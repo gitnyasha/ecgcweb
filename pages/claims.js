@@ -139,9 +139,7 @@ const Claims = () => {
                 </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/domestic-payment-insuarance-form">
-                    <h3 style={{ fontSize: 16 }}>
-                      Domestic Payment Insuarance
-                    </h3>
+                    <h3 style={{ fontSize: 16 }}>Domestic Payment Insurance</h3>
                   </Link>
                 </div>
               </div>
@@ -157,7 +155,7 @@ const Claims = () => {
                 </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/export-payment-insuarance-form">
-                    <h3 style={{ fontSize: 16 }}>Export Payment Insuarance</h3>
+                    <h3 style={{ fontSize: 16 }}>Export Payment Insurance</h3>
                   </Link>
                 </div>
               </div>
@@ -173,7 +171,7 @@ const Claims = () => {
                 </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/motor-accident">
-                    <h3 style={{ fontSize: 16 }}>Motor Accident Insuarance</h3>
+                    <h3 style={{ fontSize: 16 }}>Motor Accident Insurance</h3>
                   </Link>
                 </div>
               </div>

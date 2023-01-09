@@ -144,9 +144,7 @@ const ExportPaymentInsuaranceForm = () => {
     <>
       <Navbar />
       <div className="container py-5 my-5">
-        <h1 className="mt-5 pt-5 text-center">
-          Export Payment Insuarance Form
-        </h1>
+        <h1 className="mt-5 pt-5 text-center">Export Payment Insurance Form</h1>
         <div className="row my-2">
           <div className="col">
             <form onSubmit={handleSubmitForm}>
