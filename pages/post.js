@@ -5,15 +5,15 @@ import { useRouter } from "next/router";
 import BlogSidebar from "../components/Blog/BlogSidebar";
 import Footer from "../components/_App/Footer";
 import Navbar from "../components/_App/Navbar";
-import Moment from "moment";
+import { backend, uri } from "./api/api";
 
 const Post = () => {
   const [post, setPost] = React.useState([]);
   const router = useRouter();
   const { id: id } = router.query;
   React.useEffect(() => {
-    axios
-      .get(`http://localhost:8000/api/allposts/${id}`)
+    backend
+      .get(`/api/allposts/${id}`)
       .then((response) => {
         setPost(response.data.data);
         console.log(response.data.data);

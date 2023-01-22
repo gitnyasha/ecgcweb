@@ -26,7 +26,7 @@ const BlogSidebar = () => {
                 <Link href={`/post/${post.slug}`}>
                   <a className="thumb">
                     <span className=" cover">
-                      <img src={post.image} alt="Image" />
+                      <img src={uri + post.image} alt="Image" />
                     </span>
                   </a>
                 </Link>
