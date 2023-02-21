@@ -222,13 +222,13 @@ const Navbar = () => {
                   />
                 </div>
 
-                <div className="subscribe mx-1">
-                  <Link href="https://app.jorkshield.co.zw/" passHref>
+                {/* <div className="subscribe mx-1">
+                  <Link href="https://admin.ecgc.co.zw/" passHref>
                     <a className="default-btn" rel="noreferrer">
                       Login
                     </a>
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="subscribe">
                   <Link href="https://www.paynow.co.zw/ecgc" passHref>
@@ -254,9 +254,8 @@ const Navbar = () => {
             </nav>
           </div>
         </div>
-        {/* phoneNumber="263719745452" */}
         <FloatingWhatsApp
-          phoneNumber="263773662924"
+          phoneNumber="263719745452"
           accountName="ECGC"
           allowClickAway
           notification
