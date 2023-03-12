@@ -255,7 +255,7 @@ const ExportProposal = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>From:</b>
                   </label>
@@ -266,20 +266,9 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
-                  <label for="inputRC4">
-                    <b>Phone Number:</b>
-                  </label>
-                  <input
-                    type="number"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Fax Number:</b>
                   </label>
@@ -290,7 +279,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       We hereby apply for a Domestic Credit Insurance Policy to
@@ -307,7 +296,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       1. Status of the applicant (state whether individual,
@@ -322,7 +311,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       2. Name and address of proprietor/ partners/directors:
@@ -338,7 +327,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div style="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>3. Name & Address of our bankers:</b>
                   </label>
@@ -351,7 +340,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. a) Year of establishment</b>
                   </label>
@@ -362,7 +351,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. b) Total sales turnover Export Sales (US$)</b>
                   </label>
@@ -373,7 +362,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. c) Domestic Sales (US$)</b>
                   </label>
@@ -384,7 +373,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>5. Description of goods exported:</b>
                   </label>
@@ -401,7 +390,7 @@ const ExportProposal = () => {
                 (Please enter N/A in appropriate columns, if not applicable)
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 1:</b>
                   </label>
@@ -412,7 +401,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 1 CAD:</b>
                   </label>
@@ -423,7 +412,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Against L/Cs 1</b>
                   </label>
@@ -434,7 +423,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> On CAD Terms 1</b>
                   </label>
@@ -445,7 +434,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On Open Account 1</b>
                   </label>
@@ -456,7 +445,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Other 1</b>
                   </label>
@@ -467,7 +456,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total 1</b>
                   </label>
@@ -481,7 +470,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2:</b>
                   </label>
@@ -492,7 +481,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2 CAD:</b>
                   </label>
@@ -503,7 +492,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Against L/Cs 2</b>
                   </label>
@@ -514,7 +503,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> On CAD Terms 1</b>
                   </label>
@@ -525,7 +514,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On Open Account 2</b>
                   </label>
@@ -536,7 +525,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Other 2</b>
                   </label>
@@ -547,7 +536,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total 2</b>
                   </label>
@@ -560,7 +549,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 3:</b>
                   </label>
@@ -571,7 +560,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 3 CAD:</b>
                   </label>
@@ -582,7 +571,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Against L/Cs 3</b>
                   </label>
@@ -593,7 +582,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> On CAD Terms 3</b>
                   </label>
@@ -604,7 +593,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On Open Account 3</b>
                   </label>
@@ -615,7 +604,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Other 3</b>
                   </label>
@@ -626,7 +615,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total 3</b>
                   </label>
@@ -639,7 +628,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 4:</b>
                   </label>
@@ -650,7 +639,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 4 CAD:</b>
                   </label>
@@ -661,7 +650,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Against L/Cs 4</b>
                   </label>
@@ -672,7 +661,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> On CAD Terms 4</b>
                   </label>
@@ -683,7 +672,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On Open Account 4</b>
                   </label>
@@ -694,7 +683,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Other 4</b>
                   </label>
@@ -705,7 +694,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total 4</b>
                   </label>
@@ -721,7 +710,7 @@ const ExportProposal = () => {
                 Our anticipated sales to principal buyers for the next 12 months
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 1:</b>
                   </label>
@@ -732,7 +721,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -743,7 +732,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Within 90 Days</b>
                   </label>
@@ -754,7 +743,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -765,7 +754,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -776,7 +765,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Up To 90 Days</b>
                   </label>
@@ -787,7 +776,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -798,7 +787,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total 1</b>
                   </label>
@@ -812,7 +801,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2:</b>
                   </label>
@@ -823,7 +812,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -834,7 +823,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Within 90 Days</b>
                   </label>
@@ -845,7 +834,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -856,7 +845,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -867,7 +856,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Up To 90 Days</b>
                   </label>
@@ -878,7 +867,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -889,7 +878,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2 Total</b>
                   </label>
@@ -903,7 +892,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2:</b>
                   </label>
@@ -914,7 +903,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -925,7 +914,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Within 90 Days</b>
                   </label>
@@ -936,7 +925,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -947,7 +936,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -958,7 +947,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Up To 90 Days</b>
                   </label>
@@ -969,7 +958,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -980,7 +969,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country Total 1</b>
                   </label>
@@ -994,7 +983,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 3:</b>
                   </label>
@@ -1005,7 +994,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -1016,7 +1005,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Within 90 Days</b>
                   </label>
@@ -1027,7 +1016,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -1038,7 +1027,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>On CAD Terms</b>
                   </label>
@@ -1049,7 +1038,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Up To 90 Days</b>
                   </label>
@@ -1060,7 +1049,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>120-180 Days</b>
                   </label>
@@ -1071,7 +1060,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country Total 3</b>
                   </label>
@@ -1085,7 +1074,7 @@ const ExportProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you wish to obtain a quotation for cover of All Markets
@@ -1100,7 +1089,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you wish the Policy to be ceded to any financial or
@@ -1116,7 +1105,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Do you make shipments by air on CAD terms of payment</b>
                   </label>
@@ -1127,7 +1116,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If so, do you wish to consider them as Open Delivery terms
@@ -1142,7 +1131,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting to Associate concerns abroad, (i) Number of
@@ -1156,7 +1145,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting to Associate concerns abroad, (ii) Total
@@ -1170,7 +1159,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting to Associate concerns abroad, (iii) Would you
@@ -1184,7 +1173,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting goods on consignment basis to self or agents
@@ -1198,7 +1187,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting goods on consignment basis to self or agents
@@ -1213,7 +1202,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       If exporting goods on consignment basis to self or agents
@@ -1249,7 +1238,7 @@ const ExportProposal = () => {
                 Detailed Report
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 1</b>
                   </label>
@@ -1260,7 +1249,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 1</b>
                   </label>
@@ -1271,7 +1260,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 1</b>
                   </label>
@@ -1282,7 +1271,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 1</b>
                   </label>
@@ -1293,7 +1282,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 1</b>
                   </label>
@@ -1306,7 +1295,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 2</b>
                   </label>
@@ -1317,7 +1306,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 2</b>
                   </label>
@@ -1328,7 +1317,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 2</b>
                   </label>
@@ -1339,7 +1328,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 2</b>
                   </label>
@@ -1350,7 +1339,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 2</b>
                   </label>
@@ -1363,7 +1352,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 3</b>
                   </label>
@@ -1374,7 +1363,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 3</b>
                   </label>
@@ -1385,7 +1374,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 3</b>
                   </label>
@@ -1396,7 +1385,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 3</b>
                   </label>
@@ -1407,7 +1396,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 3</b>
                   </label>
@@ -1420,7 +1409,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 4</b>
                   </label>
@@ -1431,7 +1420,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Country 4</b>
                   </label>
@@ -1442,7 +1431,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 4</b>
                   </label>
@@ -1453,7 +1442,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 4</b>
                   </label>
@@ -1464,7 +1453,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 4</b>
                   </label>
@@ -1481,7 +1470,7 @@ const ExportProposal = () => {
                 of this Proposal
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 1</b>
                   </label>
@@ -1492,7 +1481,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 1</b>
                   </label>
@@ -1503,7 +1492,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 1</b>
                   </label>
@@ -1516,7 +1505,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 2</b>
                   </label>
@@ -1527,7 +1516,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 2</b>
                   </label>
@@ -1538,7 +1527,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 2</b>
                   </label>
@@ -1551,7 +1540,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 3</b>
                   </label>
@@ -1562,7 +1551,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 3</b>
                   </label>
@@ -1573,7 +1562,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 3</b>
                   </label>
@@ -1586,7 +1575,7 @@ const ExportProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 4</b>
                   </label>
@@ -1597,7 +1586,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 4</b>
                   </label>
@@ -1608,7 +1597,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 4</b>
                   </label>
@@ -1622,7 +1611,7 @@ const ExportProposal = () => {
               </div>
               <h3>Credit Control</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       The number of foreign buyers to whom you are regularly
@@ -1636,7 +1625,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       How do you satisfy yourselves about the credit- worthiness
@@ -1650,7 +1639,7 @@ const ExportProposal = () => {
                     onChange={(e) => setSatisfy(e.target.value)}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you have a system of checking the credit- worthiness of
@@ -1661,17 +1650,6 @@ const ExportProposal = () => {
                     type="text"
                     value={checking}
                     onChange={(e) => setChecking(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group col-md-4 col-sm-12">
-                  <label for="inputRC4">
-                    <b>Indemnity Period</b>
-                  </label>
-                  <input
-                    type="text"
-                    value={idemnity}
-                    onChange={(e) => setIdemnity(e.target.value)}
                     className="form-control"
                   />
                 </div>
@@ -1732,7 +1710,7 @@ const ExportProposal = () => {
                 </small>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Place</b>
                   </label>
@@ -1743,7 +1721,7 @@ const ExportProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name:</b>
                   </label>
@@ -1756,8 +1734,8 @@ const ExportProposal = () => {
                 </div>
               </div>
 
-              <div style="height: 80px; margin-top: 20px;">
-                <div className="form-group col-md-6 col-sm-12">
+              <div className="height: 80px; margin-top: 20px;">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Designation</b>
                   </label>

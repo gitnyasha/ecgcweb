@@ -202,7 +202,7 @@ const GuaranteeFacilities = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Full Name:</b>
                   </label>
@@ -213,7 +213,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Postal:</b>
                   </label>
@@ -226,7 +226,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Physical Address:</b>
                   </label>
@@ -237,7 +237,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Telephone Number:</b>
                   </label>
@@ -250,7 +250,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year of Establishment:</b>
                   </label>
@@ -261,7 +261,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Type of Organization (Sole Trader, Partnership, Limited
@@ -278,7 +278,7 @@ const GuaranteeFacilities = () => {
               </div>
               <h3>DIRECTORS/SHAREHOLDERS/PARTNERS</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 1 Surname:</b>
                   </label>
@@ -289,7 +289,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 1 Other Names:</b>
                   </label>
@@ -302,7 +302,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 1 % Shareholding:</b>
                   </label>
@@ -313,7 +313,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 1 Date of Birth:</b>
                   </label>
@@ -326,7 +326,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 1 Residential Address:</b>
                   </label>
@@ -337,7 +337,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 2 Surname:</b>
                   </label>
@@ -351,7 +351,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 2 Surname:</b>
                   </label>
@@ -362,7 +362,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 2 Names:</b>
                   </label>
@@ -375,7 +375,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 2 % Shareholding</b>
                   </label>
@@ -386,7 +386,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 2 Date of Birth:</b>
                   </label>
@@ -410,7 +410,7 @@ const GuaranteeFacilities = () => {
                 />
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 3 Surname:</b>
                   </label>
@@ -421,7 +421,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 3 Names:</b>
                   </label>
@@ -434,7 +434,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 3 % Shareholding:</b>
                   </label>
@@ -445,7 +445,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Partner 3 Date of Birth:</b>
                   </label>
@@ -458,7 +458,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 3 Address:</b>
                   </label>
@@ -469,7 +469,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 4 Surname:</b>
                   </label>
@@ -483,7 +483,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 4 Names:</b>
                   </label>
@@ -494,7 +494,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 4 % Shareholding:</b>
                   </label>
@@ -508,7 +508,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 4 Date of Birth:</b>
                   </label>
@@ -519,7 +519,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Partner 4 Address:</b>
                   </label>
@@ -533,7 +533,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Civil Judgement:</b>
                   </label>
@@ -546,7 +546,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC25">
                     <b>Personnel 1 - Name:</b>
                   </label>
@@ -557,7 +557,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC26">
                     <b>Personnel 1 - Position:</b>
                   </label>
@@ -570,7 +570,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC27">
                     <b>Personnel 1 - Period:</b>
                   </label>
@@ -581,7 +581,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC28">
                     <b>Personnel 1 - Qualifications:</b>
                   </label>
@@ -594,7 +594,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC29">
                     <b>Personnel 1 - Previous Employer:</b>
                   </label>
@@ -605,7 +605,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC30">
                     <b>Personnel 2 - Name:</b>
                   </label>
@@ -618,7 +618,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC31">
                     <b>Personnel 2 - Position:</b>
                   </label>
@@ -629,7 +629,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC32">
                     <b>Personnel 2 - Period:</b>
                   </label>
@@ -640,7 +640,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC32">
                     <b>Personnel 2 - Qualifications:</b>
                   </label>
@@ -651,7 +651,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC32">
                     <b>Personnel 2 - Previous Employer:</b>
                   </label>
@@ -665,7 +665,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personnel 3 Name:</b>
                   </label>
@@ -676,7 +676,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personnel 3 Position:</b>
                   </label>
@@ -690,7 +690,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personnel 3 Period:</b>
                   </label>
@@ -701,7 +701,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personnel 3 Qualifications:</b>
                   </label>
@@ -715,7 +715,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personnel 3 Previous Employer:</b>
                   </label>
@@ -790,7 +790,7 @@ const GuaranteeFacilities = () => {
                 />
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Bank 1 Branch:</b>
                   </label>
@@ -801,7 +801,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Bank 1 Savings/Current:</b>
                   </label>
@@ -825,7 +825,7 @@ const GuaranteeFacilities = () => {
                 />
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank2name">
                     <b>Bank 2 Name:</b>
                   </label>
@@ -836,7 +836,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank2branch">
                     <b>Bank 2 Branch:</b>
                   </label>
@@ -849,7 +849,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank2type">
                     <b>Bank 2 Savings/Current:</b>
                   </label>
@@ -860,7 +860,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank2accno">
                     <b>Bank 2 Account Number:</b>
                   </label>
@@ -873,7 +873,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank3name">
                     <b>Bank 3 Name:</b>
                   </label>
@@ -884,7 +884,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank3branch">
                     <b>Bank 3 Branch:</b>
                   </label>
@@ -897,7 +897,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank3type">
                     <b>Bank 3 Savings/Current:</b>
                   </label>
@@ -908,7 +908,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="bank3accno">
                     <b>Bank 3 Account Number:</b>
                   </label>
@@ -922,7 +922,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>To whom Owed 1:</b>
                   </label>
@@ -933,7 +933,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Amount Owed 1:</b>
                   </label>
@@ -946,7 +946,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Purpose of Borrowing 1:</b>
                   </label>
@@ -957,7 +957,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Monthly Repayment 1:</b>
                   </label>
@@ -970,7 +970,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>To whom Owed 2:</b>
                   </label>
@@ -981,7 +981,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Amount Owed 2:</b>
                   </label>
@@ -994,7 +994,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Purpose of Borrowing 2:</b>
                   </label>
@@ -1005,7 +1005,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Monthly Repayment 2:</b>
                   </label>
@@ -1019,7 +1019,7 @@ const GuaranteeFacilities = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>To whom Owed 3:</b>
                   </label>
@@ -1030,7 +1030,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Amount Owed 3:</b>
                   </label>
@@ -1043,7 +1043,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Purpose of Borrowing 3:</b>
                   </label>
@@ -1054,7 +1054,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Monthly Repayment 3:</b>
                   </label>
@@ -1068,7 +1068,7 @@ const GuaranteeFacilities = () => {
               </div>
               <h3>GUARANTEE HISTORY</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Who has issued guarantees for you previously?:</b>
                   </label>
@@ -1079,7 +1079,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Total amount of guarantees outstanding US$:</b>
                   </label>
@@ -1092,7 +1092,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       What collateral security has been provided and by who?
@@ -1105,7 +1105,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Has any application been turned down? YES/NO If Yes by
@@ -1121,7 +1121,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Has any guarantee issued to you been called up? YES/NO If
@@ -1135,7 +1135,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       What collateral security can be offered for the proposed
@@ -1151,7 +1151,7 @@ const GuaranteeFacilities = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Are directors / shareholders / partners prepared to sign a
@@ -1186,7 +1186,7 @@ const GuaranteeFacilities = () => {
                 iv) Bank Statements for the past six months
               </small>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Signed At:</b>
                   </label>
@@ -1197,7 +1197,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Signatory:</b>
                   </label>
@@ -1208,7 +1208,7 @@ const GuaranteeFacilities = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Designation:</b>
                   </label>

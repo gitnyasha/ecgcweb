@@ -85,7 +85,7 @@ const HomeProposal = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Insured:</b>
                   </label>
@@ -96,7 +96,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Postal Address:</b>
                   </label>
@@ -109,7 +109,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Home Address:</b>
                   </label>
@@ -120,7 +120,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Telephone Number:</b>
                   </label>
@@ -133,7 +133,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Risk Address:</b>
                   </label>
@@ -144,7 +144,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Business Address:</b>
                   </label>
@@ -157,7 +157,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Construction of Residence: Walls</b>
                   </label>
@@ -168,7 +168,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Roof:</b>
                   </label>
@@ -181,7 +181,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Period of insurance From:</b>
                   </label>
@@ -192,7 +192,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Period of insurance To:</b>
                   </label>
@@ -205,7 +205,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Renewal date:</b>
                   </label>
@@ -216,7 +216,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       House owners comprehensive: Building of the private
@@ -233,7 +233,7 @@ const HomeProposal = () => {
                   />
                 </div>
 
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>House owners comprehensive sum:</b>
                   </label>
@@ -247,7 +247,7 @@ const HomeProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Name of mortgagee:</b>
                   </label>
@@ -260,7 +260,7 @@ const HomeProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Mortgage Sum</b>
                   </label>
@@ -271,7 +271,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Householders Comprehensive: Household goods personal
@@ -298,7 +298,7 @@ const HomeProposal = () => {
                 />
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Please specify Colour Televisions, radios etc and security
@@ -313,7 +313,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>All Risk Sum:</b>
                   </label>
@@ -327,7 +327,7 @@ const HomeProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Public Liability:</b>
                   </label>
@@ -338,7 +338,7 @@ const HomeProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Personal accident:</b>
                   </label>
@@ -359,7 +359,7 @@ const HomeProposal = () => {
               </small>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Proposer's Signature:</b>
                   </label>

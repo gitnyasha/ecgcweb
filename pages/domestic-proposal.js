@@ -270,7 +270,7 @@ const DomesticProposal = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>From:</b>
                   </label>
@@ -281,20 +281,9 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
-                  <label for="inputRC4">
-                    <b>Phone Number:</b>
-                  </label>
-                  <input
-                    type="number"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Fax Number:</b>
                   </label>
@@ -305,7 +294,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       We hereby apply for a Domestic Credit Insurance Policy to
@@ -322,7 +311,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       1. Status of the applicant (state whether individual,
@@ -337,7 +326,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       2. Name and address of proprietor/ partners/directors:
@@ -353,7 +342,7 @@ const DomesticProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div style="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>3. Name & Address of our bankers:</b>
                   </label>
@@ -366,7 +355,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. a) Year of establishment</b>
                   </label>
@@ -377,7 +366,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. b) Total sales turnover Export Sales (US$)</b>
                   </label>
@@ -388,7 +377,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>4. c) Domestic Sales (US$)</b>
                   </label>
@@ -399,7 +388,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>5. Description of goods:</b>
                   </label>
@@ -416,7 +405,7 @@ const DomesticProposal = () => {
                 (Please enter N/A in appropriate columns, if not applicable)
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1:</b>
                   </label>
@@ -427,7 +416,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 COD</b>
                   </label>
@@ -438,7 +427,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 30 days</b>
                   </label>
@@ -449,7 +438,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 60 days</b>
                   </label>
@@ -460,7 +449,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 90 days</b>
                   </label>
@@ -471,7 +460,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 Other</b>
                   </label>
@@ -482,7 +471,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 Total</b>
                   </label>
@@ -496,7 +485,7 @@ const DomesticProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2:</b>
                   </label>
@@ -507,7 +496,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 COD</b>
                   </label>
@@ -518,7 +507,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 30 days</b>
                   </label>
@@ -529,7 +518,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 60 days</b>
                   </label>
@@ -540,7 +529,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 90 days</b>
                   </label>
@@ -551,7 +540,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 Other</b>
                   </label>
@@ -562,7 +551,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 Total</b>
                   </label>
@@ -575,7 +564,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3:</b>
                   </label>
@@ -586,7 +575,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 COD</b>
                   </label>
@@ -597,7 +586,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 30 days</b>
                   </label>
@@ -608,7 +597,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 60 days</b>
                   </label>
@@ -619,7 +608,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 90 days</b>
                   </label>
@@ -630,7 +619,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 Other</b>
                   </label>
@@ -641,7 +630,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 Total</b>
                   </label>
@@ -654,7 +643,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4:</b>
                   </label>
@@ -665,7 +654,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 COD</b>
                   </label>
@@ -676,7 +665,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 30 days</b>
                   </label>
@@ -687,7 +676,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 60 days</b>
                   </label>
@@ -698,7 +687,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 90 days</b>
                   </label>
@@ -709,7 +698,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 Other</b>
                   </label>
@@ -720,7 +709,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 Total</b>
                   </label>
@@ -736,7 +725,7 @@ const DomesticProposal = () => {
                 Our anticipated sales to principal buyers for the next 12 months
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1:</b>
                   </label>
@@ -747,7 +736,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 COD</b>
                   </label>
@@ -758,7 +747,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 30 days</b>
                   </label>
@@ -769,7 +758,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 60 days</b>
                   </label>
@@ -780,7 +769,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 90 days</b>
                   </label>
@@ -791,7 +780,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 Other</b>
                   </label>
@@ -802,7 +791,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1 Total</b>
                   </label>
@@ -816,7 +805,7 @@ const DomesticProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2:</b>
                   </label>
@@ -827,7 +816,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 COD</b>
                   </label>
@@ -838,7 +827,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 30 days</b>
                   </label>
@@ -849,7 +838,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 60 days</b>
                   </label>
@@ -860,7 +849,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 90 days</b>
                   </label>
@@ -871,7 +860,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 Other</b>
                   </label>
@@ -882,7 +871,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2 Total</b>
                   </label>
@@ -895,7 +884,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3:</b>
                   </label>
@@ -906,7 +895,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 COD</b>
                   </label>
@@ -917,7 +906,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 30 days</b>
                   </label>
@@ -928,7 +917,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 60 days</b>
                   </label>
@@ -939,7 +928,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 90 days</b>
                   </label>
@@ -950,7 +939,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 Other</b>
                   </label>
@@ -961,7 +950,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3 Total</b>
                   </label>
@@ -974,7 +963,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4:</b>
                   </label>
@@ -985,7 +974,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 COD</b>
                   </label>
@@ -996,7 +985,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 30 days</b>
                   </label>
@@ -1007,7 +996,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 60 days</b>
                   </label>
@@ -1018,7 +1007,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 90 days</b>
                   </label>
@@ -1029,7 +1018,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 Other</b>
                   </label>
@@ -1040,7 +1029,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4 Total</b>
                   </label>
@@ -1053,7 +1042,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you wish to obtain a quotation for cover of All Buyers
@@ -1068,7 +1057,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Are your debtors ceded to any financial institution? If
@@ -1083,7 +1072,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you wish the Policy to be ceded to any financial or
@@ -1103,7 +1092,7 @@ const DomesticProposal = () => {
                 losses incurred in each of the three years;
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2006 Turnover – US$</b>
                   </label>
@@ -1114,7 +1103,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2006 Bad Debts – US$</b>
                   </label>
@@ -1125,7 +1114,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2007 Turnover – US$</b>
                   </label>
@@ -1136,7 +1125,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2007 Bad Debts – US$</b>
                   </label>
@@ -1147,7 +1136,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2008 Turnover – US$</b>
                   </label>
@@ -1158,7 +1147,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>2008 Bad Debts – US$</b>
                   </label>
@@ -1169,7 +1158,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total Turnover</b>
                   </label>
@@ -1180,7 +1169,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Total Bad Debt</b>
                   </label>
@@ -1197,7 +1186,7 @@ const DomesticProposal = () => {
                 Detailed Report
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 1</b>
                   </label>
@@ -1208,7 +1197,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 1</b>
                   </label>
@@ -1219,7 +1208,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 1</b>
                   </label>
@@ -1230,7 +1219,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 1</b>
                   </label>
@@ -1241,7 +1230,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 1</b>
                   </label>
@@ -1254,7 +1243,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 2</b>
                   </label>
@@ -1265,7 +1254,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 2</b>
                   </label>
@@ -1276,7 +1265,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 2</b>
                   </label>
@@ -1287,7 +1276,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 2</b>
                   </label>
@@ -1298,7 +1287,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 2</b>
                   </label>
@@ -1311,7 +1300,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 3</b>
                   </label>
@@ -1322,7 +1311,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 3</b>
                   </label>
@@ -1333,7 +1322,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 3</b>
                   </label>
@@ -1344,7 +1333,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 3</b>
                   </label>
@@ -1355,7 +1344,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 3</b>
                   </label>
@@ -1368,7 +1357,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Year 4</b>
                   </label>
@@ -1379,7 +1368,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Buyer 4</b>
                   </label>
@@ -1390,7 +1379,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Amount Of Bad Debt (US$) 4</b>
                   </label>
@@ -1401,7 +1390,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Cause Of Loss 4</b>
                   </label>
@@ -1412,7 +1401,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b> Remarks 4</b>
                   </label>
@@ -1429,7 +1418,7 @@ const DomesticProposal = () => {
                 of this Proposal
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 1</b>
                   </label>
@@ -1440,7 +1429,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 1</b>
                   </label>
@@ -1451,7 +1440,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 1</b>
                   </label>
@@ -1464,7 +1453,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 2</b>
                   </label>
@@ -1475,7 +1464,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 2</b>
                   </label>
@@ -1486,7 +1475,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 2</b>
                   </label>
@@ -1499,7 +1488,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 3</b>
                   </label>
@@ -1510,7 +1499,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 3</b>
                   </label>
@@ -1521,7 +1510,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 3</b>
                   </label>
@@ -1534,7 +1523,7 @@ const DomesticProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name & Address of Buyer 4</b>
                   </label>
@@ -1545,7 +1534,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Amount (US$) 4</b>
                   </label>
@@ -1556,7 +1545,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Reason for Delay 4</b>
                   </label>
@@ -1570,7 +1559,7 @@ const DomesticProposal = () => {
               </div>
               <h3>Credit Control</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       The number of buyers to whom you are regularly selling to
@@ -1584,7 +1573,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       How do you satisfy yourselves about the credit- worthiness
@@ -1598,7 +1587,7 @@ const DomesticProposal = () => {
                     onChange={(e) => setSatisfy(e.target.value)}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Do you have a system of checking the credit- worthiness of
@@ -1609,17 +1598,6 @@ const DomesticProposal = () => {
                     type="text"
                     value={checking}
                     onChange={(e) => setChecking(e.target.value)}
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group col-md-4 col-sm-12">
-                  <label for="inputRC4">
-                    <b>Indemnity Period</b>
-                  </label>
-                  <input
-                    type="text"
-                    value={idemnity}
-                    onChange={(e) => setIdemnity(e.target.value)}
                     className="form-control"
                   />
                 </div>
@@ -1680,7 +1658,7 @@ const DomesticProposal = () => {
                 </small>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Place</b>
                   </label>
@@ -1691,7 +1669,7 @@ const DomesticProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name:</b>
                   </label>
@@ -1704,8 +1682,8 @@ const DomesticProposal = () => {
                 </div>
               </div>
 
-              <div style="height: 80px; margin-top: 20px;">
-                <div className="form-group col-md-6 col-sm-12">
+              <div className="row">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Designation</b>
                   </label>

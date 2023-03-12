@@ -37,6 +37,7 @@ const MotorProposal = () => {
   const [passedany, setPassedAny] = React.useState("");
   const [notinsured, setNotInsured] = React.useState("");
   const [reason, setReason] = React.useState("");
+  const [todrive, setToDrive] = React.useState("");
   const [nameofinsurer, setNameOfInsurer] = React.useState("");
   const [driver1name, setDriver1Name] = React.useState("");
   const [driver1birth, setDriver1Birth] = React.useState("");
@@ -237,7 +238,7 @@ const MotorProposal = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputFirstName">
                     <b>What is your first Name?</b>
                   </label>
@@ -249,7 +250,7 @@ const MotorProposal = () => {
                     id="inputFirstName"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputLastName">
                     <b>What is your surname?</b>
                   </label>
@@ -264,7 +265,7 @@ const MotorProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputGender">
                     <b>What is your gender?</b>
                   </label>
@@ -279,7 +280,7 @@ const MotorProposal = () => {
                     <option value="female">Female</option>
                   </select>
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputBirth">
                     <b>What is your date of birth?</b>
                   </label>
@@ -321,7 +322,7 @@ const MotorProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputTelephone">
                     <b>What is your telephone number?</b>
                   </label>
@@ -333,7 +334,7 @@ const MotorProposal = () => {
                     id="inputTelephone"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputEmail">
                     <b>What is your email address?</b>
                   </label>
@@ -347,7 +348,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Are you a homeowner? Yes/No</b>
                   </label>
@@ -362,7 +363,7 @@ const MotorProposal = () => {
                   </select>
                 </div>
 
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What is your marital status?</b>
                   </label>
@@ -378,7 +379,7 @@ const MotorProposal = () => {
                     <option value="Widowed">Widowed</option>
                   </select>
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>How many children under 16 do you have?</b>
                   </label>
@@ -391,7 +392,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       What do you do? Employed / Self-employed / Retired /
@@ -405,7 +406,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What job do you do?</b>
                   </label>
@@ -418,7 +419,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What industry do you work in?</b>
                   </label>
@@ -429,7 +430,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>How many cars do you own?</b>
                   </label>
@@ -440,7 +441,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What is the driving licence number? </b>
                   </label>
@@ -451,7 +452,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-md-12 col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What licence do you have? Full/Provisional </b>
                   </label>
@@ -465,7 +466,7 @@ const MotorProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Which cars are you licenced to drive?</b>
                   </label>
@@ -476,7 +477,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Manual and automatic/Automatic only</b>
                   </label>
@@ -490,7 +491,7 @@ const MotorProposal = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Do you have any additional driving qualifications? Yes/No
@@ -503,7 +504,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Do you have any medical conditions or disabilities that
@@ -558,9 +559,6 @@ const MotorProposal = () => {
                     onChange={(e) => setProvisional(e.target.value)}
                     className="form-control"
                   />
-                  <div class="form-control" style="width: 92%; height: 30px">
-                    {{ provisional }}
-                  </div>
                 </div>
               </div>
               <div className="form-row my-3">
@@ -638,7 +636,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>If yes to the above, state the reason</b>
                   </label>
@@ -649,7 +647,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Name of previous insurer</b>
                   </label>
@@ -669,7 +667,7 @@ const MotorProposal = () => {
                 </small>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your name?</b>
                   </label>
@@ -680,7 +678,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your date of birth?</b>
                   </label>
@@ -691,7 +689,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your gender</b>
                   </label>
@@ -704,7 +702,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Is this the main driver of vehicle? YES No </b>
                   </label>
@@ -715,7 +713,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>National ID/Passport No:</b>
                   </label>
@@ -726,7 +724,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Licence type (Full, Provisional) </b>
                   </label>
@@ -739,7 +737,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Country of Issue of Licence </b>
                   </label>
@@ -750,7 +748,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Date of issue of driving Licence (dd/mm/yyyy) </b>
                   </label>
@@ -761,7 +759,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Occupation</b>
                   </label>
@@ -774,7 +772,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Nature of Business </b>
                   </label>
@@ -785,7 +783,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       If you are over 70 years of age, have you had a recent
@@ -802,7 +800,7 @@ const MotorProposal = () => {
                 <h3>Driver Two details</h3>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your name?</b>
                   </label>
@@ -813,7 +811,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your date of birth?</b>
                   </label>
@@ -824,7 +822,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is your gender</b>
                   </label>
@@ -837,18 +835,18 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Is this the main driver of vehicle? YES No </b>
                   </label>
                   <input
                     type="text"
-                    value={maindriver}
-                    onChange={(e) => setMainDriver(e.target.value)}
+                    value={maindriver2}
+                    onChange={(e) => setMainDriver2(e.target.value)}
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>National ID/Passport No:</b>
                   </label>
@@ -859,7 +857,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Licence type (Full, Provisional) </b>
                   </label>
@@ -872,7 +870,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Country of Issue of Licence </b>
                   </label>
@@ -883,7 +881,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Date of issue of driving Licence (dd/mm/yyyy) </b>
                   </label>
@@ -894,7 +892,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Occupation</b>
                   </label>
@@ -907,7 +905,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Nature of Business </b>
                   </label>
@@ -918,7 +916,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       If you are over 70 years of age, have you had a recent
@@ -1082,7 +1080,7 @@ const MotorProposal = () => {
                 </small>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>declined to accept a proposal from you?</b>
                   </label>
@@ -1093,7 +1091,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>cancelled a policy, contrary to your wishes? </b>
                   </label>
@@ -1104,7 +1102,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>declined to renew a policy, contrary to your wishes?</b>
                   </label>
@@ -1135,7 +1133,7 @@ const MotorProposal = () => {
                 </h5>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the registration?</b>
                   </label>
@@ -1146,7 +1144,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What make is the car? </b>
                   </label>
@@ -1157,7 +1155,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the model?</b>
                   </label>
@@ -1170,7 +1168,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What fuel does it run on?</b>
                   </label>
@@ -1185,7 +1183,7 @@ const MotorProposal = () => {
                     <option value="Diesel">Diesel</option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the transmission?</b> a) b)
                   </label>
@@ -1199,7 +1197,7 @@ const MotorProposal = () => {
                     <option value="Manual">Manual</option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the engine size?</b>
                   </label>
@@ -1212,7 +1210,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the Chassis Number?</b>
                   </label>
@@ -1223,7 +1221,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the Engine capacity?</b>
                   </label>
@@ -1234,7 +1232,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the year of manufacture/registration?</b>
                   </label>
@@ -1247,7 +1245,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the trim?</b>
                   </label>
@@ -1258,7 +1256,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What type of alarm does the car have?</b>
                   </label>
@@ -1269,7 +1267,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Is the car fitted with a tracking device? Yes/No</b>
                   </label>
@@ -1282,7 +1280,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Is the car an import? Yes/No</b>
                   </label>
@@ -1293,7 +1291,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Has the vehicle been modiﬁed or converted in anyway?
@@ -1307,7 +1305,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What is the Value of the car?</b>
                   </label>
@@ -1362,7 +1360,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Where is the car kept during the day?</b>
                   </label>
@@ -1385,7 +1383,7 @@ const MotorProposal = () => {
                     </option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Where is the car kept at night?</b>
                   </label>
@@ -1406,7 +1404,7 @@ const MotorProposal = () => {
                     </option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Do you drive any other cars? e.g. company vehicles,
@@ -1427,7 +1425,7 @@ const MotorProposal = () => {
                 </h5>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>What type of cover are you looking for?</b>
                   </label>
@@ -1448,7 +1446,7 @@ const MotorProposal = () => {
                     </option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Who is the main driver of the vehicle?</b>
                   </label>
@@ -1459,7 +1457,7 @@ const MotorProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       How much voluntary excess are you prepared to pay in case
@@ -1475,7 +1473,7 @@ const MotorProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Are you or will you be the registered keeper and legal
@@ -1491,7 +1489,7 @@ const MotorProposal = () => {
                     <option value="Yes">Yes</option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       How would you normally pay your cover for your insurance?
@@ -1507,7 +1505,7 @@ const MotorProposal = () => {
                     <option value="Quarterly">Quarterly</option>
                   </select>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       On which days within the next 30 days would you like your
@@ -1542,7 +1540,7 @@ const MotorProposal = () => {
                 <small>Optional extras</small>
               </div>
               <div className="form-row my-3">
-                <div style="float: left; width: 25%;">
+                <div className="col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Would you like your policy to include legal cover?</b>
                   </label>
@@ -1556,7 +1554,7 @@ const MotorProposal = () => {
                     <option value="Not SUre">Not Sure</option>
                   </select>
                 </div>
-                <div style="float: left; width: 25%;">
+                <div className="col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Would like your policy to include personal injury cover?
@@ -1572,7 +1570,7 @@ const MotorProposal = () => {
                     <option value="Not SUre">Not Sure</option>
                   </select>
                 </div>
-                <div style="float: left; width: 25%;">
+                <div className="col-md-12">
                   <label htmlFor="inputRC4">
                     <b>Would like your policy to include breakdown cover?</b>
                   </label>
@@ -1586,7 +1584,7 @@ const MotorProposal = () => {
                     <option value="Not SUre">Not Sure</option>
                   </select>
                 </div>
-                <div style="float: left; width: 25%;">
+                <div className="col-md-12">
                   <label htmlFor="inputRC4">
                     <b>
                       Would you like your policy to include courtesy car cover?

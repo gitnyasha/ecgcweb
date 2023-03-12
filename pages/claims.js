@@ -64,9 +64,9 @@ const Claims = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                <Link href="/guarantee-scheme-claim">
+                <Link href="/guarantee-facilities">
                   <img
                     src="/images/ecgc/msme.jpg"
                     alt="Image"
@@ -74,12 +74,12 @@ const Claims = () => {
                   />
                 </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
-                  <Link href="/guarantee-scheme-claim">
-                    <h3 style={{ fontSize: 16 }}>Guarantee Scheme Claim</h3>
+                  <Link href="/guarantee-facilities">
+                    <h3 style={{ fontSize: 16 }}>Guarantee Facilities</h3>
                   </Link>
                 </div>
               </div>
-            </div> */}
+            </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
                 <Link href="/all-risks-claim">
@@ -172,6 +172,88 @@ const Claims = () => {
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/motor-accident">
                     <h3 style={{ fontSize: 16 }}>Motor Accident Insurance</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                {/* <Link href="/motor-accident">
+                  <img
+                    src="/images/motoraccident.jpeg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link> */}
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/motor-proposal">
+                    <h3 style={{ fontSize: 16 }}>Motor Proposal Insurance</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                {/* <Link href="/motor-accident">
+                  <img
+                    src="/images/motoraccident.jpeg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link> */}
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/home-proposal">
+                    <h3 style={{ fontSize: 16 }}>Home Proposal Insurance</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                {/* <Link href="/motor-accident">
+                  <img
+                    src="/images/motoraccident.jpeg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link> */}
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/domestic-proposal">
+                    <h3 style={{ fontSize: 16 }}>
+                      Domestic Proposal Insurance
+                    </h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                {/* <Link href="/motor-accident">
+                  <img
+                    src="/images/motoraccident.jpeg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link> */}
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/export-proposal">
+                    <h3 style={{ fontSize: 16 }}>Export Proposal Insurance</h3>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="single-blog">
+                {/* <Link href="/motor-accident">
+                  <img
+                    src="/images/motoraccident.jpeg"
+                    alt="Image"
+                    style={{ borderRadius: "15px" }}
+                  />
+                </Link> */}
+                <div className="blog-content" style={{ borderRadius: "15px" }}>
+                  <Link href="/marine-cargo">
+                    <h3 style={{ fontSize: 16 }}>Marine Cargo Insurance</h3>
                   </Link>
                 </div>
               </div>

@@ -42,7 +42,7 @@ const MarineCargo = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
-      .post("/api/home-proposal", {
+      .post("/api/marine-cargos", {
         signame,
         physical,
         postal,
@@ -94,9 +94,7 @@ const MarineCargo = () => {
       <br />
       <br />
       <Container>
-        <h1 className="mt-5 pt-5 text-center">
-          Marine Cargo Insurance Proposal Form
-        </h1>
+        <h1 className="mt-5 pt-5 text-center">Marine Cargo Insurance Form</h1>
         <small>
           IMPORTANT: This proposal forms the basis of the Insurance contract
           between the Insured and the Insurer once completed by the Insured and
@@ -112,7 +110,7 @@ const MarineCargo = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name of Proposer:</b>
                   </label>
@@ -123,7 +121,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Postal Address:</b>
                   </label>
@@ -136,7 +134,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Physical Address:</b>
                   </label>
@@ -147,7 +145,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Telephone Number:</b>
                   </label>
@@ -160,7 +158,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Contact Person:</b>
                   </label>
@@ -171,7 +169,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Fax:</b>
                   </label>
@@ -184,7 +182,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Email</b>
                   </label>
@@ -195,7 +193,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Date business was established:</b>
                   </label>
@@ -208,7 +206,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Vat Number:</b>
                   </label>
@@ -219,7 +217,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Have you traded under a different name: Yes/No (if Yes,
@@ -235,7 +233,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>
                       Description of goods carried requiring insurance cover:
@@ -248,7 +246,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Maximum load limit required in respect of Cargo</b>
                   </label>
@@ -260,7 +258,7 @@ const MarineCargo = () => {
                   />
                 </div>
 
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>
                       What pre-employment investigations are carried out on
@@ -277,7 +275,7 @@ const MarineCargo = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>What anti-hijack/theft precautions do you enforce:</b>
                   </label>
@@ -290,7 +288,7 @@ const MarineCargo = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>How many drivers/crew per vehicle</b>
                   </label>
@@ -364,7 +362,7 @@ const MarineCargo = () => {
                 />
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Please provide Territorial Limits Required:</b>
                   </label>
@@ -375,7 +373,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Are your loads currently insured? Name of Insurer:</b>
                   </label>
@@ -389,7 +387,7 @@ const MarineCargo = () => {
               </div>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Have you previously had this cover? Name of Insurer:</b>
                   </label>
@@ -400,7 +398,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Provide details on the security used:</b>
                   </label>
@@ -411,7 +409,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Cargo Claims (3 Years) Date of Loss:</b>
                   </label>
@@ -422,7 +420,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Gross Amount of Loss:</b>
                   </label>
@@ -433,7 +431,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Cause and Commodity:</b>
                   </label>
@@ -444,7 +442,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Cover Required 11.1 All Risks:</b>
                   </label>
@@ -480,7 +478,7 @@ const MarineCargo = () => {
               </small>
 
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Name:</b>
                   </label>
@@ -491,7 +489,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Position Held at Company:</b>
                   </label>
@@ -502,7 +500,7 @@ const MarineCargo = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label htmlFor="inputRC4">
                     <b>Proposer's Signature:</b>
                   </label>
