@@ -34,7 +34,7 @@ const GeneralInsuranceProducts = () => {
                     </Link>
                   </div>
                   <div className="subscribe col-lg-6">
-                    <Link href="/files/Motor Proposal Form New 2020.docx">
+                    <Link href="/motor-proposal">
                       <a className="default-btn">Apply Now</a>
                     </Link>
                   </div>
@@ -67,7 +67,7 @@ const GeneralInsuranceProducts = () => {
                     </Link>
                   </div>
                   <div className="subscribe col-lg-6">
-                    <Link href="/files/Home plan proposal form.docx">
+                    <Link href="/home-proposal">
                       <a className="default-btn">Apply Now</a>
                     </Link>
                   </div>
@@ -100,7 +100,7 @@ const GeneralInsuranceProducts = () => {
                     </Link>
                   </div>
                   <div className="subscribe col-lg-6">
-                    <Link href="/files/Marine Cargo Application.docx">
+                    <Link href="/marine-cargo">
                       <a className="default-btn">Apply Now</a>
                     </Link>
                   </div>

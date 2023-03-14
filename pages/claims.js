@@ -176,15 +176,15 @@ const Claims = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3">
+            {/* <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                 <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/motor-proposal">
                     <h3 style={{ fontSize: 16 }}>Motor Proposal Insurance</h3>
@@ -194,13 +194,13 @@ const Claims = () => {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/business-proposal">
                     <h3 style={{ fontSize: 16 }}>
@@ -212,13 +212,13 @@ const Claims = () => {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                 <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/home-proposal">
                     <h3 style={{ fontSize: 16 }}>Home Proposal Insurance</h3>
@@ -228,13 +228,13 @@ const Claims = () => {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                 <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/domestic-proposal">
                     <h3 style={{ fontSize: 16 }}>
@@ -246,13 +246,13 @@ const Claims = () => {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/export-proposal">
                     <h3 style={{ fontSize: 16 }}>Export Proposal Insurance</h3>
@@ -262,20 +262,20 @@ const Claims = () => {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="single-blog">
-                {/* <Link href="/motor-accident">
+                 <Link href="/motor-accident">
                   <img
                     src="/images/motoraccident.jpeg"
                     alt="Image"
                     style={{ borderRadius: "15px" }}
                   />
-                </Link> */}
+                </Link>
                 <div className="blog-content" style={{ borderRadius: "15px" }}>
                   <Link href="/marine-cargo">
                     <h3 style={{ fontSize: 16 }}>Marine Cargo Insurance</h3>
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
