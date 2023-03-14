@@ -251,10 +251,120 @@ const DomesticProposal = () => {
         console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setFrom("");
+          setFax("");
+          setDate("");
+          setStatusOfApplicant("");
+          setPartners("");
+          setBankersAddress("");
+          setEstablished("");
+          setExportSales("");
+          setDomesticSales("");
+          setDescription("");
+          setBuyer1("");
+          setBuyer1Cod("");
+          setBuyer130Days("");
+          setBuyer160Days("");
+          setBuyer190Days("");
+          setBuyer1Other("");
+          setBuyer1total("");
+          setBuyer2("");
+          setBuyer2Cod("");
+          setBuyer230Days("");
+          setBuyer260Days("");
+          setBuyer290Days("");
+          setBuyer2Other("");
+          setBuyer2total("");
+          setBuyer3("");
+          setBuyer3Cod("");
+          setBuyer330Days("");
+          setBuyer360Days("");
+          setBuyer390Days("");
+          setBuyer3Other("");
+          setBuyer3total("");
+          setBuyer4("");
+          setBuyer4Cod("");
+          setBuyer430Days("");
+          setBuyer460Days("");
+          setBuyer490Days("");
+          setBuyer4Other("");
+          setBuyer4total("");
+          setTwoBuyer1("");
+          setTwoBuyer1Cod("");
+          setTwoBuyer130Days("");
+          setTwoBuyer160Days("");
+          setTwoBuyer190Days("");
+          setTwoBuyer1Other("");
+          setTwoBuyer1Total("");
+          setTwoBuyer2("");
+          setTwoBuyer2Cod("");
+          setTwoBuyer230Days("");
+          setTwoBuyer260Days("");
+          setTwoBuyer290Days("");
+          setTwoBuyer2Other("");
+          setTwoBuyer2Total("");
+          setTwoBuyer3("");
+          setTwoBuyer3Cod("");
+          setTwoBuyer330Days("");
+          setTwoBuyer360Days("");
+          setTwoBuyer390Days("");
+          setTwoBuyer3Other("");
+          setTwoBuyer3Total("");
+          setTwoBuyer4("");
+          setTwoBuyer4Cod("");
+          setTwoBuyer430Days("");
+          setTwoBuyer460Days("");
+          setTwoBuyer490Days("");
+          setTwoBuyer4Other("");
+          setTwoBuyer4Total("");
+          setQuotation("");
+          setDebtors("");
+          setInstitution("");
+          setTurnover2006("");
+          setDebt2006("");
+          setTurnover2007("");
+          setDebt2007("");
+          setTurnover2008("");
+          setDebt2008("");
+          setTurnOverTotal("");
+          setDebtTotal("");
+          setDebtsyear1("");
+          setDebtsbuyer1("");
+          setDebtsAmount1("");
+          setDebtsCause1("");
+          setDebtsRemarks1("");
+          setDebtsyear2("");
+          setDebtsbuyer2("");
+          setDebtsAmount2("");
+          setDebtsCause2("");
+          setDebtsRemarks2("");
+          setDebtsyear4("");
+          setDebtsbuyer4("");
+          setDebtsAmount4("");
+          setDebtsCause4("");
+          setDebtsRemarks4("");
+          setOverDueName1("");
+          setOverDueAmount1("");
+          setOverDueReason1("");
+          setOverDueName2("");
+          setOverDueAmount2("");
+          setOverDueReason2("");
+          setOverDueName3("");
+          setOverDueAmount3("");
+          setOverDueReason3("");
+          setOverDueName4("");
+          setOverDueAmount4("");
+          setOverDueReason4("");
+          setBuyersNumber("");
+          setSatisfy("");
+          setChecking("");
+          setPlace("");
+          setSigname("");
+          setDesignation("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error Submitting...");
       });
   };
 
@@ -279,6 +389,8 @@ const DomesticProposal = () => {
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
                     className="form-control"
+                    required
+                    maxLength={500}
                   />
                 </div>
               </div>
@@ -307,6 +419,7 @@ const DomesticProposal = () => {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -324,6 +437,7 @@ const DomesticProposal = () => {
                     value={statusofapplicant}
                     onChange={(e) => setStatusOfApplicant(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -337,6 +451,8 @@ const DomesticProposal = () => {
                     value={partners}
                     onChange={(e) => setPartners(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   />
                 </div>
               </div>
@@ -364,6 +480,7 @@ const DomesticProposal = () => {
                     value={established}
                     onChange={(e) => setEstablished(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -375,6 +492,7 @@ const DomesticProposal = () => {
                     value={exportsales}
                     onChange={(e) => setExportSales(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -382,10 +500,11 @@ const DomesticProposal = () => {
                     <b>4. c) Domestic Sales (US$)</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={domesticsales}
                     onChange={(e) => setDomesticSales(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -397,6 +516,7 @@ const DomesticProposal = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -476,7 +596,7 @@ const DomesticProposal = () => {
                     <b>Buyer 1 Total</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buyer1total}
                     onChange={(e) => setBuyer1total(e.target.value)}
                     className="form-control"
@@ -556,7 +676,7 @@ const DomesticProposal = () => {
                     <b>Buyer 2 Total</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buyer2total}
                     onChange={(e) => setBuyer2total(e.target.value)}
                     className="form-control"
@@ -635,7 +755,7 @@ const DomesticProposal = () => {
                     <b>Buyer 3 Total</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buyer3total}
                     onChange={(e) => setBuyer3total(e.target.value)}
                     className="form-control"
@@ -714,7 +834,7 @@ const DomesticProposal = () => {
                     <b>Buyer 4 Total</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buyer4total}
                     onChange={(e) => setBuyer4total(e.target.value)}
                     className="form-control"
@@ -798,7 +918,7 @@ const DomesticProposal = () => {
                   <input
                     type="number"
                     value={twobuyer1total}
-                    onChange={(e) => setTwoBuyer1total(e.target.value)}
+                    onChange={(e) => setTwoBuyer1Total(e.target.value)}
                     className="form-control"
                   />
                 </div>
@@ -878,7 +998,7 @@ const DomesticProposal = () => {
                   <input
                     type="number"
                     value={twobuyer2total}
-                    onChange={(e) => setTwoBuyer2total(e.target.value)}
+                    onChange={(e) => setTwoBuyer2Total(e.target.value)}
                     className="form-control"
                   />
                 </div>
@@ -957,7 +1077,7 @@ const DomesticProposal = () => {
                   <input
                     type="number"
                     value={twobuyer3total}
-                    onChange={(e) => setTwoBuyer3total(e.target.value)}
+                    onChange={(e) => setTwoBuyer3Total(e.target.value)}
                     className="form-control"
                   />
                 </div>
@@ -1217,6 +1337,7 @@ const DomesticProposal = () => {
                     value={debtsamount1}
                     onChange={(e) => setDebtsAmount1(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1228,6 +1349,7 @@ const DomesticProposal = () => {
                     value={debtscause1}
                     onChange={(e) => setDebtsCause1(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1274,6 +1396,7 @@ const DomesticProposal = () => {
                     value={debtsamount2}
                     onChange={(e) => setDebtsAmount2(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1285,6 +1408,7 @@ const DomesticProposal = () => {
                     value={debtscause2}
                     onChange={(e) => setDebtsCause2(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1331,6 +1455,7 @@ const DomesticProposal = () => {
                     value={debtsamount3}
                     onChange={(e) => setDebtsAmount3(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1342,6 +1467,7 @@ const DomesticProposal = () => {
                     value={debtscause3}
                     onChange={(e) => setDebtsCause3(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1388,6 +1514,7 @@ const DomesticProposal = () => {
                     value={debtsamount4}
                     onChange={(e) => setDebtsAmount4(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1399,6 +1526,7 @@ const DomesticProposal = () => {
                     value={debtscause4}
                     onChange={(e) => setDebtsCause4(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1438,6 +1566,7 @@ const DomesticProposal = () => {
                     value={overdueamount1}
                     onChange={(e) => setOverDueAmount1(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1449,6 +1578,7 @@ const DomesticProposal = () => {
                     value={overduereason1}
                     onChange={(e) => setOverDueReason1(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -1473,6 +1603,7 @@ const DomesticProposal = () => {
                     value={overdueamount2}
                     onChange={(e) => setOverDueAmount2(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1484,6 +1615,7 @@ const DomesticProposal = () => {
                     value={overduereason2}
                     onChange={(e) => setOverDueReason2(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -1508,6 +1640,7 @@ const DomesticProposal = () => {
                     value={overdueamount3}
                     onChange={(e) => setOverDueAmount3(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1519,6 +1652,7 @@ const DomesticProposal = () => {
                     value={overduereason3}
                     onChange={(e) => setOverDueReason3(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -1543,6 +1677,7 @@ const DomesticProposal = () => {
                     value={overdueamount4}
                     onChange={(e) => setOverDueAmount4(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1554,6 +1689,7 @@ const DomesticProposal = () => {
                     value={overduereason4}
                     onChange={(e) => setOverDueReason4(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -1571,6 +1707,7 @@ const DomesticProposal = () => {
                     value={buyersnumber}
                     onChange={(e) => setBuyersNumber(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1667,6 +1804,7 @@ const DomesticProposal = () => {
                     value={place}
                     onChange={(e) => setPlace(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1678,6 +1816,7 @@ const DomesticProposal = () => {
                     value={signame}
                     onChange={(e) => setSigname(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -1692,6 +1831,7 @@ const DomesticProposal = () => {
                     value={designation}
                     onChange={(e) => setDesignation(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>

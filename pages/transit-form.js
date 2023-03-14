@@ -141,6 +141,63 @@ const TransitForm = () => {
         console.log(response);
         if (response.status === 201) {
           setShow(true);
+          setEmail("");
+          setInsuredName("");
+          setPolicyNumber("");
+          setcontactnumber("");
+          setposition("");
+          setphone("");
+          setmobile("");
+          setoccurencedate("");
+          setoccurencetime("");
+          setoccurenceplace("");
+          setdetailsofload("");
+          setnumpackagesofarticles1("");
+          settweight1("");
+          settvalue1("");
+          setdescofgoodsdamaged("");
+          setnumpackagesofarticles2("");
+          settweight2("");
+          settvalue2("");
+          setsalvage("");
+          setgrossclaim("");
+          setlessexcess("");
+          setnetclaim("");
+          setpolicestation("");
+          setTimeOfReport("");
+          setNonFulFillment("");
+          setownersinvolved("");
+          setSetOff("");
+          setwitnessess("");
+          setpartcularstaken("");
+          setaretherewitnessess("");
+          setpolicereferencenumber("");
+          setoccurencereported("");
+          setpoliceaddress("");
+          setaretherewarnings("");
+          setconsigneesaddress("");
+          setconsignorsaddress("");
+          setwhenwherewho("");
+          setreceipt("");
+          setgoodspacked("");
+          setaccordance("");
+          setjourney("");
+          setactiontaken("");
+          setdeliveryaccepted("");
+          setinspected("");
+          setrecieptloading("");
+          setownerorcarrier("");
+          setcontractor("");
+          setsubcontractor("");
+          setcontractoraddress("");
+          setsubcontratorpremium("");
+          setvehicleregnumber("");
+          setownvehicle("");
+          setownernameaddress("");
+          setinvolvedinaccident("");
+          setbrief("");
+          setcapacity("");
+          setname("");
         }
       });
   };
@@ -162,6 +219,8 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputRC4"
                     onChange={(e) => setInsuredName(e.target.value)}
+                    maxLength={50}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12 col-sm-12">
@@ -172,6 +231,8 @@ const TransitForm = () => {
                     id="inputPN4"
                     value={policynumber}
                     onChange={(e) => setPolicyNumber(e.target.value)}
+                    maxLength={25}
+                    required
                   />
                 </div>
               </div>
@@ -184,6 +245,8 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputRC4"
                     onChange={(e) => setcontactnumber(e.target.value)}
+                    maxLength={15}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12 col-sm-12">
@@ -219,11 +282,8 @@ const TransitForm = () => {
                   />
                 </div>
               </div>
-              <div className="card-header my-3">
-                DATE, TIME AND PLACE OF OCCURENCE
-              </div>
               <div className="form-row">
-                <div className="form-group my-2 col-md-4 col-sm-12 col-sm-12">
+                <div className="form-group my-2 col-sm-12 col-sm-12">
                   <label for="inputFullNames">Date</label>
                   <input
                     type="date"
@@ -231,19 +291,21 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputFullNames"
                     onChange={(e) => setoccurencedate(e.target.value)}
+                    required
                   />
                 </div>
-                <div className="form-group my-2 col-md-4 col-sm-12 col-sm-12">
+                <div className="form-group my-2 col-sm-12 col-sm-12">
                   <label for="inputNID2">Time</label>
                   <input
-                    type="text"
+                    type="time"
                     value={occurencetime}
                     className="form-control"
                     id="inputNID2"
                     onChange={(e) => setoccurencetime(e.target.value)}
+                    required
                   />
                 </div>
-                <div className="form-group my-2 col-md-4 col-sm-12 col-sm-12">
+                <div className="form-group my-2 col-sm-12 col-sm-12">
                   <label for="inputCD2">Place</label>
                   <input
                     type="text"
@@ -251,11 +313,9 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputCD2"
                     onChange={(e) => setoccurenceplace(e.target.value)}
+                    required
                   />
                 </div>
-              </div>
-              <div className="card-header my-3">
-                DESCRIPTION OF MERCHANDISE AND GOODS
               </div>
               <div className="form-row">
                 <div className="form-group my-2 col-md-12">
@@ -268,6 +328,7 @@ const TransitForm = () => {
                     id="exampleFormControlTextarea1"
                     rows="3"
                     onChange={(e) => setdetailsofload(e.target.value)}
+                    maxLength={5000}
                   ></textarea>
                 </div>
               </div>
@@ -280,13 +341,15 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputAm4"
                     onChange={(e) => setnumpackagesofarticles1(e.target.value)}
+                    maxLength={50}
+                    required
                   />
                 </div>
 
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputLN4">Total Weight</label>
                   <input
-                    type="text"
+                    type="number"
                     value={tweight1}
                     className="form-control"
                     id="inputLN4"
@@ -302,10 +365,11 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputLN4"
                     onChange={(e) => settvalue1(e.target.value)}
+                    maxLength={20}
                   />
                 </div>
               </div>
-              <div className="card-header my-3">
+              <div className="my-3">
                 DETAILS OF MERCHANDISE AND GOODS LOST OR DAMAGED
               </div>
               <div className="form-row">
@@ -335,11 +399,12 @@ const TransitForm = () => {
                 <div className="form-group my-2 col-md-12 col-sm-12">
                   <label for="inputLN4">Total Weight</label>
                   <input
-                    type="text"
+                    type="number"
                     value={tweight2}
                     className="form-control"
                     id="inputLN4"
                     onChange={(e) => settweight2(e.target.value)}
+                    maxLength={20}
                   />
                 </div>
 
@@ -351,6 +416,7 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputLN4"
                     onChange={(e) => settvalue2(e.target.value)}
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -363,11 +429,12 @@ const TransitForm = () => {
                     className="form-control"
                     id="inputPe4"
                     onChange={(e) => setsalvage(e.target.value)}
+                    maxLength={50}
                   />
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group my-2 col-md-4 col-sm-12">
+                <div className="form-group my-2 col-sm-12">
                   <label for="inputAm4">Gross amount of claim</label>
                   <input
                     type="number"
@@ -378,7 +445,7 @@ const TransitForm = () => {
                   />
                 </div>
 
-                <div className="form-group my-2 col-md-4 col-sm-12">
+                <div className="form-group my-2 col-sm-12">
                   <label for="inputLN4">
                     Less Excess under policy (if any)
                   </label>
@@ -391,7 +458,7 @@ const TransitForm = () => {
                   />
                 </div>
 
-                <div className="form-group my-2 col-md-4 col-sm-12">
+                <div className="form-group my-2 col-sm-12">
                   <label for="inputLN4">Net amount of claim</label>
                   <input
                     type="number"
@@ -402,7 +469,7 @@ const TransitForm = () => {
                   />
                 </div>
               </div>
-              <div className="card-header my-3">
+              <div className="my-3">
                 WHERE AVAILABLE THE FOLLOWING SHOULD BE ATTACHED TO THIS CLAIM
                 FORM:
               </div>

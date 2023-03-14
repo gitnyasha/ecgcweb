@@ -239,6 +239,7 @@ const AllRiskClaimForm = () => {
                     id="inputRC4"
                     onChange={(e) => setName(e.target.value)}
                     required
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -249,6 +250,7 @@ const AllRiskClaimForm = () => {
                     id="inputPN4"
                     value={business}
                     onChange={(e) => setBusiness(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -261,6 +263,8 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputRC4"
                     onChange={(e) => setTelephone(e.target.value)}
+                    maxLength={15}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -271,6 +275,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputPosition4"
                     onChange={(e) => setAddress(e.target.value)}
+                    maxLength={5000}
                   />
                 </div>
               </div>
@@ -285,6 +290,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputNum4"
                     onChange={(e) => setDateofloss(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -292,7 +298,7 @@ const AllRiskClaimForm = () => {
                     <small>Time /am/pm</small>
                   </label>
                   <input
-                    type="text"
+                    type="time"
                     name={timeofloss}
                     className="form-control"
                     id="inputinsolvency4"
@@ -311,6 +317,8 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputAm4"
                     onChange={(e) => setWhenandwhome(e.target.value)}
+                    maxLength={5000}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -323,12 +331,13 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputLN4"
                     onChange={(e) => setReportdate(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
                   <label for="inputAm4">Time/am/pm</label>
                   <input
-                    type="text"
+                    type="time"
                     value={reporttime}
                     className="form-control"
                     id="inputAm4"
@@ -353,6 +362,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputLN4"
                     onChange={(e) => setPolicereference(e.target.value)}
+                    maxLength={150}
                   />
                 </div>
               </div>
@@ -370,6 +380,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputDate4"
                     onChange={(e) => setReporter(e.target.value)}
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -382,6 +393,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputPe4"
                     onChange={(e) => setLossinvestigated(e.target.value)}
+                    maxLength={100}
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -396,6 +408,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputName4"
                     onChange={(e) => setOwneroftheproperty(e.target.value)}
+                    maxLength={100}
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -411,6 +424,7 @@ const AllRiskClaimForm = () => {
                     className="form-control"
                     id="inputPo4"
                     onChange={(e) => setOtherinsurances(e.target.value)}
+                    maxLength={500}
                   />
                 </div>
                 <div className="form-group my-2 col-md-12">
@@ -463,6 +477,8 @@ const AllRiskClaimForm = () => {
                   className="form-control"
                   id="inputPe4"
                   onChange={(e) => setAddressofbuilding(e.target.value)}
+                  maxLength={500}
+                  required
                 />
               </div>
               <div className="form-group my-2 col-md-12">
@@ -475,6 +491,8 @@ const AllRiskClaimForm = () => {
                   className="form-control"
                   id="inputName4"
                   onChange={(e) => setOccupied(e.target.value)}
+                  maxLength={500}
+                  required
                 />
               </div>
               <div className="form-group my-2 col-md-12">
@@ -485,7 +503,7 @@ const AllRiskClaimForm = () => {
                   </small>
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   value={daysofoccupation}
                   className="form-control"
                   id="inputPo4"
@@ -502,6 +520,7 @@ const AllRiskClaimForm = () => {
                   className="form-control"
                   id="inputSig4"
                   onChange={(e) => setEntryaffected(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group my-2 col-md-12">
@@ -514,6 +533,7 @@ const AllRiskClaimForm = () => {
                   className="form-control"
                   id="inputDate4"
                   onChange={(e) => setBuildingdamagesustained(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group my-2 col-md-12">
@@ -772,6 +792,7 @@ const AllRiskClaimForm = () => {
                   className="form-control"
                   id="inputDate4"
                   onChange={(e) => setDetailsofloss(e.target.value)}
+                  required
                 />
               </div>
               <table className="table table-bordered">
@@ -810,38 +831,42 @@ const AllRiskClaimForm = () => {
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={pricepaid1}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setPricepaid1(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={replacement1}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setReplacement1(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={depreciation1}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setDepreciation1(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={amountclaimed1}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setAmountclaimed1(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                   </tr>
@@ -853,6 +878,7 @@ const AllRiskClaimForm = () => {
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setDesc2(e.target.value)}
+                        maxLength={5000}
                       />
                     </td>
                     <td>
@@ -866,38 +892,42 @@ const AllRiskClaimForm = () => {
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={pricepaid2}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setPricepaid2(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={replacement2}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setReplacement2(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={depreciation2}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setDepreciation2(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={amountclaimed2}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setAmountclaimed2(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                   </tr>
@@ -922,38 +952,42 @@ const AllRiskClaimForm = () => {
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={pricepaid3}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setPricepaid3(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={replacement3}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setReplacement3(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={depreciation3}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setDepreciation3(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                     <td>
                       <input
-                        type="text"
+                        type="number"
                         value={amountclaimed3}
                         className="form-control"
                         id="inputDate4"
                         onChange={(e) => setAmountclaimed3(e.target.value)}
+                        maxLength={20}
                       />
                     </td>
                   </tr>

@@ -40,6 +40,11 @@ const MotorGlass = () => {
   const [estimation, setEstimation] = React.useState("");
   const [signature, setSignature] = React.useState("");
 
+  function isValidEmail(email) {
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
@@ -78,13 +83,43 @@ const MotorGlass = () => {
         formdate: new Date(),
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setPolicynumber("");
+          setClaimNumber("");
+          setNameofinsured("");
+          setOccupation("");
+          setAddress("");
+          setEmail("");
+          setMobile("");
+          setDateofbirth("");
+          setNameofdriver("");
+          setAddressofdriver("");
+          setDrrelation("");
+          setDrlicence("");
+          setOffense("");
+          setDateofissue("");
+          setRegNumber("");
+          setVehicleMake("");
+          setTypeofbody("");
+          setYearofmake("");
+          setSuminsured("");
+          setPurpose("");
+          setDateOfOccurence("");
+          setOccurencetime("");
+          setPlace("");
+          setCauseofdamage("");
+          setWasanydamage("");
+          setWindscreen("");
+          setAlreadydamaged("");
+          setPlaceseen("");
+          setFitted("");
+          setEstimation("");
+          setSignature("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error submitting");
       });
   };
 
@@ -107,6 +142,8 @@ const MotorGlass = () => {
                     value={policynumber}
                     onChange={(e) => setPolicynumber(e.target.value)}
                     className="form-control"
+                    maxLength={25}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12 col-sm-12">
@@ -116,6 +153,8 @@ const MotorGlass = () => {
                     value={claimnumber}
                     onChange={(e) => setClaimNumber(e.target.value)}
                     className="form-control"
+                    maxLength={25}
+                    required
                   />
                 </div>
               </div>
@@ -127,6 +166,8 @@ const MotorGlass = () => {
                     value={nameofinsured}
                     onChange={(e) => setNameofinsured(e.target.value)}
                     className="form-control"
+                    maxLength={250}
+                    required
                   />
                 </div>
               </div>
@@ -155,10 +196,22 @@ const MotorGlass = () => {
                   <label for="inputNum4">Email</label>
                   <input
                     type="email"
+                    id="inputEmail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
+                    className={`form-control ${
+                      email.length > 0 && !isValidEmail(email)
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    maxLength={100}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   />
+                  {email.length > 0 && !isValidEmail(email) && (
+                    <div className="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  )}
                 </div>
                 <div className="form-group col-md-12 col-sm-12">
                   <label for="inputMobile4">Contact Numbers</label>
@@ -167,6 +220,7 @@ const MotorGlass = () => {
                     value={mobile}
                     onChange={(e) => setMobile(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -181,6 +235,7 @@ const MotorGlass = () => {
                     value={nameofdriver}
                     onChange={(e) => setNameofdriver(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -190,6 +245,7 @@ const MotorGlass = () => {
                     value={dateofbirth}
                     onChange={(e) => setDateofbirth(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -199,6 +255,7 @@ const MotorGlass = () => {
                     value={addressofdriver}
                     onChange={(e) => setAddressofdriver(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -213,6 +270,7 @@ const MotorGlass = () => {
                     value={drrelation}
                     onChange={(e) => setDrrelation(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -222,6 +280,8 @@ const MotorGlass = () => {
                     value={drlicence}
                     onChange={(e) => setDrlicence(e.target.value)}
                     className="form-control"
+                    maxLength={25}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -231,6 +291,7 @@ const MotorGlass = () => {
                     value={dateofissue}
                     onChange={(e) => setDateofissue(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -258,6 +319,8 @@ const MotorGlass = () => {
                     value={regnumber}
                     onChange={(e) => setRegNumber(e.target.value)}
                     className="form-control"
+                    maxLength={25}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -267,6 +330,7 @@ const MotorGlass = () => {
                     value={vehiclemake}
                     onChange={(e) => setVehicleMake(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -276,6 +340,7 @@ const MotorGlass = () => {
                     value={typeofbody}
                     onChange={(e) => setTypeofbody(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -285,6 +350,7 @@ const MotorGlass = () => {
                     value={yearofmake}
                     onChange={(e) => setYearofmake(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -294,6 +360,9 @@ const MotorGlass = () => {
                     value={suminsured}
                     onChange={(e) => setSuminsured(e.target.value)}
                     className="form-control"
+                    maxLength={20}
+                    required
+                    step="0.01"
                   />
                 </div>
               </div>
@@ -308,6 +377,7 @@ const MotorGlass = () => {
                     value={purpose}
                     onChange={(e) => setPurpose(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -320,12 +390,13 @@ const MotorGlass = () => {
                     value={dateofoccurence}
                     onChange={(e) => setDateOfOccurence(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </Col>
                 <Col>
                   <label for="inputCD2">Time</label>
                   <input
-                    type="text"
+                    type="time"
                     value={occurencetime}
                     onChange={(e) => setOccurencetime(e.target.value)}
                     className="form-control"
@@ -353,6 +424,7 @@ const MotorGlass = () => {
                     value={causeofdamage}
                     onChange={(e) => setCauseofdamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -366,6 +438,7 @@ const MotorGlass = () => {
                     value={wasanydamage}
                     onChange={(e) => setWasanydamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="col-sm-12">

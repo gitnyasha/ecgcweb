@@ -39,6 +39,11 @@ const MarineCargo = () => {
   const [positionheld, setPositionHeld] = React.useState("");
   const [proposer, setProposer] = React.useState("");
 
+  function isValidEmail(email) {
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
@@ -77,13 +82,43 @@ const MarineCargo = () => {
         proposer,
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setSigname("");
+          setPostal("");
+          setPhysical("");
+          setTelephone("");
+          setContactPerson("");
+          setFax("");
+          setEmail("");
+          setEstablished("");
+          setVat("");
+          setTraded("");
+          setDescription("");
+          setMaximumLoad("");
+          setDriverScrew("");
+          setAntihijack("");
+          setCrewPerVehicle("");
+          setTachograph("");
+          setAlarm("");
+          setImmobiliser("");
+          setTwoWayRadio("");
+          setTrackDevice("");
+          setTerritorial("");
+          setCurrentInsurer("");
+          setPrevInsurer("");
+          setDetails("");
+          setDateOfLoss("");
+          setGrossAmountLoss("");
+          setCommodity("");
+          setAllRisk("");
+          setNameOfSig("");
+          setPositionHeld("");
+          setProposer("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert(err);
       });
   };
 
@@ -119,6 +154,8 @@ const MarineCargo = () => {
                     value={signame}
                     onChange={(e) => setSigname(e.target.value)}
                     className="form-control"
+                    maxLength={100}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -130,6 +167,8 @@ const MarineCargo = () => {
                     value={postal}
                     onChange={(e) => setPostal(e.target.value)}
                     className="form-control"
+                    maxLength={500}
+                    required
                   />
                 </div>
               </div>
@@ -143,6 +182,8 @@ const MarineCargo = () => {
                     value={physical}
                     onChange={(e) => setPhysical(e.target.value)}
                     className="form-control"
+                    maxLength={500}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -154,6 +195,7 @@ const MarineCargo = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
               </div>
@@ -167,6 +209,8 @@ const MarineCargo = () => {
                     value={contactperson}
                     onChange={(e) => setContactPerson(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -184,21 +228,33 @@ const MarineCargo = () => {
               <div className="form-row my-3">
                 <div className="form-group col-sm-12">
                   <label for="inputRC4">
-                    <b>Email</b>
+                    <b>Email:</b>
                   </label>
                   <input
                     type="email"
+                    id="inputEmail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
+                    className={`form-control ${
+                      email.length > 0 && !isValidEmail(email)
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    maxLength={100}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   />
+                  {email.length > 0 && !isValidEmail(email) && (
+                    <div className="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  )}
                 </div>
                 <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Date business was established:</b>
                   </label>
                   <input
-                    type="text"
+                    type="date"
                     value={established}
                     onChange={(e) => setEstablished(e.target.value)}
                     className="form-control"
@@ -215,6 +271,7 @@ const MarineCargo = () => {
                     value={vat}
                     onChange={(e) => setVat(e.target.value)}
                     className="form-control"
+                    maxLength={100}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -244,6 +301,7 @@ const MarineCargo = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -251,10 +309,11 @@ const MarineCargo = () => {
                     <b>Maximum load limit required in respect of Cargo</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={maximumload}
                     onChange={(e) => setMaximumLoad(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
 
@@ -297,6 +356,7 @@ const MarineCargo = () => {
                     value={crewpervehicle}
                     onChange={(e) => setCrewPerVehicle(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -407,6 +467,7 @@ const MarineCargo = () => {
                     value={details}
                     onChange={(e) => setDetails(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -487,6 +548,8 @@ const MarineCargo = () => {
                     value={nameofsig}
                     onChange={(e) => setNameOfSig(e.target.value)}
                     className="form-control"
+                    maxLength={100}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -498,6 +561,8 @@ const MarineCargo = () => {
                     value={positionheld}
                     onChange={(e) => setPositionHeld(e.target.value)}
                     className="form-control"
+                    maxLength={100}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -509,6 +574,8 @@ const MarineCargo = () => {
                     value={proposer}
                     onChange={(e) => setProposer(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
               </div>

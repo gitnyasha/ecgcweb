@@ -37,6 +37,11 @@ const PublicLiability = () => {
   const [datesigned, setDateSigned] = useState("");
   const [show, setShow] = React.useState(false);
 
+  function isValidEmail(email) {
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
@@ -75,6 +80,34 @@ const PublicLiability = () => {
         console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setBroker("");
+          setInsured("");
+          setPolicynumber("");
+          setAddress("");
+          setTelephone("");
+          setEmail("");
+          setDateofdamage("");
+          setTimeofdamage("");
+          setPlaceofdamage("");
+          setConnectedtobusiness("");
+          setCircumstances("");
+          setNegligence("");
+          setDeclaration("");
+          setPrevent("");
+          setThirdpartydetails1("");
+          setThirdpartyphone1("");
+          setThirdpartyloss1("");
+          setThirdpartydetails2("");
+          setThirdpartyphone2("");
+          setThirdpartyloss2("");
+          setWitness1name("");
+          setWitness1relation("");
+          setWitness1contact("");
+          setWitness2name("");
+          setWitness2relation("");
+          setWitness2contact("");
+          setInsuredfullname("");
+          setInsuredcapacity("");
         }
       })
       .catch((err) => {
@@ -101,6 +134,8 @@ const PublicLiability = () => {
                     value={policynumber}
                     onChange={(e) => setPolicynumber(e.target.value)}
                     className="form-control"
+                    required
+                    maxLength={30}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -110,6 +145,8 @@ const PublicLiability = () => {
                     value={broker}
                     onChange={(e) => setBroker(e.target.value)}
                     className="form-control"
+                    maxLength={60}
+                    required
                   />
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">
@@ -145,16 +182,29 @@ const PublicLiability = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Email</label>
                   <input
                     type="email"
+                    id="inputEmail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
+                    className={`form-control ${
+                      email.length > 0 && !isValidEmail(email)
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    maxLength={100}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   />
+                  {email.length > 0 && !isValidEmail(email) && (
+                    <div className="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  )}
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">
                   2. Details of loss/Damage
@@ -166,15 +216,17 @@ const PublicLiability = () => {
                     value={dateofdamage}
                     onChange={(e) => setDateofdamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Time</label>
                   <input
-                    type="text"
+                    type="time"
                     value={timeofdamage}
                     onChange={(e) => setTimeofdamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -184,6 +236,7 @@ const PublicLiability = () => {
                     value={placeofdamage}
                     onChange={(e) => setPlaceofdamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -195,6 +248,7 @@ const PublicLiability = () => {
                     value={connectedtobusiness}
                     onChange={(e) => setConnectedtobusiness(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -206,6 +260,8 @@ const PublicLiability = () => {
                     value={circumstances}
                     onChange={(e) => setCircumstances(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   ></textarea>
                 </div>
                 <div className="form-group col-md-12">
@@ -216,6 +272,8 @@ const PublicLiability = () => {
                     value={negligence}
                     onChange={(e) => setNegligence(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   ></textarea>
                 </div>
                 <div className="form-group col-md-12">
@@ -226,6 +284,8 @@ const PublicLiability = () => {
                     value={prevent}
                     onChange={(e) => setPrevent(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   ></textarea>
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">
@@ -278,6 +338,7 @@ const PublicLiability = () => {
                     value={thirdpartyphone2}
                     onChange={(e) => setThirdpartyphone2(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -287,6 +348,7 @@ const PublicLiability = () => {
                     value={thirdpartyloss2}
                     onChange={(e) => setThirdpartyloss2(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">
@@ -299,6 +361,7 @@ const PublicLiability = () => {
                     value={witness1name}
                     onChange={(e) => setWitness1name(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -308,6 +371,7 @@ const PublicLiability = () => {
                     value={witness1relation}
                     onChange={(e) => setWitness1relation(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -317,6 +381,7 @@ const PublicLiability = () => {
                     value={witness1contact}
                     onChange={(e) => setWitness1contact(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -326,6 +391,7 @@ const PublicLiability = () => {
                     value={witness2name}
                     onChange={(e) => setWitness2name(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -335,6 +401,7 @@ const PublicLiability = () => {
                     value={witness2relation}
                     onChange={(e) => setWitness2relation(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -344,6 +411,7 @@ const PublicLiability = () => {
                     value={witness2contact}
                     onChange={(e) => setWitness2contact(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-5">

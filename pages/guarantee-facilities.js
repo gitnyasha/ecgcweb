@@ -85,8 +85,6 @@ const GuaranteeFacilities = () => {
   const [proposed, setProposed] = React.useState("");
   const [indemnity, setIndemnity] = React.useState("");
   const [signedat, setSignedAt] = React.useState("");
-  const [datestamp, setDateStamp] = React.useState("");
-  const [signature, setSignature] = React.useState("");
   const [signatory, setSignatory] = React.useState("");
   const [designation, setDesignation] = React.useState("");
 
@@ -171,20 +169,97 @@ const GuaranteeFacilities = () => {
         calledup,
         proposed,
         indemnity,
-        signedat,
-        datestamp,
-        signature,
+        signedat: new Date(),
         signatory,
         designation,
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setFullName("");
+          setPostal("");
+          setPhysical("");
+          setTelephone("");
+          setEstablished("");
+          setTypeOfOrg("");
+          setPartner1Surname("");
+          setPartner1Names("");
+          setPartner1Shares("");
+          setPartner1Birth("");
+          setPartner1Address("");
+          setPartner2Surname("");
+          setPartner2Names("");
+          setPartner2Shares("");
+          setPartner2Birth("");
+          setPartner2Address("");
+          setPartner3Surname("");
+          setPartner3Names("");
+          setPartner3Shares("");
+          setPartner3Birth("");
+          setPartner3Address("");
+          setPartner4Surname("");
+          setPartner4Names("");
+          setPartner4Shares("");
+          setPartner4Birth("");
+          setPartner4Address("");
+          setCivilJudgement("");
+          setPersonnel1Name("");
+          setPersonnel1Position("");
+          setPersonnel1Period("");
+          setPersonnel1Qualif("");
+          setPersonnel1Prev("");
+          setPersonnel2Name("");
+          setPersonnel2Position("");
+          setPersonnel2Period("");
+          setPersonnel2Qualif("");
+          setPersonnel2Prev("");
+          setPersonnel3Name("");
+          setPersonnel3Position("");
+          setPersonnel3Period("");
+          setPersonnel3Qualif("");
+          setPersonnel3Prev("");
+          setTypeGuarantee("");
+          setAmountGuarantee("");
+          setUnderwriters("");
+          setResult("");
+          setBank1Name("");
+          setBank1Branch("");
+          setBank1Type("");
+          setBank1AccNo("");
+          setBank2Name("");
+          setBank2Branch("");
+          setBank2Type("");
+          setBank2AccNo("");
+          setBank3Name("");
+          setBank3Branch("");
+          setBank3Type("");
+          setBank3AccNo("");
+          setDebt1Whom("");
+          setDebt1Amount("");
+          setDebt1Purpose("");
+          setDebt1Repayment("");
+          setDebt2Whom("");
+          setDebt2Amount("");
+          setDebt2Purpose("");
+          setDebt2Repayment("");
+          setDebt3Whom("");
+          setDebt3Amount("");
+          setDebt3Purpose("");
+          setDebt3Repayment("");
+          setIssuedGuarantees("");
+          setAmountGuarantees("");
+          setCollateral("");
+          setTurnedDown("");
+          setCalledUp("");
+          setProposed("");
+          setIndemnity("");
+          setSignedAt("");
+          setSignatory("");
+          setDesignation("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error occured");
       });
   };
 
@@ -211,6 +286,8 @@ const GuaranteeFacilities = () => {
                     value={fullname}
                     onChange={(e) => setFullName(e.target.value)}
                     className="form-control"
+                    maxLength={500}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -222,6 +299,7 @@ const GuaranteeFacilities = () => {
                     value={postal}
                     onChange={(e) => setPostal(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
               </div>
@@ -235,6 +313,7 @@ const GuaranteeFacilities = () => {
                     value={physical}
                     onChange={(e) => setPhysical(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -246,6 +325,7 @@ const GuaranteeFacilities = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
               </div>
@@ -259,6 +339,8 @@ const GuaranteeFacilities = () => {
                     value={established}
                     onChange={(e) => setEstablished(e.target.value)}
                     className="form-control"
+                    required
+                    maxLength={4}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -273,6 +355,8 @@ const GuaranteeFacilities = () => {
                     value={typeoforg}
                     onChange={(e) => setTypeOfOrg(e.target.value)}
                     className="form-control"
+                    maxLength={500}
+                    required
                   />
                 </div>
               </div>
@@ -287,6 +371,7 @@ const GuaranteeFacilities = () => {
                     value={partner1surname}
                     onChange={(e) => setPartner1Surname(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -298,6 +383,7 @@ const GuaranteeFacilities = () => {
                     value={partner1names}
                     onChange={(e) => setPartner1Names(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -311,6 +397,7 @@ const GuaranteeFacilities = () => {
                     value={partner1shares}
                     onChange={(e) => setPartner1Shares(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -360,6 +447,7 @@ const GuaranteeFacilities = () => {
                     value={partner2surname}
                     onChange={(e) => setPartner2Surname(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -371,6 +459,7 @@ const GuaranteeFacilities = () => {
                     value={partner2names}
                     onChange={(e) => setPartner2Names(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -384,6 +473,7 @@ const GuaranteeFacilities = () => {
                     value={partner2shares}
                     onChange={(e) => setPartner2Shares(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -419,6 +509,7 @@ const GuaranteeFacilities = () => {
                     value={partner3surname}
                     onChange={(e) => setPartner3Surname(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -430,6 +521,7 @@ const GuaranteeFacilities = () => {
                     value={partner3names}
                     onChange={(e) => setPartner3Names(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
               </div>
@@ -443,6 +535,7 @@ const GuaranteeFacilities = () => {
                     value={partner3shares}
                     onChange={(e) => setPartner3Shares(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -478,6 +571,7 @@ const GuaranteeFacilities = () => {
                     value={partner4surname}
                     onChange={(e) => setPartner4Surname(e.target.value)}
                     className="form-control"
+                    maxLength={50}
                   />
                 </div>
               </div>
@@ -492,6 +586,7 @@ const GuaranteeFacilities = () => {
                     value={partner4names}
                     onChange={(e) => setPartner4Names(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -503,6 +598,7 @@ const GuaranteeFacilities = () => {
                     value={partner4shares}
                     onChange={(e) => setPartner4Shares(e.target.value)}
                     className="form-control"
+                    maxLength={10}
                   />
                 </div>
               </div>
@@ -737,6 +833,7 @@ const GuaranteeFacilities = () => {
                   value={typeguarantee}
                   onChange={(e) => setTypeGuarantee(e.target.value)}
                   className="form-control"
+                  required
                 />
               </div>
               <div className="form-group my-3">
@@ -748,6 +845,8 @@ const GuaranteeFacilities = () => {
                   value={amountgurantee}
                   onChange={(e) => setAmountGuarantee(e.target.value)}
                   className="form-control"
+                  maxLength={20}
+                  required
                 />
               </div>
               <div className="form-group my-3">
@@ -764,6 +863,7 @@ const GuaranteeFacilities = () => {
                   value={underwriters}
                   onChange={(e) => setUnderwriters(e.target.value)}
                   className="form-control"
+                  required
                 />
               </div>
               <div className="form-group my-3">
@@ -787,6 +887,7 @@ const GuaranteeFacilities = () => {
                   value={bank1name}
                   onChange={(e) => setBank1Name(e.target.value)}
                   className="form-control"
+                  maxLength={200}
                 />
               </div>
               <div className="form-row my-3">
@@ -799,6 +900,7 @@ const GuaranteeFacilities = () => {
                     value={bank1branch}
                     onChange={(e) => setBank1Branch(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -810,6 +912,7 @@ const GuaranteeFacilities = () => {
                     value={bank1type}
                     onChange={(e) => setBank1Type(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -822,6 +925,7 @@ const GuaranteeFacilities = () => {
                   value={bank1accno}
                   onChange={(e) => setBank1AccNo(e.target.value)}
                   className="form-control"
+                  maxLength={200}
                 />
               </div>
               <div className="form-row my-3">
@@ -834,6 +938,7 @@ const GuaranteeFacilities = () => {
                     value={bank2name}
                     onChange={(e) => setBank2Name(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -845,6 +950,7 @@ const GuaranteeFacilities = () => {
                     value={bank2branch}
                     onChange={(e) => setBank2Branch(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -858,6 +964,7 @@ const GuaranteeFacilities = () => {
                     value={bank2type}
                     onChange={(e) => setBank2Type(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -869,6 +976,7 @@ const GuaranteeFacilities = () => {
                     value={bank2accno}
                     onChange={(e) => setBank2AccNo(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -882,6 +990,7 @@ const GuaranteeFacilities = () => {
                     value={bank3name}
                     onChange={(e) => setBank3Name(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -893,6 +1002,7 @@ const GuaranteeFacilities = () => {
                     value={bank3branch}
                     onChange={(e) => setBank3Branch(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -906,6 +1016,7 @@ const GuaranteeFacilities = () => {
                     value={bank3type}
                     onChange={(e) => setBank3Type(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -917,6 +1028,7 @@ const GuaranteeFacilities = () => {
                     value={bank3accno}
                     onChange={(e) => setBank3AccNo(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
               </div>
@@ -1077,6 +1189,8 @@ const GuaranteeFacilities = () => {
                     value={issuedguarantees}
                     onChange={(e) => setIssuedGuarantees(e.target.value)}
                     className="form-control"
+                    required
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1088,6 +1202,7 @@ const GuaranteeFacilities = () => {
                     value={amountguarantees}
                     onChange={(e) => setAmountGuarantees(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -1103,6 +1218,8 @@ const GuaranteeFacilities = () => {
                     value={collateral}
                     onChange={(e) => setCollateral(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1117,6 +1234,7 @@ const GuaranteeFacilities = () => {
                     value={turneddown}
                     onChange={(e) => setTurnedDown(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
               </div>
@@ -1133,6 +1251,7 @@ const GuaranteeFacilities = () => {
                     value={calledup}
                     onChange={(e) => setCalledUp(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1195,6 +1314,7 @@ const GuaranteeFacilities = () => {
                     value={signedat}
                     onChange={(e) => setSignedAt(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1206,6 +1326,7 @@ const GuaranteeFacilities = () => {
                     value={signatory}
                     onChange={(e) => setSignatory(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1217,6 +1338,7 @@ const GuaranteeFacilities = () => {
                     value={designation}
                     onChange={(e) => setDesignation(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>

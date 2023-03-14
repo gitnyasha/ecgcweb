@@ -233,13 +233,115 @@ const ExportProposal = () => {
         designation,
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setFrom("");
+          setFax("");
+          setDate("");
+          setStatusOfApplicant("");
+          setPartners("");
+          setBankersAddress("");
+          setEstablished("");
+          setExportSales("");
+          setDomesticSales("");
+          setDescription("");
+          setCommerce("");
+          setCountry1("");
+          setCountry1Against("");
+          setCountry1Cad("");
+          setCountry1Account("");
+          setCountry1Other("");
+          setCountry1total("");
+          setCountry2("");
+          setCountry2Against("");
+          setCountry2Cad("");
+          setCountry2Account("");
+          setCountry2Other("");
+          setCountry2total("");
+          setCountry3("");
+          setCountry3Against("");
+          setCountry3Cad("");
+          setCountry3Account("");
+          setCountry3Other("");
+          setCountry3total("");
+          setCountry4("");
+          setCountry4Against("");
+          setCountry4Cad("");
+          setCountry4Account("");
+          setCountry4Other("");
+          setCountry4total("");
+          setCntry1("");
+          setCntry1Cad1("");
+          setCntry1Within("");
+          setCntry1Days1("");
+          setCntry1Cad2("");
+          setCntry1Upto("");
+          setCntry1Days2("");
+          setCntry1Total("");
+          setCntry2("");
+          setCntry2Cad1("");
+          setCntry2Within("");
+          setCntry2Days1("");
+          setCntry2Cad2("");
+          setCntry2Upto("");
+          setCntry2Days2("");
+          setCntry2Total("");
+          setCntry3("");
+          setCntry3Cad1("");
+          setCntry3Within("");
+          setCntry3Days1("");
+          setCntry3Cad2("");
+          setCntry3Upto("");
+          setCntry3Days2("");
+          setCntry3Total("");
+          setQuotation("");
+          setCollateral("");
+          setShipments("");
+          setOpenDelivery("");
+          setAssociates("");
+          setShipmentValue("");
+          setPoliticalRisk("");
+          setConsignees("");
+          setShipmentsValue2("");
+          setPoliticalRisk2("");
+          setCompreRisk("");
+          setDebtsyear1("");
+          setDebtsbuyer1("");
+          setDebtsAmount1("");
+          setDebtsCause1("");
+          setDebtsRemarks1("");
+          setDebtsyear2("");
+          setDebtsbuyer2("");
+          setDebtsAmount2("");
+          setDebtsCause2("");
+          setDebtsRemarks2("");
+          setDebtsyear4("");
+          setDebtsbuyer4("");
+          setDebtsAmount4("");
+          setDebtsCause4("");
+          setDebtsRemarks4("");
+          setOverDueName1("");
+          setOverDueAmount1("");
+          setOverDueReason1("");
+          setOverDueName2("");
+          setOverDueAmount2("");
+          setOverDueReason2("");
+          setOverDueName3("");
+          setOverDueAmount3("");
+          setOverDueReason3("");
+          setOverDueName4("");
+          setOverDueAmount4("");
+          setOverDueReason4("");
+          setBuyersNumber("");
+          setSatisfy("");
+          setChecking("");
+          setPlace("");
+          setSigname("");
+          setDesignation("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error: Form submission not successful");
       });
   };
 
@@ -264,6 +366,8 @@ const ExportProposal = () => {
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
               </div>
@@ -292,6 +396,7 @@ const ExportProposal = () => {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -309,6 +414,8 @@ const ExportProposal = () => {
                     value={statusofapplicant}
                     onChange={(e) => setStatusOfApplicant(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -322,6 +429,8 @@ const ExportProposal = () => {
                     value={partners}
                     onChange={(e) => setPartners(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   />
                 </div>
               </div>
@@ -349,6 +458,7 @@ const ExportProposal = () => {
                     value={established}
                     onChange={(e) => setEstablished(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -360,6 +470,7 @@ const ExportProposal = () => {
                     value={exportsales}
                     onChange={(e) => setExportSales(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -367,10 +478,11 @@ const ExportProposal = () => {
                     <b>4. c) Domestic Sales (US$)</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={domesticsales}
                     onChange={(e) => setDomesticSales(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -382,6 +494,8 @@ const ExportProposal = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
+                    required
                   />
                 </div>
               </div>
@@ -399,6 +513,7 @@ const ExportProposal = () => {
                     value={country1}
                     onChange={(e) => setCountry1(e.target.value)}
                     className="form-control"
+                    maxLength={100}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -465,6 +580,7 @@ const ExportProposal = () => {
                     value={country1total}
                     onChange={(e) => setCountry1total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -545,6 +661,7 @@ const ExportProposal = () => {
                     value={country2total}
                     onChange={(e) => setCountry2total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -624,6 +741,7 @@ const ExportProposal = () => {
                     value={country3total}
                     onChange={(e) => setCountry3total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -703,6 +821,7 @@ const ExportProposal = () => {
                     value={country4total}
                     onChange={(e) => setCountry4total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -796,6 +915,7 @@ const ExportProposal = () => {
                     value={cntry1total}
                     onChange={(e) => setCntry1Total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -887,6 +1007,7 @@ const ExportProposal = () => {
                     value={cntry2total}
                     onChange={(e) => setCntry2Total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -978,6 +1099,7 @@ const ExportProposal = () => {
                     value={cntry2total}
                     onChange={(e) => setCntry2Total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -1069,6 +1191,7 @@ const ExportProposal = () => {
                     value={cntry3total}
                     onChange={(e) => setCntry3Total(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -1207,6 +1330,21 @@ const ExportProposal = () => {
                     <b>
                       If exporting goods on consignment basis to self or agents
                       abroad (for sale from stocks), Would you like to get
+                      cover: (a) for stocks against political risks?:
+                    </b>
+                  </label>
+                  <input
+                    type="text"
+                    value={politicalrisk2}
+                    onChange={(e) => setPoliticalRisk2(e.target.value)}
+                    className="form-control"
+                  />
+                </div>
+                <div className="form-group col-sm-12">
+                  <label for="inputRC4">
+                    <b>
+                      If exporting goods on consignment basis to self or agents
+                      abroad (for sale from stocks), Would you like to get
                       cover: (b) also for sales made to ultimate buyers against
                       comprehensive risks?:
                     </b>
@@ -1219,7 +1357,7 @@ const ExportProposal = () => {
                   />
                 </div>
               </div>
-              <h3>
+              <small>
                 **Note** Where shipments are made by air, buyers will be able to
                 take delivery of the goods from the airline without making
                 payment in the case of CAD transactions. In such cases, the
@@ -1231,7 +1369,7 @@ const ExportProposal = () => {
                 CAD terms) and (b) paying premium on such shipments at rates
                 applicable to Open Delivery terms. Such cover can be obtained on
                 selected buyers, if you wish to do so.
-              </h3>
+              </small>
 
               <h3>
                 Bad debts suffered by us in the last 3 years (buyer-wise) –
@@ -1719,6 +1857,8 @@ const ExportProposal = () => {
                     value={place}
                     onChange={(e) => setPlace(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -1730,6 +1870,8 @@ const ExportProposal = () => {
                     value={signame}
                     onChange={(e) => setSigname(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
               </div>
@@ -1744,6 +1886,8 @@ const ExportProposal = () => {
                     value={designation}
                     onChange={(e) => setDesignation(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
               </div>

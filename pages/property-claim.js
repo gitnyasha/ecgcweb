@@ -65,10 +65,32 @@ const PropertyClaim = () => {
         console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setPolicynumber("");
+          setpolicyholder("");
+          setInsurer("");
+          setAddress("");
+          setTelephone("");
+          setDateofdamage("");
+          setTimeofdamage("");
+          setPlaceofdamage("");
+          setpremisesoccupied("");
+          settypeofpremise("");
+          setcauseofdamage("");
+          setother("");
+          setcriminal("");
+          setpolicestation("");
+          setbrigade("");
+          setcircumstances("");
+          setinterested("");
+          setanotherinsuarnce("");
+          setreplacement("");
+          settotalcost("");
+          setamountclaimed("");
+          setauthorized("");
+          setwitness("");
         }
       })
       .catch((err) => {
-        console.log(err);
         alert("Error submitting");
       });
   };
@@ -91,6 +113,8 @@ const PropertyClaim = () => {
                     value={policynumber}
                     onChange={(e) => setPolicynumber(e.target.value)}
                     className="form-control"
+                    maxLength={25}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -100,6 +124,8 @@ const PropertyClaim = () => {
                     value={policyholder}
                     onChange={(e) => setpolicyholder(e.target.value)}
                     className="form-control"
+                    maxLength={50}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -109,6 +135,8 @@ const PropertyClaim = () => {
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     className="form-control"
+                    maxLength={150}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -118,6 +146,8 @@ const PropertyClaim = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={50}
+                    required
                   />
                 </div>
                 <div className="card-header bg-secondary text-white py-1 my-3">
@@ -130,12 +160,13 @@ const PropertyClaim = () => {
                     value={dateofdamage}
                     onChange={(e) => setDateofdamage(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
                   <label for="inputPN4">Time</label>
                   <input
-                    type="text"
+                    type="time"
                     value={timeofdamage}
                     onChange={(e) => setTimeofdamage(e.target.value)}
                     className="form-control"
@@ -148,6 +179,8 @@ const PropertyClaim = () => {
                     value={placeofdamage}
                     onChange={(e) => setPlaceofdamage(e.target.value)}
                     className="form-control"
+                    maxLength={500}
+                    required
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -181,6 +214,7 @@ const PropertyClaim = () => {
                     className="form-control"
                     value={causeofdamage}
                     onChange={(e) => setcauseofdamage(e.target.value)}
+                    required
                   >
                     <option value="Fire">Fire</option>
                     <option value="Storm">Storm</option>
@@ -196,6 +230,7 @@ const PropertyClaim = () => {
                     value={other}
                     onChange={(e) => setother(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   ></textarea>
                 </div>
                 <div className="form-group col-md-12">
@@ -207,6 +242,7 @@ const PropertyClaim = () => {
                     value={criminal}
                     onChange={(e) => setcriminal(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
                 <div className="form-group col-md-12">
@@ -216,6 +252,7 @@ const PropertyClaim = () => {
                     value={policestation}
                     onChange={(e) => setpolicestation(e.target.value)}
                     className="form-control"
+                    maxLength={5000}
                   />
                 </div>
                 <div className="form-group col-md-12">

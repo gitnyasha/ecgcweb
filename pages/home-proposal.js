@@ -61,13 +61,35 @@ const HomeProposal = () => {
         signature,
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setInsured("");
+          setPostal("");
+          setHomeAddress("");
+          setTelephone("");
+          setRiskAddress("");
+          setBusiness("");
+          setResidence("");
+          setRoof("");
+          setPeriodFrom("");
+          setPeriodTo("");
+          setRenewalDate("");
+          setBuilding("");
+          setBsum("");
+          setMorgage("");
+          setMsum("");
+          setRiskAdd("");
+          setRiskSum("");
+          setAllRisk("");
+          setAllSum("");
+          setLiability("");
+          setAccident("");
+          setSignture("");
+          setBmaterials("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error submitting the form");
       });
   };
 
@@ -94,6 +116,8 @@ const HomeProposal = () => {
                     value={insured}
                     onChange={(e) => setInsured(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -105,6 +129,7 @@ const HomeProposal = () => {
                     value={postal}
                     onChange={(e) => setPostal(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
               </div>
@@ -118,6 +143,7 @@ const HomeProposal = () => {
                     value={homeaddress}
                     onChange={(e) => setHomeAddress(e.target.value)}
                     className="form-control"
+                    maxLength={500}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -129,6 +155,7 @@ const HomeProposal = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
               </div>
@@ -142,6 +169,7 @@ const HomeProposal = () => {
                     value={riskaddress}
                     onChange={(e) => setRiskAddress(e.target.value)}
                     className="form-control"
+                    maxLength={200}
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -190,6 +218,7 @@ const HomeProposal = () => {
                     value={periodfrom}
                     onChange={(e) => setPeriodFrom(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -201,6 +230,7 @@ const HomeProposal = () => {
                     value={periodto}
                     onChange={(e) => setPeriodTo(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
@@ -214,6 +244,7 @@ const HomeProposal = () => {
                     value={renewaldate}
                     onChange={(e) => setRenewalDate(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="form-group col-sm-12">
@@ -230,6 +261,7 @@ const HomeProposal = () => {
                     value={building}
                     onChange={(e) => setBuilding(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
 
@@ -368,6 +400,7 @@ const HomeProposal = () => {
                     value={signature}
                     onChange={(e) => setSignture(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
