@@ -77,6 +77,11 @@ const BusinessProposal = () => {
   const [proposer, setProposer] = React.useState("");
   const [signature, setSignature] = React.useState("");
 
+  function isValidEmail(email) {
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     backend
@@ -153,13 +158,80 @@ const BusinessProposal = () => {
         signature,
       })
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           setShow(true);
+          setNameOfProposer("");
+          setDirectors("");
+          setPostalAddress("");
+          setPhysicalAddress("");
+          setTelephone("");
+          setEmail("");
+          setNatureOfBusiness("");
+          setBeginInsurance("");
+          setEndInsurance("");
+          setBuildingsSum("");
+          setBuildingRate("");
+          setBuildingAnnual("");
+          setStockSum("");
+          setStockRate("");
+          setStockAnnual("");
+          setRawSum("");
+          setRawRate("");
+          setRawAnnual("");
+          setOtherSum("");
+          setOtherRate("");
+          setOtherAnnual("");
+          setPlantSum("");
+          setPlantRate("");
+          setPlantAnnual("");
+          setTotalSum("");
+          setTotalAnnual("");
+          setTheftSum("");
+          setTheftAnnual("");
+          setSafeSum("");
+          setSafeAnnual("");
+          setDirectorSum("");
+          setEmployeeSum("");
+          setStrongroomSum("");
+          setStrongAnnual("");
+          setSeasonalSum("");
+          setSeasonalAnnual("");
+          setWorldwideSum("");
+          setChequeSum("");
+          setGoodSum("");
+          setGoodAnnual("");
+          setGlassSum("");
+          setGlassAnnual("");
+          setEquipSum("");
+          setEquipAnnual("");
+          setCellularSum("");
+          setCellularAnnual("");
+          setPedalSum("");
+          setPedalAnnual("");
+          setBusiOtherSum("");
+          setBusiOtherAnnual("");
+          setGeneralSum("");
+          setGeneralAnnual("");
+          setPropertySum("");
+          setPropertyAnnual("");
+          setTenantSum("");
+          setTenantAnnual("");
+          setCompSum("");
+          setCompAnnual("");
+          setLaptopSum("");
+          setLaptopAnnual("");
+          setMediaSum("");
+          setMediaAnnual("");
+          setReconstructSum("");
+          setReconstructAnnual("");
+          setCostOfWorkSum("");
+          setCostOfWorkAnnual("");
+          setIdemnity("");
+          setProposer("");
         }
       })
       .catch((err) => {
-        console.log(err);
+        alert(err);
       });
   };
 
@@ -175,7 +247,7 @@ const BusinessProposal = () => {
           <Col>
             <form onSubmit={handleSubmit}>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Name of Proposer:</b>
                   </label>
@@ -184,9 +256,11 @@ const BusinessProposal = () => {
                     value={nameofproposer}
                     onChange={(e) => setNameOfProposer(e.target.value)}
                     className="form-control"
+                    maxLength={200}
+                    required
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Names of Directors</b>
                   </label>
@@ -199,7 +273,7 @@ const BusinessProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Physical Address:</b>
                   </label>
@@ -210,7 +284,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Postal Address:</b>
                   </label>
@@ -223,18 +297,30 @@ const BusinessProposal = () => {
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Email Address:</b>
                   </label>
                   <input
                     type="email"
+                    id="inputEmail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
+                    className={`form-control ${
+                      email.length > 0 && !isValidEmail(email)
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    maxLength={100}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   />
+                  {email.length > 0 && !isValidEmail(email) && (
+                    <div className="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  )}
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Telephone:</b>
                   </label>
@@ -243,12 +329,13 @@ const BusinessProposal = () => {
                     value={telephone}
                     onChange={(e) => setTelephone(e.target.value)}
                     className="form-control"
+                    maxLength={15}
                   />
                 </div>
               </div>
 
               <div className="form-row my-3">
-                <div style="float: left; width: 100%;">
+                <div className="form-group col-md-12">
                   <label for="inputRC4">
                     <b>Nature of Business:</b>
                   </label>
@@ -257,11 +344,12 @@ const BusinessProposal = () => {
                     value={natureofbusiness}
                     onChange={(e) => setNatureOfBusiness(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Period of Insurance - From:</b>
                   </label>
@@ -270,9 +358,10 @@ const BusinessProposal = () => {
                     value={begininsurance}
                     onChange={(e) => setBeginInsurance(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Period of Insurance - To:</b>
                   </label>
@@ -281,217 +370,235 @@ const BusinessProposal = () => {
                     value={endinsurance}
                     onChange={(e) => setEndInsurance(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
               <h3>Building</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buildingssum}
                     onChange={(e) => setBuildingsSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buildingrate}
                     onChange={(e) => setBuildingRate(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={buildingannual}
                     onChange={(e) => setBuildingAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
               <h3>Stock In Trade</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={stocksum}
                     onChange={(e) => setStockSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={stockrate}
                     onChange={(e) => setStockRate(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={stockannual}
                     onChange={(e) => setStockAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
               <h3>Raw Materials</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={rawsum}
                     onChange={(e) => setRawSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={rawrate}
                     onChange={(e) => setRawRate(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={rawannual}
                     onChange={(e) => setRawAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
               <h3>Other Contents</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={othersum}
                     onChange={(e) => setOtherSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={otherrate}
                     onChange={(e) => setOtherRate(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={otherannual}
                     onChange={(e) => setOtherAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
               <h3>Plant/Machinery</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={plantsum}
                     onChange={(e) => setPlantSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={plantrate}
                     onChange={(e) => setPlantRate(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={plantannual}
                     onChange={(e) => setPlantAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
               <h3>Totals</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={totalsum}
                     onChange={(e) => setTotalSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input type="text" className="form-control" disabled />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     value={totalannual}
                     onChange={(e) => setTotalAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -503,7 +610,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Qualified Theft</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -512,15 +619,16 @@ const BusinessProposal = () => {
                     value={theftsum}
                     onChange={(e) => setTheftSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Rate:</b>
                   </label>
                   <input type="text" className="form-control" disabled />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -529,6 +637,7 @@ const BusinessProposal = () => {
                     value={theftannual}
                     onChange={(e) => setTheftAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -540,7 +649,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Not contained in a locked safe/strongroom (petty cash)</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -549,9 +658,10 @@ const BusinessProposal = () => {
                     value={safesum}
                     onChange={(e) => setSafeSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-4 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -565,7 +675,7 @@ const BusinessProposal = () => {
               </div>
               <h3>At the residence of directors or Employees</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -574,9 +684,10 @@ const BusinessProposal = () => {
                     value={directorsum}
                     onChange={(e) => setDirectorSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -592,7 +703,7 @@ const BusinessProposal = () => {
                 In a locked safe/strongroom or In transit to or from the bank
               </h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -601,9 +712,10 @@ const BusinessProposal = () => {
                     value={strongroomsum}
                     onChange={(e) => setStrongroomSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -612,13 +724,14 @@ const BusinessProposal = () => {
                     value={strongannual}
                     onChange={(e) => setStrongAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
 
               <h3>Seasonal increase</h3>
               <div className="form-row my-3">
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -629,7 +742,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="form-group col-md-6 col-sm-12">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -638,6 +751,7 @@ const BusinessProposal = () => {
                     value={seasonalannual}
                     onChange={(e) => setSeasonalAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -652,6 +766,7 @@ const BusinessProposal = () => {
                     value={worldwidesum}
                     onChange={(e) => setWorldwideSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -666,6 +781,7 @@ const BusinessProposal = () => {
                     value={chequesum}
                     onChange={(e) => setChequeSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -685,6 +801,7 @@ const BusinessProposal = () => {
                     value={goodsum}
                     onChange={(e) => setGoodSum(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
                 <div className="col-md-12">
@@ -696,6 +813,7 @@ const BusinessProposal = () => {
                     value={goodannual}
                     onChange={(e) => setGoodAnnual(e.target.value)}
                     className="form-control"
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -739,7 +857,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Office equipment and machines </h3>
               <div className="form-row my-3">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -750,7 +868,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -764,7 +882,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Cellular telephones</h3>
               <div className="form-row my-3">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -775,7 +893,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -789,7 +907,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Pedal cycles</h3>
               <div className="form-row my-3">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -800,7 +918,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -814,7 +932,7 @@ const BusinessProposal = () => {
               </div>
               <h3>Other</h3>
               <div className="form-row my-3">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Sum Insured:</b>
                   </label>
@@ -825,7 +943,7 @@ const BusinessProposal = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <label for="inputRC4">
                     <b>Annual Premium:</b>
                   </label>
@@ -1070,8 +1188,8 @@ const BusinessProposal = () => {
                   Company.
                 </small>
               </div>
-              <div style="height: 80px; margin-top: 20px;">
-                <div className="form-group col-md-6 col-sm-12">
+              <div className="row">
+                <div className="form-group col-sm-12">
                   <label for="inputRC4">
                     <b>Proposer</b>
                   </label>
@@ -1080,6 +1198,7 @@ const BusinessProposal = () => {
                     value={proposer}
                     onChange={(e) => setProposer(e.target.value)}
                     className="form-control"
+                    required
                   />
                 </div>
               </div>
