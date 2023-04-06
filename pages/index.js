@@ -15,7 +15,7 @@ const Index = () => {
     backend
       .get("/api/track-visitors")
       .then((response) => {
-        setCareers(response.data.careers);
+        console.log(response);
       })
       .catch((error) => console.error(error));
   }, []);
