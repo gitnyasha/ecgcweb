@@ -174,6 +174,17 @@ const Navbar = () => {
                       </li>
 
                       <li className="nav-item">
+                        <Link
+                          href="/board-of-directors"
+                          activeClassName="active"
+                        >
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Our Board
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
                         <Link href="/news-and-events" activeClassName="active">
                           <a onClick={toggleNavbar} className="nav-link">
                             News & Events
@@ -201,12 +212,35 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </li>
+
                   <li className="nav-item">
-                    <Link href="/contact" activeClassName="active">
-                      <a onClick={toggleNavbar} className="nav-link">
-                        Contact Us
+                    <Link href="#">
+                      <a
+                        onClick={(e) => e.preventDefault()}
+                        className="nav-link"
+                      >
+                        Contact Us <i className="bx bx-chevron-down" />
                       </a>
                     </Link>
+                    <ul className="dropdown-menu">
+                      <li className="nav-item">
+                        <Link href="/contact" activeClassName="active">
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Contact Us
+                          </a>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link
+                          href="/key-contact-personnel"
+                          activeClassName="active"
+                        >
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Key Contact Personnel
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>

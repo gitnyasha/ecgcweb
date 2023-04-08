@@ -7,7 +7,6 @@ const BlogPost = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [recordsPerPage] = useState(8);
-
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
   const currentRecords = posts.slice(indexOfFirstRecord, indexOfLastRecord);
@@ -15,7 +14,7 @@ const BlogPost = () => {
 
   const postList = currentRecords.map((post) => (
     <div className="col-lg-6" key={post.id}>
-      <div className="single-blog">
+      <div className="single-blog single-director">
         <Link href={`/post/${post.slug}`}>
           <a>
             <img src={uri + post.image} alt="Image" className="blog-fluid" />
