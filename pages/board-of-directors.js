@@ -20,7 +20,7 @@ const Board = () => {
       <div className="blog-details-area">
         <div className="container">
           <div className="row">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <BoardOfDirectors />
             </div>
           </div>
