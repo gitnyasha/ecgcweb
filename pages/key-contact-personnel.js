@@ -19,30 +19,11 @@ const ContactPersonnel = () => {
   }, []);
 
   const mypersonnels = personnels.map((p) => (
-    <div className="client-area">
-      <div className="container">
-        <div className="row">
-          <div className="table-responsive">
-            <table className="table top-selling-table" id="datatablesSimple">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Title</th>
-                  <th>Contact Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr key={p.id}>
-                  <td>{p.fullname}</td>
-                  <td>{p.title}</td>
-                  <td>{p.contacts}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
+    <tr key={p.id}>
+      <td>{p.fullname}</td>
+      <td>{p.title}</td>
+      <td>{p.contacts}</td>
+    </tr>
   ));
 
   return (
@@ -62,7 +43,27 @@ const ContactPersonnel = () => {
           {mypersonnels.length > 0 ? (
             <>
               <h3>Key Contact Personnel</h3>
-              {mypersonnels}
+              <div className="client-area">
+                <div className="container">
+                  <div className="row">
+                    <div className="table-responsive">
+                      <table
+                        className="table top-selling-table"
+                        id="datatablesSimple"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Contact Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>{mypersonnels}</tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </>
           ) : (
             <h3>Coming Soon!</h3>
